@@ -2,6 +2,7 @@
 *{
     margin:0px;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -23,6 +24,12 @@ nav {
     padding: 30px;
     background-color: bisque;
 }
+
+nav>ul{
+    list-style-type: none;
+}
+
+
 aside {
     float: left;
     width: 25%;
