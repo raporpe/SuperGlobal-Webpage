@@ -60,7 +60,15 @@ header>p {
     float:left;
     padding: 40px 20px;
     width: 30%;
-    
+}
+
+header h1{
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+header ul li a{
+    font-family: "Arial Black", Gadget, sans-serif;
+}
 }
 
 nav {
@@ -84,7 +92,7 @@ nav ul li a{
 
 nav ul li a:hover{
     color: #fff;
-    background-color: black;
+    background-color: darkblue;
     
 }
 
@@ -97,19 +105,58 @@ aside {
     background-color:aqua;
 }
 
+aside h2{
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
 section {
     background-color: darksalmon;
 }
 
+section h1{
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+section h3{
+        font-family: "Arial Black", Gadget, sans-serif;
+
+}
+
+.quote{
+        font-family: "Lucida Console", Monaco, monospace;
+    text-align: center;
+
+}
+
 footer {
-    padding: 30px;
+    padding: 10px;
     clear:both;
     background-color:darkblue;
     color: white;
-
     text-align: center;
 }
 
+footer ul{
+    padding:0px;
+    margin: 0px;
+    display:inline-flex;
+}
+
+footer ul li{
+    list-style: none;
+}
+
+footer ul li a{
+    padding: 10px;
+    text-decoration: none;
+    color: darkgray;
+    display:inline-block;
+}
+
+footer ul li a:hover{
+    font-weight: bolder;
+    color: white;
+}
 
 #logo {
     float: left;
@@ -118,7 +165,9 @@ footer {
 
 #links {
     float: right;
-    padding: 40px 0;
+    padding: 20px 0;
+    font-weight: bold;
+    
 }
 
 #links ul{
@@ -143,7 +192,7 @@ footer {
 #links ul li a:hover{
     font-weight: bolder;
     color: white;
-    background: #000;
+    background-color: darkblue;
 }
 
 #burger {
