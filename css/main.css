@@ -24,12 +24,12 @@ body, html {
 
 .wrap-right {
     float: right;
-    padding: 10px;
+    margin: 15px;
 }
 
 .wrap-left {
     float: left;
-    padding: 10px;
+    margin: 15px
 }
 
 .one-fourth-left{
@@ -63,13 +63,34 @@ header>p {
     
 }
 
-
 nav {
-    background-color: bisque;
+    background-color: bisque; 
 }
 
-nav>ul{
-    list-style-type: none;
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: darkblue;
+    display: block;
+}
+
+nav ul li a:hover{
+    color: #fff;
+    background-color: black;
+    
+}
+
+nav ul li a.active{
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 aside {
@@ -100,7 +121,32 @@ footer {
     padding: 40px 0;
 }
 
-#hamburguesa {
+#links ul{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+}
+
+#links ul li{
+    list-style: none;
+}
+
+#links ul li a{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: darkblue;
+    display: block;
+}
+
+#links ul li a:hover{
+    font-weight: bolder;
+    color: white;
+    background: #000;
+}
+
+#burger {
     display: none;
 }
 
@@ -138,7 +184,7 @@ footer {
         display: none;
     }
     
-    #hamburguesa {
+    #burger {
         display: inline;
     }
     
