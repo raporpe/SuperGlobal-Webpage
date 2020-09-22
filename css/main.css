@@ -22,7 +22,15 @@ body, html {
 }
 
 
+.wrap-right {
+    float: right;
+    padding: 10px;
+}
 
+.wrap-left {
+    float: left;
+    padding: 10px;
+}
 
 .one-fourth-left{
     float: left;
@@ -92,18 +100,47 @@ footer {
     padding: 40px 0;
 }
 
-/*Responsiveness*/
+#hamburguesa {
+    display: none;
+}
 
-@media (max-width: 900px) {
-    nav{
+/*Responsiveness for tablets*/
+
+@media (max-width: 768px) {
+
+    .one-fourth-right {
+        display: none;
+    }
+    
+    .half-left {
+        width: 75%;
+    }
+    
+    #links {
+        display: none;
+
+    }
+}
+
+/*Responsiveness for mobile phones*/
+
+@media (max-width: 600px) {
+
+    .one-fourth-left {
+        display: none;
+    }
+    
+    .half-left {
         width: 100%;
     }
     
-    section{
-        width: 100%;
+    #logo {
+        display: none;
     }
-
-    aside{
-        width: 100%;
+    
+    #hamburguesa {
+        display: inline;
     }
+    
+    
 }
