@@ -15,6 +15,12 @@ body, html {
     padding: 25px;   
 }
 
+.video{
+    box-shadow: 3px 12px 57px -18px rgba(0,0,0,0.75);
+    padding: 5px;   
+
+}
+
 .sticky {
     position: fixed;
     top:10px;
@@ -39,7 +45,7 @@ body, html {
 }
 
 .one-fourth-right{
-    float: right;
+    float: left;
     width: 25%;
     padding: 10px;
 }
@@ -199,6 +205,39 @@ footer ul li a:hover{
     display: none;
 }
 
+
+[class^="l-"] {
+    float: left;
+    padding: 5px;
+}
+
+[class^="m-"] {
+    float: left;
+        padding: 5px;
+
+}
+
+[class^="s-"] {
+    float: left;
+        padding: 5px;
+
+}
+
+  .l-1 {width: 8.33%;}
+  .l-2 {width: 16.66%;}
+  .l-3 {width: 25%;}
+  .l-4 {width: 33.33%;}
+  .l-5 {width: 41.66%;}
+  .l-6 {width: 50%;}
+  .l-7 {width: 58.33%;}
+  .l-8 {width: 66.66%;}
+  .l-9 {width: 75%;}
+  .l-10 {width: 83.33%;}
+  .l-11 {width: 91.66%;}
+  .l-12 {width: 100%;}
+
+
+
 /*Responsiveness for tablets*/
 
 @media (max-width: 768px) {
@@ -217,6 +256,30 @@ footer ul li a:hover{
     
     #burger {
     display: none;
+    }
+
+  .m-1 {width: 8.33%;}
+  .m-2 {width: 16.66%;}
+  .m-3 {width: 25%;}
+  .m-4 {width: 33.33%;}
+  .m-5 {width: 41.66%;}
+  .m-6 {width: 50%;}
+  .m-7 {width: 58.33%;}
+  .m-8 {width: 66.66%;}
+  .m-9 {width: 75%;}
+  .m-10 {width: 83.33%;}
+  .m-11 {width: 91.66%;}
+  .m-12 {width: 100%;}
+    
+    .dis-m{
+        display: none;
+    }
+    .deco-icon {
+        display: none;
+    }
+    
+    .app-m{
+        display:inline-block;
     }
 }
 
@@ -240,5 +303,37 @@ footer ul li a:hover{
         display: none;
     }
     
+  .s-1 {width: 8.33%;}
+  .s-2 {width: 16.66%;}
+  .s-3 {width: 25%;}
+  .s-4 {width: 33.33%;}
+  .s-5 {width: 41.66%;}
+  .s-6 {width: 50%;}
+  .s-7 {width: 58.33%;}
+  .s-8 {width: 66.66%;}
+  .s-9 {width: 75%;}
+  .s-10 {width: 83.33%;}
+  .s-11 {width: 91.66%;}
+  .s-12 {width: 100%;}
     
+    .deco-icon {
+        display: none;
+    }
+    
+    .paragraph{
+        display: none;
+    }
+    
+    .intro-paragraph{
+        display: none;
+    }
+    
+    .dis-s{
+        display: none;
+    }
 }
+
+@media screen and (min-width:769px) {  
+    dis-l{
+        display: none;
+    }
