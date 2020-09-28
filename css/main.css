@@ -213,7 +213,10 @@ footer ul li a:hover{
     
     #links {
         display: none;
-
+    }
+    
+    #burger {
+    display: none;
     }
 }
 
