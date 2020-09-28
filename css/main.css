@@ -4,22 +4,26 @@
     font-family: "Roboto", sans-serif;
 }
 
+.main-container{ border:solid 10px green; padding:10px;}
+
+
+.sticky {
+    position:-webkit-sticky; 
+    position:sticky; 
+    top:0;
+}
+
 
 body, html {
-  width: 100%;
   margin: 0;
 }
+
 
 .card{
     box-shadow: 3px 12px 57px -18px rgba(0,0,0,0.75);
     padding: 25px;   
 }
 
-.sticky {
-    position: fixed;
-    top:10px;
-    position:-webkit-sticky;
-}
 
 
 .wrap-right {
@@ -51,9 +55,10 @@ body, html {
 }
 
 header {
-    padding: 20px;
+    padding: 15px;
     background-color:aquamarine;
-    overflow: hidden;
+    height: 140px;
+    top:0;
 }
 
 header>p {
