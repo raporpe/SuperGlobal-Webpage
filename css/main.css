@@ -33,51 +33,24 @@ body, html {
 }
 
 
-.wrap-right {
-    float: right;
-    margin: 15px;
-}
-
-.wrap-left {
-    float: left;
-    margin: 15px
-}
-
-.one-fourth-left{
-    float: left;
-    width: 25%;
-    padding: 10px;
-}
-
-.one-fourth-right{
-    float: left;
-    width: 25%;
-    padding: 10px;
-}
-
-.half-left{
-    float: left;
-    width: 50%;
-    padding: 10px;
-}
 
 header {
     padding: 15px;
     background-color:aquamarine;
     height: 120px;
     top:0;
--webkit-box-shadow: 0px 23px 29px -24px rgba(0,0,0,0.29);
--moz-box-shadow: 0px 23px 29px -24px rgba(0,0,0,0.29);
-box-shadow: 0px 23px 29px -24px rgba(0,0,0,0.29);
-        z-index:999;
+    -webkit-box-shadow: 0px 23px 29px -24px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 23px 29px -24px rgba(0,0,0,0.29);
+    box-shadow: 0px 23px 29px -24px rgba(0,0,0,0.29);
+    z-index:999;
+    
     position: relative;
+      
+    
+    display: flex;
+    align-items: center;
 }
 
-header>p {
-    float:left;
-    padding: 40px 20px;
-    width: 30%;
-}
 
 section p{
     text-align: justify;
@@ -85,8 +58,6 @@ section p{
 
 header#title{
     font-family: "Arial Black", Gadget, sans-serif;
-    display: flex;
-    align-items: center;
 }
 
 header ul li a{
@@ -122,10 +93,6 @@ nav ul li a:hover{
 nav ul li a.active{
     font-size: 20px;
     font-weight: bolder;
-}
-
-aside {
-    background-color:aqua;
 }
 
 aside h2{
@@ -181,16 +148,13 @@ footer ul li a:hover{
     color: white;
 }
 
-#logo {
-    float: left;
-    padding: 10px;
-}
+
+
 
 #links {
-    float: right;
     padding: 20px 0;
     font-weight: bold;
-    
+    margin-left: auto;
 }
 
 #links ul{
@@ -220,7 +184,17 @@ footer ul li a:hover{
 
 #burger {
     display: none;
+    float: left;
+    width: 70px;
+    padding: 15px;
 }
+
+#logo {
+    float: left;
+    width: 70px;
+}
+
+
 
 
 [class^="l-"] {
@@ -239,7 +213,7 @@ footer ul li a:hover{
     padding: 10px;
 
 }
-
+    .l-0 {display: none}
   .l-1 {width: 8.33%;}
   .l-2 {width: 16.66%;}
   .l-3 {width: 25%;}
@@ -258,23 +232,13 @@ footer ul li a:hover{
 /*Responsiveness for tablets*/
 
 @media (max-width: 768px) {
-
-    .one-fourth-right {
-        display: none;
-    }
-    
-    .half-left {
-        width: 75%;
-    }
     
     #links {
         display: none;
     }
     
-    #burger {
-    display: none;
-    }
-
+    
+    .m-0 {display: none}
   .m-1 {width: 8.33%;}
   .m-2 {width: 16.66%;}
   .m-3 {width: 25%;}
@@ -298,28 +262,22 @@ footer ul li a:hover{
     .app-m{
         display:inline-block;
     }
+    
+
 }
 
 /*Responsiveness for mobile phones*/
 
 @media (max-width: 600px) {
-
-    .one-fourth-left {
-        display: none;
-    }
-    
-    .half-left {
-        width: 100%;
-    }
     
     #logo {
         display: none;
     }
     
     #burger {
-        display: none;
+        display: inline;
     }
-    
+    .s-0 {display: none}
   .s-1 {width: 8.33%;}
   .s-2 {width: 16.66%;}
   .s-3 {width: 25%;}
@@ -333,6 +291,7 @@ footer ul li a:hover{
   .s-11 {width: 91.66%;}
   .s-12 {width: 100%;}
     
+    
     .deco-icon {
         display: none;
     }
@@ -341,13 +300,14 @@ footer ul li a:hover{
     .intro-paragraph{
         display: none;
     }
+
     
-    .dis-s{
-        display: none;
-    }
+    
+
 }
 
 @media screen and (min-width:769px) {  
     video-float{
         float: left;
     }
+
