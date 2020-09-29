@@ -79,6 +79,10 @@ header>p {
     width: 30%;
 }
 
+section p{
+    text-align: justify;
+}
+
 header#title{
     font-family: "Arial Black", Gadget, sans-serif;
     display: flex;
@@ -333,10 +337,7 @@ footer ul li a:hover{
         display: none;
     }
     
-    .paragraph{
-        display: none;
-    }
-    
+
     .intro-paragraph{
         display: none;
     }
@@ -347,6 +348,6 @@ footer ul li a:hover{
 }
 
 @media screen and (min-width:769px) {  
-    dis-l{
-        display: none;
+    video-float{
+        float: left;
     }
