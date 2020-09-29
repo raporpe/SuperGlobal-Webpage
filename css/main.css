@@ -221,18 +221,18 @@ footer ul li a:hover{
 
 [class^="l-"] {
     float: left;
-    padding: 5px;
+    padding: 10px;
 }
 
 [class^="m-"] {
     float: left;
-        padding: 5px;
+    padding: 10px;
 
 }
 
 [class^="s-"] {
     float: left;
-        padding: 5px;
+    padding: 10px;
 
 }
 
