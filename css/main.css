@@ -145,10 +145,7 @@ footer ul li a:hover{
 }
 
 
-#logo {
-    float: left;
-    padding: 10px;
-}
+
 
 #links {
     padding: 20px 0;
@@ -182,11 +179,18 @@ footer ul li a:hover{
 }
 
 #burger {
-    padding: 10px;
     display: none;
     float: left;
-
+    width: 70px;
+    padding: 15px;
 }
+
+#logo {
+    float: left;
+    width: 70px;
+}
+
+
 
 
 [class^="l-"] {
@@ -267,9 +271,7 @@ footer ul li a:hover{
     }
     
     #burger {
-        display: flex;
-        justify-content: center;
-        align-items: center; 
+        display: inline;
     }
     .s-0 {display: none}
   .s-1 {width: 8.33%;}
