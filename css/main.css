@@ -27,7 +27,7 @@ body, html {
 
 .video{
     box-shadow: 3px 12px 57px -18px rgba(0,0,0,0.75);
-    padding: 5px;   
+    padding: 4px;
 }
 
 
@@ -250,7 +250,16 @@ footer ul li a:hover{
   .l-11 {width: 91.66%;}
   .l-12 {width: 100%;}
 
+/* Vertical Bar*/
+.vbar {
+  border-left: 3px solid white;
+  height: 10px;
+  left: 50%;
+  margin-left: 2px;
+  margin-right: 2px;
 
+  top: 0;
+}
 
 /*Responsiveness for tablets*/
 
@@ -330,5 +339,5 @@ footer ul li a:hover{
 @media screen and (min-width:769px) {  
     video-float{
         float: left;
-    }
+}
 
