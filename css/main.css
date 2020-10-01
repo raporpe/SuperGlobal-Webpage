@@ -18,7 +18,6 @@ body, html {
 }
 
 header {
-    padding: 25px;
     margin: 8px;
     background-color:aquamarine;
     height: 90px;
@@ -87,7 +86,6 @@ header {
 
 #title {
     font-size: 1.7em;
-    margin: 8px;
     font-weight: bold;
 }
 
@@ -192,7 +190,6 @@ footer ul li a:hover{
 
 
 #links {
-    padding: 20px 0;
     font-weight: bold;
     margin-left: auto;
 }
