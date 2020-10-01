@@ -286,6 +286,7 @@ footer ul li a:hover{
   top: 0;
 }
 
+
 /*Responsiveness for tablets*/
 
 @media (max-width: 768px) {
@@ -364,28 +365,39 @@ footer ul li a:hover{
 @media screen and (min-width:769px) {  
     video-float{
         float: left;
+    }    
 }
 
-    
     /* TABLES */
-    
-#grades th, #grades td {
-  padding: 8px;
-  border: 2px solid #eef;
 
+th, td {
+  padding: 8px;
+  text-align: center;
 }
 
-#grades tr:nth-child(even)
-    {background-color: #a2e2e2;}
+.name{
+    text-align: left;
+    font-weight: bold;
+}
 
-#grades tr:hover {background-color: #eef;}
+#grades tr:nth-child(even){
+    background-color: #ffffff;
+}
+    
+#grades tr:nth-child(odd){
+    background-color: #dedede;
+}
+
+#grades tr:hover {
+    background-color: #f5f5f5
+}
+
 
 #grades th {
-  text-align: left;
-  background-color: #4CAF50;
+  background-color:darkblue;
   color: white;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 10px;
+
 }
     
 #hidder {
@@ -395,3 +407,9 @@ footer ul li a:hover{
     width: 100%;
     height: 20px;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
