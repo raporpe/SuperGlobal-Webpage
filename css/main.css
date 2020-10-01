@@ -363,3 +363,24 @@ footer ul li a:hover{
         float: left;
 }
 
+    
+    /* TABLES */
+    
+#grades th, #grades td {
+  padding: 8px;
+  border: 2px solid #eef;
+
+}
+
+#grades tr:nth-child(even)
+    {background-color: #a2e2e2;}
+
+#grades tr:hover {background-color: #eef;}
+
+#grades th {
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
