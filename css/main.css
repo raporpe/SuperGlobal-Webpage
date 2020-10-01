@@ -213,6 +213,24 @@ footer ul li a:hover{
 }
 
 
+.avatar {
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+}
+
+.avatar img {
+    padding: 10px;
+    border-radius: 50%;
+    height: 100%;
+    width: auto;
+}
+.avatar p {
+    padding: 10px;
+    font-size: 25px;
+}
+
 
 #logo {
     float: left;
