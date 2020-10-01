@@ -9,13 +9,32 @@
 .sticky {
     position:-webkit-sticky; 
     position:sticky; 
-    top:0;
+    top: 105px;
 }
 
 
 body, html {
-  margin: 0;
+  margin: 0px 4px;
 }
+
+header {
+    padding: 25px;
+    margin: 8px;
+    background-color:aquamarine;
+    height: 90px;
+    top:0;
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
+    z-index:1;
+    
+ 
+    position:-webkit-sticky; 
+    position:sticky; 
+    top: 10px;
+    
+    display: flex;
+    align-items: center;
+}
+
 
 
 .card{
@@ -64,19 +83,12 @@ body, html {
 }
 
 
-header {
-    padding: 15px;
-    background-color:aquamarine;
-    height: 120px;
-    top:0;
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
-    z-index:1;
-    
-    position: relative;
-      
-    
-    display: flex;
-    align-items: center;
+
+
+#title {
+    font-size: 1.7em;
+    margin: 8px;
+    font-weight: bold;
 }
 
 
@@ -84,29 +96,25 @@ section p{
     text-align: justify;
 }
 
-header#title{
-    font-family: "Arial Black", Gadget, sans-serif;
-}
 
 header ul li a{
     font-family: "Arial Black", Gadget, sans-serif;
-}
 }
 
 nav {
     background-color: bisque; 
 }
 
-nav ul{
+nav ul {
     margin: 0;
     padding: 0;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: darkblue;
     display: block;
@@ -236,24 +244,24 @@ footer ul li a:hover{
 
 #logo {
     float: left;
-    width: 70px;
+    width: 60px;
 }
 
 
 [class^="l-"] {
     float: left;
-    padding: 10px;
+    padding: 8px;
 }
 
 [class^="m-"] {
     float: left;
-    padding: 10px;
+    padding: 8px;
 
 }
 
 [class^="s-"] {
     float: left;
-    padding: 10px;
+    padding: 8px;
 
 }
     .l-0 {display: none}
@@ -381,4 +389,12 @@ footer ul li a:hover{
   color: white;
   padding-top: 12px;
   padding-bottom: 12px;
+}
+    
+#hidder {
+    position: fixed;
+    top:0px;
+    background-color: white;
+    width: 100%;
+    height: 20px;
 }
