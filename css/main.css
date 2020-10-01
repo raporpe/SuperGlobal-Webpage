@@ -9,29 +9,20 @@
 .sticky {
     position:-webkit-sticky; 
     position:sticky; 
-    top: 105px;
+    top: 120px;
 }
 
 
 body, html {
-  margin: 0px 4px;
+  margin: 5px;
 }
 
 header {
-    margin: 8px;
-    background-color:aquamarine;
     height: 90px;
-    top:0;
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
-    z-index:1;
-    
- 
-    position:-webkit-sticky; 
-    position:sticky; 
-    top: 10px;
-    
+    background-color: white;
     display: flex;
     align-items: center;
+    overflow: hidden !important;
 }
 
 
@@ -100,7 +91,7 @@ header ul li a{
 }
 
 nav {
-    background-color: bisque; 
+    background-color: white; 
 }
 
 nav ul {
@@ -134,7 +125,7 @@ aside h2{
 }
 
 section {
-    background-color: darksalmon;
+    background-color: white;
 }
 
 section h1{
@@ -157,7 +148,7 @@ section h3{
 }
 
 footer {
-    padding: 10px;
+    margin: 10px;
     clear:both;
     background-color:darkblue;
     color: white;
@@ -247,18 +238,18 @@ footer ul li a:hover{
 
 [class^="l-"] {
     float: left;
-    padding: 8px;
+    padding: 10px;
 }
 
 [class^="m-"] {
     float: left;
-    padding: 8px;
+    padding: 10px;
 
 }
 
 [class^="s-"] {
     float: left;
-    padding: 8px;
+    padding: 10px;
 
 }
     .l-0 {display: none}
