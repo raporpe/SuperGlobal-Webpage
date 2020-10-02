@@ -164,75 +164,6 @@ nav ul li a.active{
 
 
 
-/* Footer */
-
-footer {
-    margin: 10px;
-    clear: both;
-    background-color: darkblue !important;
-    color: white;
-    text-align: center;
-}
-
-footer ul{
-    padding:0px;
-    margin: 0px;
-    display:inline-flex;
-}
-
-footer ul li{
-    list-style: none;
-}
-
-footer ul li a{
-    padding: 10px;
-    text-decoration: none;
-    color: darkgray;
-    display:inline-block;
-}
-
-footer ul li a:hover{
-    font-weight: bolder;
-    color: white;
-}
-
-.vbar {
-  border-left: 3px solid white;
-  height: 10px;
-  left: 50%;
-  margin-left: 2px;
-  margin-right: 2px;
-  top: 0;
-}
-
-
-h1 {
-    color: darkblue;
-}
-
-
-
-.video{
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
-    padding: 4px;
-}
-
-
-p{
-    text-align: justify;
-}
-
-section {
-    background-color: white;
-}
-
-
-
-.quote{
-    font-family: "Lucida Console", Monaco, monospace;
-    text-align: center;
-}
-
 /* Students page avatar */
 
 .name{
@@ -296,6 +227,104 @@ section {
 
 
 
+/* General text */
+
+h1 {
+    color: darkblue;
+}
+
+p{
+    text-align: justify;
+}
+
+.video{
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
+    padding: 4px;
+}
+
+section {
+    background-color: white;
+}
+
+.quote{
+    font-family: "Lucida Console", Monaco, monospace;
+    text-align: center;
+}
+
+/* Grades page */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+#grades tr:nth-child(even){
+    background-color: #ffffff;
+}
+    
+#grades tr:nth-child(odd){
+    background-color: #dedede;
+}
+
+#grades tr:hover {
+    background-color: #f5f5f5
+}
+
+
+#grades th {
+  background-color:darkblue;
+  color: white;
+  padding: 10px;
+
+}
+    
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+
+/* Footer */
+
+footer {
+    margin: 10px;
+    clear: both;
+    background-color: darkblue !important;
+    color: white;
+    text-align: center;
+}
+
+footer ul{
+    padding:0px;
+    margin: 0px;
+    display:inline-flex;
+}
+
+footer ul li{
+    list-style: none;
+}
+
+footer ul li a{
+    padding: 10px;
+    text-decoration: none;
+    color: darkgray;
+    display:inline-block;
+}
+
+footer ul li a:hover{
+    font-weight: bolder;
+    color: white;
+}
+
+.vbar {
+  border-left: 3px solid white;
+  height: 10px;
+  left: 50%;
+  margin-left: 2px;
+  margin-right: 2px;
+  top: 0;
+}
 
 /*Responsiveness for tablets*/
 
@@ -378,43 +407,3 @@ section {
         float: left;
     }    
 }
-
-
-
-
-
-
-/* Grades page */
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-
-#grades tr:nth-child(even){
-    background-color: #ffffff;
-}
-    
-#grades tr:nth-child(odd){
-    background-color: #dedede;
-}
-
-#grades tr:hover {
-    background-color: #f5f5f5
-}
-
-
-#grades th {
-  background-color:darkblue;
-  color: white;
-  padding: 10px;
-
-}
-    
-th, td {
-  padding: 8px;
-  text-align: center;
-}
-
-
