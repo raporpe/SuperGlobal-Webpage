@@ -38,10 +38,10 @@ header {
 /* Header mobile version */
 
 #burger {
-    display: none;
     float: left;
     width: 70px;
     padding: 15px;
+    fill: darkblue;
 }
 
 .dropdown {
@@ -102,7 +102,6 @@ header {
 /* Header links */
 
 #links {
-    font-weight: bold;
     font-size: 1.1em;
     margin-left: auto;
 }
@@ -125,13 +124,9 @@ header {
 }
 
 #links ul li a:hover {
-    font-weight: bolder;
     color: white;
     background-color: darkblue;
 }
-
-
-
 
 
 /* Navigation bar */
@@ -199,22 +194,22 @@ nav ul li a.active {
    s - small screens (mobile phones) */
 
 
-[class^="l-"] {
+[class*="l-"] {
     float: left;
     padding: 10px;
 }
 
-[class^="m-"] {
+[class*="m-"] {
     float: left;
     padding: 10px;
 }
 
-[class^="s-"] {
+[class*="s-"] {
     float: left;
     padding: 10px;
 }
 
-.l-0 {display: none}
+.hide-l {display: none;}
 .l-1 {width: 8.33%;}
 .l-2 {width: 16.66%;}
 .l-3 {width: 25%;}
@@ -234,6 +229,7 @@ nav ul li a.active {
 
 h1 {
     color: darkblue;
+    font-size: 1.7em;
 }
 
 p {
@@ -317,7 +313,7 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-    font-weight: bolder;
+    font-weight: lighter;
     color: white;
 }
 
@@ -333,12 +329,9 @@ footer ul li a:hover {
 /*Responsiveness for tablets*/
 
 @media (max-width: 768px) {
-
-    #links {
-        display: none;
-    }
     
-    .m-0 {display: none}
+    .show-m{display: inline;}
+    .hide-m {display: none;}
     .m-1 {width: 8.33%;}
     .m-2 {width: 16.66%;}
     .m-3 {width: 25%;}
@@ -352,36 +345,14 @@ footer ul li a:hover {
     .m-11 {width: 91.66%;}
     .m-12 {width: 100%;}
 
-
-
-    .dis-m {
-        display: none;
-    }
-
-    .deco-icon {
-        display: none;
-    }
-
-    .app-m {
-        display: inline-block;
-    }
-
-
 }
 
 /*Responsiveness for mobile phones*/
 
 @media (max-width: 600px) {
-
-    #logo {
-        display: none;
-    }
-
-    #burger {
-        display: inline;
-    }
-
-    .s-0 {display: none}
+    
+    .show-s{display: inline;}
+    .hide-s{display: none;}
     .s-1 {width: 8.33%;}
     .s-2 {width: 16.66%;}
     .s-3 {width: 25%;}
@@ -395,21 +366,4 @@ footer ul li a:hover {
     .s-11 {width: 91.66%;}
     .s-12 {width: 100%;}
 
-    .deco-icon {
-        display: none;
-    }
-
-    .intro-paragraph {
-        display: none;
-    }
-
-
-}
-
-/* Tablets responsiveness */
-
-@media screen and (min-width:769px) {
-    video-float {
-        float: left;
-    }
 }
