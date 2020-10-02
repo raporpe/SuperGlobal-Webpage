@@ -3,13 +3,16 @@
     font-family: "Roboto", sans-serif;
 }
 
-.main-container{ border:solid 10px green; padding:10px;}
 
 
 .sticky {
     position:-webkit-sticky; 
     position:sticky; 
     top: 120px;
+}
+
+h1 {
+    color: darkblue;
 }
 
 
@@ -78,6 +81,7 @@ header {
 #title {
     font-size: 1.7em;
     font-weight: bold;
+    color: darkblue;
 }
 
 
