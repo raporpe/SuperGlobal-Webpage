@@ -39,8 +39,8 @@ header {
 
 #burger {
     float: left;
-    width: 70px;
-    padding: 15px;
+    width: 65px;
+    padding: 10px;
     fill: darkblue;
 }
 
@@ -78,14 +78,13 @@ header {
     font-weight: bold;
     font-style: italic;
     color: darkblue;
-    margin: 10px;
 }
 
 /* Header logo */
 
 #logo {
     float: left;
-    width: 60px;
+    width: 65px;
 }
 
 /* Header hidder for central text scroll */
@@ -126,13 +125,16 @@ header {
 #links ul li a:hover {
     color: white;
     background-color: darkblue;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
 }
 
 
 /* Navigation bar */
 
 nav ul {
-    margin: 0;
+    margin: 8px;
     padding: 0;
 }
 
@@ -144,11 +146,15 @@ nav ul li a {
     text-decoration: none;
     color: darkblue;
     display: block;
+    padding: 5px;
 }
 
 nav ul li a:hover {
     color: #fff;
     background-color: darkblue;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 
 }
 
@@ -259,6 +265,10 @@ section {
 .quote {
     font-family: "Lucida Console", Monaco, monospace;
     text-align: center;
+}
+
+.right-margin {
+    margin: 0px 10px 0px 0px;
 }
 
 /* Grades page */
@@ -394,3 +404,10 @@ footer ul li a:hover {
     width: 20px;
     display: block;
 }
+
+/* Fontawesome colors */
+
+[class*="fa-"] {
+    color: darkblue;
+}
+
