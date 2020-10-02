@@ -230,10 +230,21 @@ nav ul li a.active {
 h1 {
     color: darkblue;
     font-size: 1.7em;
+    margin: 10px
+}
+
+h2 {
+    margin: 10px
+}
+
+h3 {
+    margin: 10px
 }
 
 p {
     text-align: justify;
+    margin: 10px;
+    padding: 0px;
 }
 
 .video {
@@ -366,4 +377,13 @@ footer ul li a:hover {
     .s-11 {width: 91.66%;}
     .s-12 {width: 100%;}
 
+}
+
+/* Icons */
+
+.newspaper {
+    background: url('/assets/icons/news.png');
+    height: 20px;
+    width: 20px;
+    display: block;
 }
