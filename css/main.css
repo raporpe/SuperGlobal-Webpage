@@ -174,7 +174,7 @@ nav ul li a.active {
 }
 
 .avatar {
-    height: 100px;
+    height: 70px;
 
     display: flex;
     align-items: center;
@@ -188,8 +188,8 @@ nav ul li a.active {
 }
 
 .avatar p {
-    padding: 10px;
-    font-size: 25px;
+    padding: 5px;
+    font-size: 15px;
 }
 
 
@@ -331,7 +331,7 @@ table {
 }
 
 #grades tr:nth-child(odd) {
-    background-color: #dedede;
+    background-color: #efefff;
 }
 
 #grades tr:hover {
@@ -445,8 +445,16 @@ footer ul li a:hover {
     display: block;
 }
 
+.send {
+    background: url('/assets/icons/send.png');
+    height: 20px;
+    width: 20px;
+    display: block;
+}
+
 /* Fontawesome colors */
 
 [class*="fa-"] {
     color: darkblue;
 }
+
