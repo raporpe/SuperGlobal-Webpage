@@ -48,7 +48,6 @@ header {
     display: block;
 }
 
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -65,6 +64,10 @@ header {
     display: block;
 }
 
+.dropdown-content a:hover {
+    background-color: darkblue;
+    color: white;
+}
 
 
 
