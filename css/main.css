@@ -147,6 +147,7 @@ nav ul li a {
     color: darkblue;
     display: block;
     padding: 5px;
+    font-size: 1.2em;
 }
 
 nav ul li a:hover {
@@ -159,8 +160,12 @@ nav ul li a:hover {
 }
 
 nav ul li a.active {
-    font-size: 20px;
+    font-size: 1.4em;
     font-weight: bolder;
+}
+
+nav ul li a:hover i {
+    color:white;
 }
 
 
