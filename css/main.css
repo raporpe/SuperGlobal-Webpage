@@ -417,7 +417,8 @@ footer ul li a:hover {
     .m-10 {width: 83.33%;}
     .m-11 {width: 91.66%;}
     .m-12 {width: 100%;}
-
+    .avatar img{display: none;}
+    
 }
 
 /*Responsiveness for mobile phones*/
