@@ -1,9 +1,21 @@
+body, html {
+  margin: 5px;
+}
+
 *{
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 
+/* Cards */
+
+.card{
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
+    padding: 25px; 
+    overflow: auto;
+    background-color: white;
+}
 
 .sticky {
     position:-webkit-sticky; 
@@ -11,14 +23,8 @@
     top: 120px;
 }
 
-h1 {
-    color: darkblue;
-}
 
-
-body, html {
-  margin: 5px;
-}
+/* Header */
 
 header {
     height: 90px;
@@ -28,20 +34,14 @@ header {
     overflow: hidden !important;
 }
 
+/* Header mobile version */
 
-
-.card{
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
-    padding: 25px; 
-    overflow: auto;
-
+#burger {
+    display: none;
+    float: left;
+    width: 70px;
+    padding: 15px;
 }
-
-.video{
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
-    padding: 4px;
-}
-
 
 .dropdown{
   position: relative;
@@ -53,7 +53,7 @@ header {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
   z-index: 200;
 }
 
@@ -64,39 +64,76 @@ header {
   display: block;
 }
 
-#burger {
-    display: none;
-    float: left;
-    width: 70px;
-    padding: 15px;
-}
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
 
-
+/* Header title */
 
 #title {
-    font-size: 1.7em;
+    font-size: 2em;
     font-weight: bold;
+    font-style: italic;
     color: darkblue;
+    margin: 10px;
+}
+
+/* Header logo */
+
+#logo {
+    float: left;
+    width: 60px;
+}
+
+/* Header hidder for central text scroll */
+
+#hidder {
+    position: fixed;
+    top:0px;
+    background-color: white;
+    width: 100%;
+    height: 20px;
 }
 
 
-section p{
-    text-align: justify;
+/* Header links */
+
+#links {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-left: auto;
+}
+
+#links ul{
+    display: flex;
+}
+
+#links ul li{
+    list-style: none;
+}
+
+#links ul li a{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: darkblue;
+    display: block;
+}
+
+#links ul li a:hover{
+    font-weight: bolder;
+    color: white;
+    background-color: darkblue;
 }
 
 
-header ul li a{
-    font-family: "Arial Black", Gadget, sans-serif;
-}
 
-nav {
-    background-color: white; 
-}
+
+
+/* Navigation bar */
 
 nav ul {
     margin: 0;
@@ -124,37 +161,15 @@ nav ul li a.active{
     font-weight: bolder;
 }
 
-aside h2{
-    font-family: "Arial Black", Gadget, sans-serif;
-}
 
-section {
-    background-color: white;
-}
 
-section h1{
-    font-family: "Arial Black", Gadget, sans-serif;
-}
 
-section h2{
-    font-family: "Arial Black", Gadget, sans-serif;
-}
-
-section h3{
-        font-family: "Arial Black", Gadget, sans-serif;
-
-}
-
-.quote{
-        font-family: "Lucida Console", Monaco, monospace;
-    text-align: center;
-
-}
+/* Footer */
 
 footer {
     margin: 10px;
-    clear:both;
-    background-color:darkblue;
+    clear: both;
+    background-color: darkblue !important;
     color: white;
     text-align: center;
 }
@@ -181,39 +196,49 @@ footer ul li a:hover{
     color: white;
 }
 
-
-
-
-#links {
-    font-weight: bold;
-    margin-left: auto;
+.vbar {
+  border-left: 3px solid white;
+  height: 10px;
+  left: 50%;
+  margin-left: 2px;
+  margin-right: 2px;
+  top: 0;
 }
 
-#links ul{
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-}
 
-#links ul li{
-    list-style: none;
-}
-
-#links ul li a{
-    height: 50px;
-    line-height: 50px;
-    padding: 0 20px;
-    text-decoration: none;
+h1 {
     color: darkblue;
-    display: block;
 }
 
-#links ul li a:hover{
-    font-weight: bolder;
-    color: white;
-    background-color: darkblue;
+
+
+.video{
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
+    padding: 4px;
 }
 
+
+p{
+    text-align: justify;
+}
+
+section {
+    background-color: white;
+}
+
+
+
+.quote{
+    font-family: "Lucida Console", Monaco, monospace;
+    text-align: center;
+}
+
+/* Students page avatar */
+
+.name{
+    text-align: left;
+    font-weight: bold;
+}
 
 .avatar {
     height: 100px;
@@ -234,10 +259,11 @@ footer ul li a:hover{
 }
 
 
-#logo {
-    float: left;
-    width: 60px;
-}
+
+/* Page column dividers */
+/* l - large screens
+   m - medium screens (tablets) 
+   s - small screens (mobile phones) */
 
 
 [class^="l-"] {
@@ -248,13 +274,11 @@ footer ul li a:hover{
 [class^="m-"] {
     float: left;
     padding: 10px;
-
 }
 
 [class^="s-"] {
     float: left;
     padding: 10px;
-
 }
     .l-0 {display: none}
   .l-1 {width: 8.33%;}
@@ -270,16 +294,7 @@ footer ul li a:hover{
   .l-11 {width: 91.66%;}
   .l-12 {width: 100%;}
 
-/* Vertical Bar*/
-.vbar {
-  border-left: 3px solid white;
-  height: 10px;
-  left: 50%;
-  margin-left: 2px;
-  margin-right: 2px;
 
-  top: 0;
-}
 
 
 /*Responsiveness for tablets*/
@@ -356,6 +371,7 @@ footer ul li a:hover{
     
 
 }
+    /* Tablets responsiveness */
 
 @media screen and (min-width:769px) {  
     video-float{
@@ -363,17 +379,18 @@ footer ul li a:hover{
     }    
 }
 
-    /* TABLES */
 
-th, td {
-  padding: 8px;
-  text-align: center;
+
+
+
+
+/* Grades page */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.name{
-    text-align: left;
-    font-weight: bold;
-}
 
 #grades tr:nth-child(even){
     background-color: #ffffff;
@@ -395,16 +412,9 @@ th, td {
 
 }
     
-#hidder {
-    position: fixed;
-    top:0px;
-    background-color: white;
-    width: 100%;
-    height: 20px;
+th, td {
+  padding: 8px;
+  text-align: center;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
 
