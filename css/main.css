@@ -268,7 +268,7 @@ section {
 }
 
 .right-margin {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 10px 0px 0px;
 }
 
 /* Grades page */
@@ -396,4 +396,10 @@ footer ul li a:hover {
     height: 20px;
     width: 20px;
     display: block;
+}
+
+/* Fontawesome colors */
+
+[class*="fa-"] {
+    color: darkblue;
 }
