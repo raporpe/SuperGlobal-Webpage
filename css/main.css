@@ -1,8 +1,9 @@
-body, html {
-  margin: 5px;
+body,
+html {
+    margin: 5px;
 }
 
-*{
+* {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
@@ -10,16 +11,16 @@ body, html {
 
 /* Cards */
 
-.card{
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
-    padding: 25px; 
+.card {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    padding: 25px;
     overflow: auto;
     background-color: white;
 }
 
 .sticky {
-    position:-webkit-sticky; 
-    position:sticky; 
+    position: -webkit-sticky;
+    position: sticky;
     top: 120px;
 }
 
@@ -43,30 +44,30 @@ header {
     padding: 15px;
 }
 
-.dropdown{
-  position: relative;
-  display: inline-block;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.dropdown-content{
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
-  z-index: 200;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    z-index: 200;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 
@@ -91,7 +92,7 @@ header {
 
 #hidder {
     position: fixed;
-    top:0px;
+    top: 0px;
     background-color: white;
     width: 100%;
     height: 20px;
@@ -106,15 +107,15 @@ header {
     margin-left: auto;
 }
 
-#links ul{
+#links ul {
     display: flex;
 }
 
-#links ul li{
+#links ul li {
     list-style: none;
 }
 
-#links ul li a{
+#links ul li a {
     height: 50px;
     line-height: 50px;
     padding: 0 20px;
@@ -123,7 +124,7 @@ header {
     display: block;
 }
 
-#links ul li a:hover{
+#links ul li a:hover {
     font-weight: bolder;
     color: white;
     background-color: darkblue;
@@ -150,13 +151,13 @@ nav ul li a {
     display: block;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: #fff;
     background-color: darkblue;
-    
+
 }
 
-nav ul li a.active{
+nav ul li a.active {
     font-size: 20px;
     font-weight: bolder;
 }
@@ -166,7 +167,7 @@ nav ul li a.active{
 
 /* Students page avatar */
 
-.name{
+.name {
     text-align: left;
     font-weight: bold;
 }
@@ -184,6 +185,7 @@ nav ul li a.active{
     height: 100%;
     width: auto;
 }
+
 .avatar p {
     padding: 10px;
     font-size: 25px;
@@ -211,19 +213,20 @@ nav ul li a.active{
     float: left;
     padding: 10px;
 }
-    .l-0 {display: none}
-  .l-1 {width: 8.33%;}
-  .l-2 {width: 16.66%;}
-  .l-3 {width: 25%;}
-  .l-4 {width: 33.33%;}
-  .l-5 {width: 41.66%;}
-  .l-6 {width: 50%;}
-  .l-7 {width: 58.33%;}
-  .l-8 {width: 66.66%;}
-  .l-9 {width: 75%;}
-  .l-10 {width: 83.33%;}
-  .l-11 {width: 91.66%;}
-  .l-12 {width: 100%;}
+
+.l-0 {display: none}
+.l-1 {width: 8.33%;}
+.l-2 {width: 16.66%;}
+.l-3 {width: 25%;}
+.l-4 {width: 33.33%;}
+.l-5 {width: 41.66%;}
+.l-6 {width: 50%;}
+.l-7 {width: 58.33%;}
+.l-8 {width: 66.66%;}
+.l-9 {width: 75%;}
+.l-10 {width: 83.33%;}
+.l-11 {width: 91.66%;}
+.l-12 {width: 100%;}
 
 
 
@@ -233,12 +236,12 @@ h1 {
     color: darkblue;
 }
 
-p{
+p {
     text-align: justify;
 }
 
-.video{
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2),0 2px 20px 0 rgba(0,0,0,0.2);
+.video {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
     padding: 4px;
 }
 
@@ -246,7 +249,7 @@ section {
     background-color: white;
 }
 
-.quote{
+.quote {
     font-family: "Lucida Console", Monaco, monospace;
     text-align: center;
 }
@@ -254,16 +257,16 @@ section {
 /* Grades page */
 
 table {
-  border-collapse: collapse;
-  width: 100%;
+    border-collapse: collapse;
+    width: 100%;
 }
 
 
-#grades tr:nth-child(even){
+#grades tr:nth-child(even) {
     background-color: #ffffff;
 }
-    
-#grades tr:nth-child(odd){
+
+#grades tr:nth-child(odd) {
     background-color: #dedede;
 }
 
@@ -273,15 +276,16 @@ table {
 
 
 #grades th {
-  background-color:darkblue;
-  color: white;
-  padding: 10px;
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
 
 }
-    
-th, td {
-  padding: 8px;
-  text-align: center;
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
 }
 
 
@@ -295,115 +299,117 @@ footer {
     text-align: center;
 }
 
-footer ul{
-    padding:0px;
+footer ul {
+    padding: 0px;
     margin: 0px;
-    display:inline-flex;
+    display: inline-flex;
 }
 
-footer ul li{
+footer ul li {
     list-style: none;
 }
 
-footer ul li a{
+footer ul li a {
     padding: 10px;
     text-decoration: none;
     color: darkgray;
-    display:inline-block;
+    display: inline-block;
 }
 
-footer ul li a:hover{
+footer ul li a:hover {
     font-weight: bolder;
     color: white;
 }
 
 .vbar {
-  border-left: 3px solid white;
-  height: 10px;
-  left: 50%;
-  margin-left: 2px;
-  margin-right: 2px;
-  top: 0;
+    border-left: 3px solid white;
+    height: 10px;
+    left: 50%;
+    margin-left: 2px;
+    margin-right: 2px;
+    top: 0;
 }
 
 /*Responsiveness for tablets*/
 
 @media (max-width: 768px) {
-    
+
     #links {
         display: none;
     }
     
-    
     .m-0 {display: none}
-  .m-1 {width: 8.33%;}
-  .m-2 {width: 16.66%;}
-  .m-3 {width: 25%;}
-  .m-4 {width: 33.33%;}
-  .m-5 {width: 41.66%;}
-  .m-6 {width: 50%;}
-  .m-7 {width: 58.33%;}
-  .m-8 {width: 66.66%;}
-  .m-9 {width: 75%;}
-  .m-10 {width: 83.33%;}
-  .m-11 {width: 91.66%;}
-  .m-12 {width: 100%;}
-    
-    .dis-m{
+    .m-1 {width: 8.33%;}
+    .m-2 {width: 16.66%;}
+    .m-3 {width: 25%;}
+    .m-4 {width: 33.33%;}
+    .m-5 {width: 41.66%;}
+    .m-6 {width: 50%;}
+    .m-7 {width: 58.33%;}
+    .m-8 {width: 66.66%;}
+    .m-9 {width: 75%;}
+    .m-10 {width: 83.33%;}
+    .m-11 {width: 91.66%;}
+    .m-12 {width: 100%;}
+
+
+
+    .dis-m {
         display: none;
     }
+
     .deco-icon {
         display: none;
     }
-    
-    .app-m{
-        display:inline-block;
+
+    .app-m {
+        display: inline-block;
     }
-    
+
 
 }
 
 /*Responsiveness for mobile phones*/
 
 @media (max-width: 600px) {
-    
+
     #logo {
         display: none;
     }
-    
+
     #burger {
         display: inline;
     }
+
     .s-0 {display: none}
-  .s-1 {width: 8.33%;}
-  .s-2 {width: 16.66%;}
-  .s-3 {width: 25%;}
-  .s-4 {width: 33.33%;}
-  .s-5 {width: 41.66%;}
-  .s-6 {width: 50%;}
-  .s-7 {width: 58.33%;}
-  .s-8 {width: 66.66%;}
-  .s-9 {width: 75%;}
-  .s-10 {width: 83.33%;}
-  .s-11 {width: 91.66%;}
-  .s-12 {width: 100%;}
-    
-    
+    .s-1 {width: 8.33%;}
+    .s-2 {width: 16.66%;}
+    .s-3 {width: 25%;}
+    .s-4 {width: 33.33%;}
+    .s-5 {width: 41.66%;}
+    .s-6 {width: 50%;}
+    .s-7 {width: 58.33%;}
+    .s-8 {width: 66.66%;}
+    .s-9 {width: 75%;}
+    .s-10 {width: 83.33%;}
+    .s-11 {width: 91.66%;}
+    .s-12 {width: 100%;}
+
     .deco-icon {
         display: none;
     }
-    
 
-    .intro-paragraph{
+    .intro-paragraph {
         display: none;
     }
-    
+
 
 }
-    /* Tablets responsiveness */
 
-@media screen and (min-width:769px) {  
-    video-float{
+/* Tablets responsiveness */
+
+@media screen and (min-width:769px) {
+    video-float {
         float: left;
-    }    
+    }
 }
