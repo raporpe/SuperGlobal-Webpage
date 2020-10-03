@@ -417,7 +417,6 @@ footer ul li a:hover {
     .m-10 {width: 83.33%;}
     .m-11 {width: 91.66%;}
     .m-12 {width: 100%;}
-    .avatar img{display: none;}
     
 }
 
@@ -442,6 +441,19 @@ footer ul li a:hover {
 
 }
 
+@media (max-width: 1050px) {
+    .msg{
+        display: none;
+    }
+    
+    .mail{
+        font-size: 11px;
+    }
+    
+    .name{
+        font-size: 12px;
+    }
+}
 /* Icons */
 
 .newspaper {
