@@ -54,6 +54,7 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
+    top: 80px;
     background-color: white;
     min-width: 160px;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
@@ -71,16 +72,23 @@ header {
     background-color: darkblue;
     color: white;
 }
+.dropdown-content a:hover i {
+    color: white;
+}
 
 
 
 /* Header title */
 
 #title {
-    font-size: 2em;
+    font-size: clamp(1.4em, 6vw, 1.9em);
     font-weight: bold;
     font-style: italic;
     color: darkblue;
+}
+
+#title p{
+    margin: 0;
 }
 
 /* Header logo */
@@ -104,7 +112,7 @@ header {
 /* Header links */
 
 #links {
-    font-size: 1.1em;
+    font-size: clamp(0.6em, 1.6vw, 1.1em);
     margin-left: auto;
 }
 
@@ -137,7 +145,6 @@ header {
 /* Navigation bar */
 
 nav ul {
-    margin: 8px;
     padding: 0;
 }
 
@@ -150,7 +157,7 @@ nav ul li a {
     color: darkblue;
     display: block;
     padding: 5px;
-    font-size: 1.2em;
+    font-size: clamp(1em, 2vw, 1.2em);
 }
 
 nav ul li a:hover {
@@ -163,7 +170,7 @@ nav ul li a:hover {
 }
 
 nav ul li a.active {
-    font-size: 1.4em;
+    font-size: clamp(1.2em, 2.5vw, 1.3em);
     font-weight: bolder;
 }
 
