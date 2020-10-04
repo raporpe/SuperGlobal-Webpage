@@ -468,21 +468,7 @@ footer ul li a:hover {
         font-size: 12px;
     }
 }
-/* Icons */
 
-.newspaper {
-    background: url('/assets/icons/news.png');
-    height: 20px;
-    width: 20px;
-    display: block;
-}
-
-.send {
-    background: url('/assets/icons/send.png');
-    height: 20px;
-    width: 20px;
-    display: block;
-}
 
 /* Fontawesome colors */
 
