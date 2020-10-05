@@ -458,9 +458,16 @@ footer ul li a:hover {
 
 }
 
+ /*To assure students send button is visible and readable */
 @media (max-width: 1050px) {
+    
+    
     .msg{
-        display: none;
+        font-size: 0;
+    }
+    
+    .msg i{
+        font-size: initial;
     }
     
     .mail{
