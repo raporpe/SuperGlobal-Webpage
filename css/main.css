@@ -395,16 +395,17 @@ footer ul li a {
     text-decoration: none;
     color: darkgray;
     display: inline-block;
+    width: 150px;
 }
 
 footer ul li a:hover {
-    font-weight: lighter;
+    font-weight: bolder;
     color: white;
 }
 
 .vbar {
     border-left: 3px solid white;
-    height: 10px;
+    height: 45px;
     left: 50%;
     margin-left: 2px;
     margin-right: 2px;
