@@ -27,3 +27,8 @@ function changeActive(obj){
     otherActive[0].className = "";
     obj.className = "active";
 }
+
+window.onload = function() {
+    
+    changeContent("/main.html");
+}
