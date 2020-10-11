@@ -123,6 +123,7 @@ header {
 
 #links ul li {
     list-style: none;
+    margin-left: 5px;
 }
 
 #links ul li a {
@@ -132,14 +133,17 @@ header {
     text-decoration: none;
     color: darkblue;
     display: block;
+    transition: 0.3s;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+
 }
 
 #links ul li a:hover {
     color: white;
     background-color: darkblue;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
+
 }
 
 
@@ -158,15 +162,18 @@ nav ul li a {
     color: darkblue;
     display: block;
     padding: 5px;
+    margin-top: 5px;
     font-size: clamp(1em, 2vw, 1.2em);
+    transition: 0.3s;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
 }
 
 nav ul li a:hover {
     color: #fff;
     background-color: darkblue;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+
 
 }
 
@@ -212,20 +219,22 @@ nav ul li a:hover i {
 /* Button */
 
 .button {
-    padding: 12px;
+    padding: 10px;
+    border: 2px solid darkblue;
     background-color: darkblue;
+    
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 7px;
+    
     color: white;
-    border: 0px;
     display: inline;
     font-size: 1.1em;
+    transition: 0.3s;
+
 }
 
 .button:hover{
-    padding: 10px;
-    border: 2px solid darkblue;
     background: white;
     color: darkblue;
     margin: 0px;
@@ -405,6 +414,8 @@ footer ul li a {
     color: darkgray;
     display: inline-block;
     width: 150px;
+    transition: 0.3s;
+
 }
 
 footer ul li a:hover {
