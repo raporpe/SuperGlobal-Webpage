@@ -1,6 +1,7 @@
 body,
 html {
     margin: 5px;
+    height: 100%
 }
 
 * {
@@ -275,7 +276,15 @@ nav ul li a:hover i {
 .l-11 {width: 91.66%;}
 .l-12 {width: 100%;}
 
-
+/* iFrame */
+iframe {
+    border: 0;
+    overflow: visible;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 
 /* General text */
 
