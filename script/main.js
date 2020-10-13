@@ -29,6 +29,11 @@ function changeActive(obj){
 }
 
 window.onload = function() {
-    
     changeContent("/main.html");
 }
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f6fa;
+    
+}
+
+/* General box */
+
+.box {
+    background-color: white;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+    overflow: hidden;
+    width: 300px;
+    margin: auto;
+}
+
+.box-content {
+    padding:50px 20px;
+    
+}
+
+
+
+/* Login and register button */
+
+.button {
+    padding: 10px 50px;
+    border: 2px solid darkblue;
+    background-color: darkblue;
+    
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+    
+    color: white;
+    display: inline;
+    font-size: 1.1em;
+    transition: 0.3s;
+
+}
+
+.button:hover{
+    background: white;
+    color: darkblue;
+}
+
+.button i {
+    color: white;
+}
+
+.button:hover i{
+    color: darkblue;
+}
+
+label {
+    font-size: 20px;
+}
+
+input {
+
+}
+
+a {
+    text-decoration: none;
+}
