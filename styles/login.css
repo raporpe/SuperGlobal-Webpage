@@ -3,28 +3,150 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: #f5f6fa;
-    
+body,
+html {
+    margin: 0;
+    height: 100%;
 }
 
-/* General box */
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-.box {
+/* Box with animation only for desktop */
+
+.box-desktop {
     background-color: white;
     -webkit-border-radius: 17px;
     -moz-border-radius: 17px;
     border-radius: 17px;
     overflow: hidden;
-    width: 300px;
-    margin: auto;
+
+    height: 450px;
+    width: 750px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+
 }
 
-.box-content {
-    padding:50px 20px;
-    
+
+#slider {
+    background-color: darkblue;
+    color: white;
+    width: 40%;
+    height: 100%;
+    z-index: 999;
+    position: absolute;
+
+    /* Modified by js */
+    left: 0px;
+    transition: 0.8s;
+
 }
 
+#slider-register {
+    position: absolute;
+    transition: 0.8s;
+    padding: 20px;
+
+
+    /* Initially not shown */
+    opacity: 0;
+
+    /* Initially hidden on the left */
+    left: -200px;
+}
+
+#slider-login {
+    position: absolute;
+    transition: 0.8s;
+    padding: 20px;
+
+    /* Initially shown */
+    opacity: 1;
+
+    /* Will be hidden on the right */
+    right: 160px;
+}
+
+.box-content-left {
+    padding: 20px;
+    position: absolute;
+    width: 40%;
+    transition: 0.8s;
+    opacity: 0;
+    left: 200px;
+    z-index: 2;
+    background-color: white;
+}
+
+.box-content-right {
+    padding: 20px;
+    position: absolute;
+    width: 60%;
+    left: 350px;
+    transition: 0.8s;
+    z-index: 1;
+    background-color: white;
+
+
+}
+
+/* Box for mobile phones and tablets */
+
+.box-small {
+    display: none;
+    background-color: white;
+    height: 90%;
+    width: 90%;
+    overflow: scroll;
+
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+#login-content-small {
+    padding: 40px;
+}
+
+#register-content-small {
+    padding: 40px;
+}
+
+.box-small > p {
+    text-align: center;
+}
+
+.box-small-header {
+    width: 100%;
+    height: 75px;
+    background-color: darkblue;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+}
+
+/* Background image */
+
+.bg-img {
+    background-image: url("/images/uc3m_campus.jpg");
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -1;
+}
 
 
 /* Login and register button */
@@ -33,11 +155,11 @@ body {
     padding: 10px 50px;
     border: 2px solid darkblue;
     background-color: darkblue;
-    
+
     -webkit-border-radius: 17px;
     -moz-border-radius: 17px;
     border-radius: 17px;
-    
+
     color: white;
     display: inline;
     font-size: 1.1em;
@@ -45,7 +167,7 @@ body {
 
 }
 
-.button:hover{
+.button:hover {
     background: white;
     color: darkblue;
 }
@@ -54,7 +176,7 @@ body {
     color: white;
 }
 
-.button:hover i{
+.button:hover i {
     color: darkblue;
 }
 
@@ -62,10 +184,23 @@ label {
     font-size: 20px;
 }
 
-input {
-
-}
+input {}
 
 a {
     text-decoration: none;
+}
+
+
+/*Responsiveness for small screens (mobile phones included) */
+
+@media (max-width: 768px) {
+
+    .box-desktop {
+        display: none;
+    }
+
+    .box-small {
+        display: inline;
+    }
+
 }
