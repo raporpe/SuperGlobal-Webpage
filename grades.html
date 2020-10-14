@@ -1,8 +1,3 @@
-<head>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="script/jquery.table2excel.js"></script>
-</head>
-
 <section class="card">
     <h1>GRADES</h1>
     <h3>MAG 2.55 Computer Architecture</h3>
@@ -88,25 +83,4 @@
     </table>
     <button class="exportToExcel">Export</button>
     
-    <script>
-        $(function() {
-				$(".exportToExcel").click(function(e){
-					var table = $(this).prev('.table2excel');
-					if(table && table.length){
-						var preserveColors = (table.hasClass('table2excel_with_colors') ? true : false);
-						$(table).table2excel({
-							exclude: ".noExl",
-							name: "Grades",
-							filename: "grades" + new Date().toISOString().replace(/[\-\:\.]/g, "") + ".xls",
-							fileext: ".xls",
-							exclude_img: true,
-							exclude_links: true,
-							exclude_inputs: true,
-							preserveColors: preserveColors
-						});
-					}
-				});
-				
-			});
-    </script>
 </section>
