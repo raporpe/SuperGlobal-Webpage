@@ -10,28 +10,29 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" type="text/css" href="styles/fontawesome.css">
     <script src="script/login.js"></script>
+    <script src="script/md5.js"></script>
+    <script src="script/cookiemanager.js"></script>
+
 
 </head>
 
 <body>
 
-    <div class="box center">
+    <!-- For desktop only -->
+
+    <div class="box-desktop center">
         <div id="slider">
             <div id="slider-login">
-                <p>hola ka ase</p>
-                <button id="switch-register">Register</button>
-
-
+                <p>Welcome to superglobal</p>
+                <button id="switch-register-desktop">Sign up</button>
             </div>
 
             <div id="slider-register">
-                <p>Register</p>
-                <button id="switch-login">Login</button>
-
+                <p>Login instead</p>
+                <button id="switch-login-desktop">Login</button>
             </div>
 
         </div>
-
         <div class="box-content-left">
             <h2>Account Information</h2>
 
@@ -89,31 +90,124 @@
                 <button type="button" id="save">Save</button>
                 <button type="button" id="delete">Delete</button>
             </form>
-        </div>
 
+
+        </div>
         <div class="box-content-right">
+
             <label for="username">Username</label><br>
             <input type="text" id="username" name="username" required><br>
+
             <label for="password">Password</label><br>
             <input type="password" id="password" name="password" required><br>
+
             <a class="button" id="login">Login</a>
             <a class="button" href="/registration.html" id="register">Register</a>
+
+
         </div>
 
 
 
+    </div>
+
+    <!-- For small screens only -->
+
+    <div class="box-small center">
+        <div class="box-small-header"></div>
+
+        <div id="login-content-small">
+            <p>Welcome back to SuperGobal</p>
 
 
+            <label for="username">Username</label><br>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" required><br>
+
+            <a class="button" id="login">Login</a>
+            <a class="button" id="switch-register-small">Register</a>
+
+
+        </div>
+
+
+        <div id="register-content-small">
+            <h2>Account Information</h2>
+            <button id="switch-login-small">Login</button>
+
+            <form>
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" required><br>
+                <label for="NIA">NIA</label><br>
+                <input type="number" id="nia" name="nia" maxlength="9" value="100" required><br>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" maxlength="8" pattern="([0-9]|[a-z])+$" required><br>
+
+                <!--- using javascript, we hide some options depending of user answers-->
+                <h2>Personal Information</h2>
+                <label for="Name">Name</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="Surname">Surname</label><br>
+                <input type="text" id="surname" name="surname" required><br>
+                <label for="Email">Email</label><br>
+                <input type="text" id="email" name="email" required><br>
+                <label for="Date of Birth">Date of Birth</label><br>
+                <input type="text" id="date-birth" name="date-birth" required><br>
+                <label for="ID Document">ID Document</label><br>
+                <input type="text" id="id-doc" name="id-doc" required><br>
+                <label for="Role">Role</label><br>
+                <input type="radio" id="admin" name="role" value="Administrator">
+                <label for="admin">Administrator</label><br>
+                <input type="radio" id="teacher" name="role" value="teacher">
+                <label for="teacher">Teacher</label><br>
+                <input type="radio" id="student" name="role" value="student">
+                <label for="student">Student</label><br>
+
+                <!--- ONLY IF selectes student-->
+
+                <label for="Role">Bachelor's Degree</label><br>
+                <input type="radio" id="comp-eng" name="degree" value="Computer Science Engineering">
+                <label for="comp-eng">Computer Science Engineering</label><br>
+                <input type="radio" id="bio-eng" name="degree" value="Biomedical Engineering">
+                <label for="bio-eng">Biomedical Engineering</label><br>
+                <input type="radio" id="telco-eng" name="degree" value="Telematics Engineering">
+                <label for="telco-eng">Telematics Engineering</label><br>
+
+                <label for="University">University</label><br>
+                <input type="text" id="university" name="university" value="UC3M EPS" readonly required><br>
+                <label for="Language">Language</label><br>
+                <input type="checkbox" id="english" name="language" value="english">
+                <label for="english">English</label><br>
+                <input type="checkbox" id="italian" name="language" value="italian">
+                <label for="italian">Italian</label><br>
+                <input type="checkbox" id="spanish" name="language" value="spanish">
+                <label for="spanish">Spanish</label><br><br>
+
+                <input type="checkbox" id="spanish" name="language" value="terms" required>
+                <label for="terms">I have read and accept the Terms of Use.</label><br>
+
+                <button type="button" id="save">Save</button>
+                <button type="button" id="delete">Delete</button>
+            </form>
+
+        </div>
 
 
     </div>
 
+
+
+
+    <!-- Background image -->
     <div class="bg-img">
-
     </div>
 
 
 
 
 
-</body></html>
+</body>
+
+</html>
