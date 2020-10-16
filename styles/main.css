@@ -31,6 +31,7 @@ html {
 
 /* Header */
 
+
 header {
     height: 90px;
     background-color: white;
@@ -74,6 +75,36 @@ header {
     color: white;
 }
 .dropdown-content a:hover i {
+    color: white;
+}
+
+.dropdown:hover .dropdown-content-left {
+    display: block;
+}
+
+.dropdown-content-left {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 22px;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    z-index: 200;
+}
+
+.dropdown-content-left a {
+    color: darkblue;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content-left a:hover {
+    background-color: darkblue;
+    color: white;
+}
+.dropdown-content-left a:hover i {
     color: white;
 }
 
