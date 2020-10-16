@@ -85,10 +85,10 @@ header {
 .dropdown-content-left {
     display: none;
     position: absolute;
-    top: 80px;
+    top: 78px;
     right: 22px;
     background-color: white;
-    min-width: 160px;
+    min-width: 120px;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
     z-index: 200;
 }
@@ -98,6 +98,7 @@ header {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-size: 16px;
 }
 
 .dropdown-content-left a:hover {
@@ -168,14 +169,13 @@ header {
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     border-radius: 12px;
-
 }
 
 #links ul li a:hover {
     color: white;
     background-color: darkblue;
-
 }
+
 
 
 /* Navigation bar */
