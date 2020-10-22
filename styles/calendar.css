@@ -220,9 +220,7 @@ button.btn-action.active {
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	background: #ff5f56;
-	-webkit-box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
-	box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
+
 }
 .console-log.--md {
 	width: 65%;
