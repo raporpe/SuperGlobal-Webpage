@@ -16,6 +16,8 @@
     <script src="script/pop-up.js"></script>
     <script src="script/jquery.table2excel.js"></script>
     <script src="script/excel_export.js"></script>
+    
+    
 </head>
 
 <body>
@@ -32,12 +34,12 @@
             <div class="dropdown">
                 <img id="burger" src="images/burguer.png" alt="burguer" class="hide-l show-s">
                 <div class="dropdown-content">
-                    <a href="index.html"><i class="fab fa-leanpub right-margin fa-fw"></i>Course</a>
-                    <a href="students.html"><i class="fas fa-graduation-cap right-margin fa-fw"></i>Students</a>
-                    <a href="forum.html"><i class="fas fa-comments right-margin fa-fw"></i>Forum</a>
-                    <a href="grades.html"><i class="fas fa-sticky-note right-margin fa-fw"></i>Grades</a>
+                    <a onclick="changeWebContentTo('/main.html'); changeActive(this);"><i class="fab fa-leanpub right-margin fa-fw"></i>Course</a>
+                    <a onclick="changeWebContentTo('/students.html'); changeActive(this);"><i class="fas fa-graduation-cap right-margin fa-fw"></i>Students</a>
+                    <a onclick="changeWebContentTo('/forum.html'); changeActive(this);"><i class="fas fa-comments right-margin fa-fw"></i>Forum</a>
+                    <a onclick="changeWebContentTo('/grades.html'); changeActive(this);"><i class="fas fa-sticky-note right-margin fa-fw"></i>Grades</a>
                     <a><i class="fas fa-newspaper right-margin fa-fw"></i>Last News</a>
-                    <a href="calendar.html"><i class="fas fa-calendar right-margin fa-fw"></i>New Events</a>
+                    <a onclick="changeWebContentTo('/calendar.html'); changeActive(this);"><i class="fas fa-calendar right-margin fa-fw"></i>New Events</a>
                 </div> 
             </div>
 

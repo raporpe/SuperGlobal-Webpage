@@ -419,6 +419,7 @@ td {
 }
 
 
+
 /* Footer */
 
 footer {
@@ -535,6 +536,27 @@ footer ul li a:hover {
 
 [class*="fa-"] {
     color: darkblue;
+}
+
+#popup-button{
+     padding: 2px;
+    border: 3px solid darkblue;
+    background-color: darkblue;
+    
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    
+    color: white;
+    display: inline;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+#popup-button:hover{
+    background: white;
+    color: darkblue;
+    margin: 0px;
 }
 
 .popup-wrapper {
