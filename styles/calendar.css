@@ -586,8 +586,6 @@ code span.violet {
 		height: 6px;
 		top: 6px;
 		left: 8px;
-		-webkit-box-shadow: 10px 0 0 #ffbd2e, 20px 0 0 #27c93f;
-		box-shadow: 10px 0 0 #ffbd2e, 20px 0 0 #27c93f
 	}
 	#themes .theme-content {
 		padding-top: 10px;
