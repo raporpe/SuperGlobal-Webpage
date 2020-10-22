@@ -1,14 +1,10 @@
 function getContent(url, callback) {
 
-
     // Feature detection
-    if (!window.XMLHttpRequest) return;
+    if (!window.XMLHttpRequest) console.log("The browser does not this functionality");
 
     // Create new request
     var xhttp = new XMLHttpRequest();
-
-    xhttp.open("GET", url, true);
-    xhttp.send();
 
     xhttp.onreadystatechange = function () {
 
@@ -17,6 +13,11 @@ function getContent(url, callback) {
             callback(xhttp.responseText);
         }
     };
+
+    xhttp.open("GET", url, true);
+    xhttp.send();
+
+
 };
 
 function changeActive(obj) {
@@ -28,13 +29,28 @@ function changeActive(obj) {
 
 function changeWebContentTo(changeTo) {
     var webContent = document.getElementById("web-content");
-    getContent(changeTo, function(html) {
-            webContent.innerHTML = html;
+    getContent(changeTo, function (html) {
+        webContent.innerHTML = html;
     });
 }
 
 window.onload = function () {
 
     changeWebContentTo("/main.html");
+
+    //checkLoggedIn();
+
+    //Check log in every 5 seconds
+    setInterval(function () {
+        //checkLoggedIn();
+    }, 5000);
+
+}
+
+function checkLoggedIn() {
+    if (getCookie("loginHash") == undefined) {
+        // Redirect to login
+        window.location.href = "/index.html";
+    }
 
 }

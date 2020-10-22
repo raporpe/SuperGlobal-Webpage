@@ -6,14 +6,16 @@ function login() {
 
     var hash = MD5(username + password);
     console.log("Hash to find: " + hash);
-    var cookies = document.cookie.split(";");
+    var cookies = getAllCookies();
     console.log("Cookies installed: " + cookies);
     var found = false;
 
     for (i in cookies) {
-        if (cookies[i] == hash) {
+        cookie = cookies[i];
+        if (cookie.name == "loginHash" && cookie.value == hash) {
             found = true;
-            console.log("Found cookie:" + cookies[i]);
+            setCookie("authenticated", "true");
+            console.log("Found cookie:" + cookie.value);
         }
     }
 
@@ -29,8 +31,8 @@ function login() {
 
 function register() {
     //Validate all the fields
-    
-    //Serialize information into a cookie
+
+    //Save information in a cookie
 }
 
 function slide_register() {
@@ -39,22 +41,22 @@ function slide_register() {
     console.log("slide to the register");
 
     // Hide the right part
-    document.getElementsByClassName("box-content-right")[0].style.opacity = "0";
+    document.getElementById("box-content-login").style.opacity = "0";
 
     // Movement effect
-    document.getElementsByClassName("box-content-right")[0].style.left = "250px";
-    document.getElementsByClassName("box-content-left")[0].style.left = "0px";
+    document.getElementById("box-content-login").style.left = "250px";
+    document.getElementById("box-content-register").style.left = "0px";
 
     //Begin moving to the right
     document.getElementById("slider").style.width = "100%";
 
 
     // Make the registration scrollable
-    document.getElementsByClassName("box-desktop")[0].style.overflow = "scroll";
+    document.getElementsByClassName("box")[0].style.overflow = "scroll";
 
     // Change percentages to accomodate to more space
-    document.getElementsByClassName("box-content-left")[0].style.width = "60%";
-    document.getElementsByClassName("box-content-right")[0].style.width = "40%";
+    document.getElementById("box-content-register").style.width = "60%";
+    document.getElementById("box-content-login").style.width = "40%";
 
 
     // Swap contents inside slider with visual effects
@@ -68,7 +70,11 @@ function slide_register() {
         document.getElementById("slider").style.left = "450px";
 
         // Delayed opacity change for better visuals
-        document.getElementsByClassName("box-content-left")[0].style.opacity = "1";
+        document.getElementById("box-content-register").style.opacity = "1";
+
+        // Restore width
+        document.getElementById("slider").style.width = "40%";
+
 
     }, 150); // Delay in ms
 
@@ -80,22 +86,22 @@ function slide_login() {
     console.log("slide to the login");
 
     // Hide the left part
-    document.getElementsByClassName("box-content-left")[0].style.opacity = "0";
+    document.getElementById("box-content-register").style.opacity = "0";
 
 
     // Movement effect
-    document.getElementsByClassName("box-content-right")[0].style.left = "350px";
-    document.getElementsByClassName("box-content-left")[0].style.left = "2000px";
+    document.getElementById("box-content-login").style.left = "300px";
+    document.getElementById("box-content-register").style.left = "2000px";
 
     //Begin moving to the left
     document.getElementById("slider").style.width = "100%";
 
     // Make the login not scrollable
-    document.getElementsByClassName("box-desktop")[0].style.overflow = "hidden";
+    document.getElementsByClassName("box")[0].style.overflow = "hidden";
 
     // Change percentages to accomodate to the initial space
-    document.getElementsByClassName("box-content-left")[0].style.width = "40%";
-    document.getElementsByClassName("box-content-right")[0].style.width = "60%";
+    document.getElementById("box-content-register").style.width = "40%";
+    document.getElementById("box-content-login").style.width = "60%";
 
 
     // Swap contents inside slider with visual effects
@@ -109,7 +115,7 @@ function slide_login() {
         document.getElementById("slider").style.left = "0px";
 
         // Delayed opacity change for better visuals
-        document.getElementsByClassName("box-content-right")[0].style.opacity = "1";
+        document.getElementById("box-content-login").style.opacity = "1";
 
         //Restore width
         document.getElementById("slider").style.width = "40%";
@@ -121,14 +127,22 @@ function slide_login() {
 
 
 function small_register() {
-    document.getElementById("login-content-small").style.display = "none";
-    document.getElementById("register-content-small").style.display = "inherit";
+    //    document.getElementById("box-content-login").style.display = "none";
+    //    document.getElementById("box-content-register").style.display = "inherit";
+    document.getElementById("box-content-register").style.opacity = "1";
+    document.getElementById("box-content-login").style.opacity = "0";
+    document.getElementById("box-content-register").style.zIndex = "1";
+    document.getElementById("box-content-login").style.zIndex = "-1";
 
 }
-function small_login() {
-    document.getElementById("login-content-small").style.display = "inherit";
-    document.getElementById("register-content-small").style.display = "none";
 
+function small_login() {
+    //    document.getElementById("box-content-login").style.display = "inherit";
+    //    document.getElementById("box-content-register").style.display = "none";
+    document.getElementById("box-content-register").style.opacity = "0";
+    document.getElementById("box-content-login").style.opacity = "1";
+    document.getElementById("box-content-register").style.zIndex = "-1";
+    document.getElementById("box-content-login").style.zIndex = "1";
 }
 
 
@@ -139,25 +153,25 @@ window.onload = function () {
 
     document.getElementById("switch-register-small").addEventListener("click", small_register);
     document.getElementById("switch-login-small").addEventListener("click", small_login);
-    
+
     small_login();
-    
-    cookies = getAllCookies();
-    console.log(cookies);
-    cookies[0].name = "asdfasfasdfsdfsafsd";
-    cookie1 = {
-        name: "hoaluuuuuu",
-        value: "diego"
-    };
-    cookie2 = {
-        name: "hoalasasasa",
-        value: "diego"
-    };
-    cook = [cookie1, cookie2];
-    addCookies(cook);
-    
+
+
 }
 
 
-
-
+//Testing
+(function (h, o, t, j, a, r) {
+    h.hj = h.hj || function () {
+        (h.hj.q = h.hj.q || []).push(arguments)
+    };
+    h._hjSettings = {
+        hjid: 2054808,
+        hjsv: 6
+    };
+    a = o.getElementsByTagName('head')[0];
+    r = o.createElement('script');
+    r.async = 1;
+    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+    a.appendChild(r);
+})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');

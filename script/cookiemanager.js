@@ -9,6 +9,19 @@ function addCookies(cookies) {
     }
 }
 
+function setCookie(cookieName, cookieValue) {
+    addCookie({name: cookieName, value: cookieValue});
+}
+
+function getCookie(cookieName) {
+    cookies = getAllCookies();
+    for (i in cookies){
+        if (cookies[i].name == cookieName){
+            return cookies[i];
+        }
+    }
+}
+
 function getAllCookies() {
     rawCookies = document.cookie;
     arrayRawCookies = rawCookies.split("; ");

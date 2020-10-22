@@ -16,9 +16,9 @@ html {
     transform: translate(-50%, -50%);
 }
 
-/* Box with animation only for desktop */
+/* Central box with content */
 
-.box-desktop {
+.box {
     background-color: white;
     -webkit-border-radius: 17px;
     -moz-border-radius: 17px;
@@ -54,6 +54,8 @@ html {
 
     /* Initially not shown */
     opacity: 0;
+    z-index: -1;
+
 
     /* Initially hidden on the left */
     left: -200px;
@@ -66,63 +68,36 @@ html {
 
     /* Initially shown */
     opacity: 1;
+    z-index: 1;
 
     /* Will be hidden on the right */
     right: 160px;
 }
 
-.box-content-left {
-    padding: 20px;
+#box-content-register {
+    padding: 40px;
     position: absolute;
     width: 40%;
     transition: 0.8s;
-    opacity: 0;
     left: 200px;
     z-index: 2;
     background-color: white;
+    opacity: 0;
 }
 
-.box-content-right {
-    padding: 20px;
+#box-content-login {
+    padding: 40px;
     position: absolute;
     width: 60%;
-    left: 350px;
+    left: 300px;
     transition: 0.8s;
     z-index: 1;
     background-color: white;
-
-
+    
 }
 
-/* Box for mobile phones and tablets */
-
-.box-small {
+#box-header {
     display: none;
-    background-color: white;
-    height: 90%;
-    width: 90%;
-    overflow: scroll;
-
-    -webkit-border-radius: 17px;
-    -moz-border-radius: 17px;
-    border-radius: 17px;
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
-
-}
-
-#login-content-small {
-    padding: 40px;
-}
-
-#register-content-small {
-    padding: 40px;
-}
-
-.box-small > p {
-    text-align: center;
-}
-
-.box-small-header {
     width: 100%;
     height: 75px;
     background-color: darkblue;
@@ -131,6 +106,12 @@ html {
     left: 0;
 
 }
+
+/* Button switch from login to register and vicerversa*/
+
+#switch-login {}
+
+#switch-register {}
 
 /* Background image */
 
@@ -190,17 +171,151 @@ a {
     text-decoration: none;
 }
 
+#switch-register-small {
+    display: none;
+}
+
+#switch-login-small {
+    display: none;
+}
 
 /*Responsiveness for small screens (mobile phones included) */
 
 @media (max-width: 768px) {
 
-    .box-desktop {
-        display: none;
+
+    /* Box for mobile phones and tablets */
+
+    .box {
+        background-color: white;
+        height: 90%;
+        width: 90%;
+        overflow: scroll;
+
+        -webkit-border-radius: 17px;
+        -moz-border-radius: 17px;
+        border-radius: 17px;
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+
     }
 
-    .box-small {
+
+
+
+    #box-content-register {
+        position: absolute;
+        left: 0;
+        padding: 40px;
+        width: 100%;
+    }
+
+    #box-content-login {
+        position: absolute;
+        left: 0;
+        padding: 40px;
+        width: 100%;
+    }
+
+    .box-small > p {
+        text-align: center;
+    }
+
+    #box-header {
         display: inline;
     }
 
+    #slider {
+        display: none;
+    }
+
+    #switch-register-small {
+        display: inline;
+    }
+
+    #switch-login-small {
+        display: inline;
+    }
+
+}
+
+
+/* Forms */
+
+.form-input {
+    margin-bottom: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+
+}
+
+.form-input > label {
+    font-size: 18px;
+    margin-bottom: 10px;
+
+}
+
+.form-input > input {
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    border: 1px solid gray;
+    padding: 12px 19px;
+    font-size: 17px;
+    width: 100%;
+    padding-top: 10px;
+
+}
+
+.form-input > input:focus {
+    border: 1px solid darkblue;
+    outline: none !important;
+    transition: 0.5s;
+
+}
+
+
+.required::after {
+    content: '*';
+    margin-left: 2px;
+    color: red;
+}
+
+.form-input > input:focus {
+    border: 1px solid darkblue;
+    outline: none !important;
+    transition: 0.5s;
+
+}
+
+.wrong > label {
+    color: red;
+
+}
+
+.form-input > input:focus:required:invalid {
+    border: 2px solid red !important;
+}
+
+.form-input > input:required:invalid {
+    border: 2px solid red !important;
+}
+
+form:invalid button {
+    background-color: salmon;
+    pointer-events: none;
+}
+
+.form-checkmark {
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+.form-checkmark > label {
+    font-size: 17px;
+}
+
+.form-checkmark > h2 {
+    margin: 2px;
 }
