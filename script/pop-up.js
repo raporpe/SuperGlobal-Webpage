@@ -1,5 +1,3 @@
-
- 
 window.onload = function() {
     var button = document.getElementById('button');
     var popup = document.getElementsByClassName('popup-wrapper')[0];

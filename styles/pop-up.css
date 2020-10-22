@@ -41,14 +41,21 @@
 
 }
 
- 
+.popup-close {
+  height: 30px;
+  width: 30px;
+  background-color: #000;
+}
  
 .popup-close {
+    
     position: absolute;
-    top: 5px;
-    right: 5px;
+    right:18px;
+    top: -4px;
     cursor: pointer;
     font-size: 1.5rem;
+    color: #fff;
+
 }
 
 .popup-content iframe{
