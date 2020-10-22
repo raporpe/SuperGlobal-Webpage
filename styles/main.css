@@ -31,6 +31,7 @@ html {
 
 /* Header */
 
+
 header {
     height: 90px;
     background-color: white;
@@ -74,6 +75,37 @@ header {
     color: white;
 }
 .dropdown-content a:hover i {
+    color: white;
+}
+
+.dropdown:hover .dropdown-content-left {
+    display: block;
+}
+
+.dropdown-content-left {
+    display: none;
+    position: absolute;
+    top: 78px;
+    right: 22px;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    z-index: 200;
+}
+
+.dropdown-content-left a {
+    color: darkblue;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.dropdown-content-left a:hover {
+    background-color: darkblue;
+    color: white;
+}
+.dropdown-content-left a:hover i {
     color: white;
 }
 
@@ -137,14 +169,13 @@ header {
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     border-radius: 12px;
-
 }
 
 #links ul li a:hover {
     color: white;
     background-color: darkblue;
-
 }
+
 
 
 /* Navigation bar */
@@ -504,5 +535,64 @@ footer ul li a:hover {
 
 [class*="fa-"] {
     color: darkblue;
+}
+
+/* Pop-up! */
+button-popup {
+    display: block;
+    margin: 20px auto;
+    background: salmon;
+    color: white;
+    border: 0;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+ 
+button-popup:hover {
+    background: palevioletred;
+    transition: all 0.2s;
+}
+ 
+.popup-wrapper {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+ 
+.popup {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    position: relative;
+}
+ 
+.popup a {
+    background: salmon;
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    margin: 30px auto;
+    display: block;
+    width: 50%;
+}
+ 
+.popup a:hover {
+    background: palevioletred;
+    transition: all 0.2s;
+}
+ 
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
 }
 
