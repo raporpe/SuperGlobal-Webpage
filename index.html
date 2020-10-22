@@ -7,11 +7,16 @@
     <title>Super Global</title>
     <link rel="stylesheet" href="styles/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="styles/fontawesome.css">
+
+    <script src="script/jquery-3.5.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
     <script src="script/login.js"></script>
     <script src="script/md5.js"></script>
     <script src="script/cookiemanager.js"></script>
+
 </head>
 
 <body>
@@ -21,13 +26,23 @@
     <div class="box center">
         <div id="slider">
             <div id="slider-login">
-                <p>Welcome to superglobal</p>
-                <button id="switch-register-desktop">Sign up</button>
+                <div id="title">
+                    <img id="logo" src="images/uc3m.png" alt="logo" class="hide-s">
+
+                    <p>Super Global</p>
+                </div>
+                <p><b>Hey there!</b><br> Log in to continue with your courses and enjoy learning in the renewed platform. </p>
+                <div class="button" id="switch-register-desktop">Sign up</div>
             </div>
 
             <div id="slider-register">
-                <p>Login instead</p>
-                <button id="switch-login-desktop">Login</button>
+                <div id="title">
+                    <img id="logo" src="images/uc3m.png" alt="logo" class="hide-s">
+
+                    <p>Super Global</p>
+                </div>
+                <p><b>Hey there!</b><br> Log in to continue with your courses and enjoy learning in the renewed platform. </p>
+                <div class="button" id="switch-register-desktop">Sign up</div>
             </div>
 
         </div>
@@ -38,53 +53,53 @@
 
             <h2>Account Information</h2>
 
-            <form>
+            <form id="reg_form">
                 <div class="form-input">
-                    <label for="username" class="required">Username </label>
+                    <label for="register_username" class="required">Username </label>
                     <br>
-                    <input type="text" id="username" name="username" required>
+                    <input type="text" id="register_username" name="register_username">
                 </div>
                 <div class="form-input">
 
-                    <label for="NIA">NIA</label><br>
-                    <input type="number" id="nia" name="nia" maxlength="9" value="100" required><br>
+                    <label for="NIA" class="required">NIA</label><br>
+                    <input type="number" id="nia" name="nia" maxlength="9" value="100" pattern="100[0-9]{6}"><br>
                 </div>
                 <div class="form-input">
 
-                    <label for="password">Password</label><br>
-                    <input type="password" id="password" name="password" maxlength="8" pattern="([0-9]|[a-z])+$" required><br>
+                    <label for="register_password" class="required">Password</label><br>
+                    <input type="password" id="register_password" name="register_password" maxlength="8" pattern="([0-9]|[a-z])*"><br>
                 </div>
 
                 <!--- using javascript, we hide some options depending of user answers-->
                 <h2>Personal Information</h2>
                 <div class="form-input">
 
-                    <label for="Name">Name</label><br>
-                    <input type="text" id="name" name="name" required><br>
+                    <label for="Name" class="required">Name</label><br>
+                    <input type="text" id="name" name="name"><br>
                 </div>
                 <div class="form-input">
 
                     <label for="Surname">Surname</label><br>
-                    <input type="text" id="surname" name="surname" required><br>
+                    <input type="text" id="surname" name="surname"><br>
                 </div>
                 <div class="form-input">
 
-                    <label for="Email">Email</label><br>
-                    <input type="text" id="email" name="email" required><br>
+                    <label for="Email" class="required">Email</label><br>
+                    <input type="text" id="email" name="email"><br>
                 </div>
                 <div class="form-input">
 
-                    <label for="Date of Birth">Date of Birth</label><br>
-                    <input type="text" id="date-birth" name="date-birth" required><br>
+                    <label for="Date of Birth" class="required">Date of Birth</label><br>
+                    <input type="text" id="date-birth" name="date-birth"><br>
                 </div>
                 <div class="form-input">
 
-                    <label for="ID Document">ID Document</label><br>
-                    <input type="text" id="id-doc" name="id-doc" required><br>
+                    <label for="ID Document" class="required">ID Document</label><br>
+                    <input type="text" id="id-doc" name="id-doc"><br>
                 </div>
                 <div class="form-checkmark">
 
-                    <h2>Role</h2>
+                    <h2 class="required">Role</h2>
 
                     <input type="radio" id="admin" name="role" value="Administrator">
                     <label for="admin">Administrator</label><br>
@@ -98,7 +113,7 @@
 
 
                 <!--- ONLY IF selectes student-->
-                <div class="form-checkmark">
+                <div class="form-checkmark" id="bachelor-degree">
                     <h2>Bachelor's Degree</h2>
 
                     <input type="radio" id="comp-eng" name="degree" value="Computer Science Engineering">
@@ -110,6 +125,7 @@
                     <input type="radio" id="telco-eng" name="degree" value="Telematics Engineering">
                     <label for="telco-eng">Telematics Engineering</label><br>
                 </div>
+                <!--- END IF selectes student-->
 
                 <div class="form-input">
 
@@ -138,8 +154,11 @@
                     <label for="terms">I have read and accept the Terms of Use.</label><br>
 
                 </div>
-                <button type="button" id="submit">Submit</button>
-                <button type="button" id="delete">Delete</button>
+                <div class="wrapper">
+                    <div class="button" id="submit">Submit</div>
+                    <div class="button" id="delete">Delete</div>
+                </div>
+
             </form>
 
 
@@ -148,20 +167,18 @@
 
             <button id="switch-register-small">Register</button>
             <div class="form-input">
-                
-                <label for="username">Username</label><br>
-                <input type="text" id="username" name="username" required><br>
-                
+                <label for="login_username">Username</label><br>
+                <input type="text" id="login_username" name="login_username" pattern="([0-9]|[a-z])+"><br>
             </div>
-            
-            <div class="form-input">
 
-                <label for="password">Password</label><br>
-                <input type="password" id="password" name="password" required><br>
-                
+            <div class="form-input">
+                <label for="login_password">Password</label><br>
+                <input type="password" id="login_password" name="login_password" pattern="([0-9]|[a-z])+" maxlength="8"><br>
             </div>
-            
-            <a class="button" id="login">Login</a>
+
+            <div class="button" id="login-button">Login</div>
+
+            <p id="login-message">Error</p>
 
 
         </div>
@@ -178,18 +195,6 @@
     <div class="bg-img">
     </div>
 
-
-<!-- Hotjar Tracking Code for My site -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2054808,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
 
 
 </body></html>
