@@ -537,22 +537,6 @@ footer ul li a:hover {
     color: darkblue;
 }
 
-/* Pop-ups! */
-button-popup {
-    display: block;
-    margin: 20px auto;
-    background: salmon;
-    color: white;
-    border: 0;
-    padding: 6px 10px;
-    cursor: pointer;
-}
- 
-button-popup:hover {
-    background: palevioletred;
-    transition: all 0.2s;
-}
- 
 .popup-wrapper {
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
