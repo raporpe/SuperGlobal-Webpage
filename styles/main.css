@@ -51,6 +51,7 @@ header {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    
 }
 
 .dropdown-content {
@@ -61,6 +62,9 @@ header {
     min-width: 160px;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
     z-index: 200;
+    border-radius: 10px;
+    
+
 }
 
 .dropdown-content a {
@@ -91,6 +95,8 @@ header {
     min-width: 120px;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
     z-index: 200;
+        border-radius: 13px;
+
 }
 
 .dropdown-content-left a {
@@ -428,6 +434,9 @@ footer {
     background-color: darkblue !important;
     color: white;
     text-align: center;
+    font-size: clamp(0.9em,1.6vw,1em);
+
+    
 }
 
 footer ul {
@@ -445,7 +454,7 @@ footer ul li a {
     text-decoration: none;
     color: darkgray;
     display: inline-block;
-    width: 150px;
+    width: 134px;
     transition: 0.3s;
 
 }
@@ -539,7 +548,7 @@ footer ul li a:hover {
 }
 
 #popup-button{
-     padding: 2px;
+    padding: 2px;
     border: 3px solid darkblue;
     background-color: darkblue;
     
@@ -549,7 +558,7 @@ footer ul li a:hover {
     
     color: white;
     display: inline;
-    font-size: 1.1em;
+    font-size: 0.9em;
     transition: 0.3s;
 }
 
@@ -573,10 +582,13 @@ footer ul li a:hover {
     text-align: center;
     width: 100%;
     max-width: 300px;
+    height: 100%;
+    max-height: 468px;
     background: white;
-    margin: 10% auto;
-    padding: 20px;
+    margin: 5% auto;
+    padding: 10px;
     position: relative;
+    border-radius: 10px
 }
  
 .popup a {
