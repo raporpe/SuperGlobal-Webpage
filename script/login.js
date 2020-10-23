@@ -83,95 +83,96 @@ function slide_register() {
         queue: false
     };
     var easeType = "easeInOutQuint"
-    console.log("slide to the register");
 
-    // Hide the login part
+    
+//    $("#box-content-register").css('z-index', 10);
+//    $("#box-content-login").css('z-index', -1);
+//    $("#slider").css('z-index', 20);
+
+    // Hide the login box
     $("#box-content-login").fadeOut(options, easeType);
 
-    // Movement effect: login to the left fading and 
+    // Movement effect: login moving to the left while fading
     $("#box-content-login").animate({
         "left": "-=550px"
     }, options, easeType);
+    
+    // Register box begins to appear
+    $("#box-content-register").fadeIn(options, easeType);
     
     // Movement effect: register appears from the right
     $("#box-content-register").animate({
         "left": "0px"
     }, options, easeType);
     
-
+    
+    // Move blue slider to the left
     $("#slider").animate({
-        "left": "450px"
+        "left": "450px",
     }, options, easeType);
     
-
-    $("#box-content-register").fadeIn(options, easeType);
 
     // Make the registration scrollable
     $(".box").css({
         "overflow": "scroll"
     });
 
-
-    // Swap contents inside slider with visual effects
-    $("#slider-register").animate({
-        "left": "0px"
-    }, options, easeType);
     
-    
+    // The register dialog appears in the slider 
     $("#slider-register").fadeIn(options, easeType);
-    
-    
-    $("#slider-login").animate({
-        "right": "-100px"
-    }, options, easeType);
-    
-    
+     
+    // The login dialog disappears in the slider 
     $("#slider-login").fadeOut(options, easeType);
+    
 
 
 
 }
 
 function slide_login() {
+    
+    var speed = 300;
+    var options = {
+        duration: speed,
+        queue: false
+    };
+    var easeType = "easeInOutQuint"
+    
+    // Hide the register box
+    $("#box-content-register").fadeOut(options, easeType);
 
-    console.log("slide to the login");
-
-    // Hide the left part
-    document.getElementById("box-content-register").style.opacity = "0";
-
-
-    // Movement effect
-    document.getElementById("box-content-login").style.left = "300px";
-    document.getElementById("box-content-register").style.left = "2000px";
-
-    //Begin moving to the left
-    document.getElementById("slider").style.width = "100%";
+    // Movement effect: register moving to the right while fading
+    $("#box-content-register").animate({
+        "left": "+=500px"
+    }, options, easeType);
+    
+    // Login box begins to appear
+    $("#box-content-login").fadeIn(options, easeType);
+    
+    // Movement effect: login appears from the left
+    $("#box-content-login").animate({
+        "left": "300px"
+    }, options, easeType);
+    
+    
+    // Move blue slider to the right
+    $("#slider").animate({
+        "left": "0px"
+    }, options, easeType);
+    
 
     // Make the login not scrollable
-    document.getElementsByClassName("box")[0].style.overflow = "hidden";
+    $(".box").css({
+        "overflow": "hidden"
+    });
 
-    // Change percentages to accomodate to the initial space
-    document.getElementById("box-content-register").style.width = "40%";
-    document.getElementById("box-content-login").style.width = "60%";
+    
+    // The register dialog disappears in the slider 
+    $("#slider-register").fadeOut(options, easeType);
+     
+    // The login dialog appears in the slider 
+    $("#slider-login").fadeIn(options, easeType);
 
-
-    // Swap contents inside slider with visual effects
-    document.getElementById("slider-register").style.left = "-200px";
-    document.getElementById("slider-register").style.opacity = "0";
-    document.getElementById("slider-login").style.right = "160px";
-    document.getElementById("slider-login").style.opacity = "1";
-
-    setTimeout(function () {
-        // Follow right effect
-        document.getElementById("slider").style.left = "0px";
-
-        // Delayed opacity change for better visuals
-        document.getElementById("box-content-login").style.opacity = "1";
-
-        //Restore width
-        document.getElementById("slider").style.width = "40%";
-
-    }, 150); // Delay in ms
 
 
 }

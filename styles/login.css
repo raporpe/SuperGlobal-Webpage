@@ -41,7 +41,6 @@ html {
     position: sticky;
     top: 0px;
     /* Modified by js */
-    left: 0px;
     -webkit-border-radius: 17px;
     -moz-border-radius: 17px;
     border-radius: 17px;
@@ -52,34 +51,38 @@ html {
 
 #slider-register {
     position: absolute;
-    padding: 20px;
+    padding: 15px 30px;
     width: 100%;
 
 
     /* Initially not shown */
-    opacity: 0;
+    display: none;
     z-index: -1;
 
 
     /* Initially hidden on the left */
-    left: -200px;
+}
+
+#slider-register p {
+    text-align: center;
+    margin: 20px 0;
 }
 
 #slider-login {
     position: absolute;
-    padding: 30px;
+    padding: 15px 30px;
     width: 100%;
-    
-
 }
 
 #slider-login p {
     text-align: center;
+    margin: 20px 0;
+
 }
 
 
 #box-content-register {
-    padding: 40px;
+    padding: 15px 40px 40px 40px;
     position: absolute;
     width: 60%;
     left: 200px;
@@ -93,8 +96,8 @@ html {
     padding: 40px;
     position: absolute;
     top: 0px;
+    right: 0px;
     width: 60%;
-    left: 300px;
     z-index: 2;
     background-color: white;
 
@@ -118,11 +121,20 @@ html {
     color: darkblue;
 }
 
+#switch-login-desktop:hover {
+    font-style: italic;
+}
+
+
 #switch-register-desktop {
     background-color: white;
     color: darkblue;
     margin: 25px 0;
 
+}
+
+#switch-register-desktop:hover {
+    font-style: italic;
 }
 
 /* Background image */
@@ -405,3 +417,6 @@ form:invalid #submit {
     margin: 15px auto;
 }
 
+.white-background {
+    background-color: white;
+}
