@@ -1,6 +1,34 @@
+$(document).ready(function () {
+    $("#login-button").click(login);
+    $("#switch-register-desktop").click(slide_register);
+    $("#switch-login-desktop").click(slide_login);
+    $("#switch-register-small").click(small_register);
+    $("#switch-login-small").click(small_login);
+    small_login();
+
+    $("#bachelor-degree").fadeOut(500);
+    $("#reg_form").on("change", function () {
+        if ($(this).find("input[name=role]:checked").val() == "student") {
+            $("#bachelor-degree").fadeIn(500);
+        } else {
+            $("#bachelor-degree").fadeOut(500);
+        }
+    });
+
+    //Delete all form data and scroll to op
+    $("#delete").click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, "slow");
+    });
+    
+    
+});
+
+
 function login() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    var username = $("#login_username").val();
+    var password = $("#login_password").val();
     console.log("Username -> " + username);
     console.log("Password -> " + password);
 
@@ -9,6 +37,15 @@ function login() {
     var cookies = getAllCookies();
     console.log("Cookies installed: " + cookies);
     var found = false;
+    $("#login-message").fadeOut(500);
+
+    if (username == "" || password == "") {
+        $("#login-message").text("The password or username are empty");
+        $("#login-message").fadeIn(500);
+
+        return;
+    }
+
 
     for (i in cookies) {
         cookie = cookies[i];
@@ -25,6 +62,9 @@ function login() {
     } else {
         //Do nothing
         console.log("Cookie not found!");
+        $("#login-message").text("The user or password are incorrect");
+        $("#login-message").fadeIn(500);
+
 
     }
 }
@@ -37,125 +77,117 @@ function register() {
 
 function slide_register() {
 
+    var speed = 300;
+    var options = {
+        duration: speed,
+        queue: false
+    };
+    var easeType = "easeInOutQuint"
 
-    console.log("slide to the register");
+    
+//    $("#box-content-register").css('z-index', 10);
+//    $("#box-content-login").css('z-index', -1);
+//    $("#slider").css('z-index', 20);
 
-    // Hide the right part
-    document.getElementById("box-content-login").style.opacity = "0";
+    // Hide the login box
+    $("#box-content-login").fadeOut(options, easeType);
 
-    // Movement effect
-    document.getElementById("box-content-login").style.left = "250px";
-    document.getElementById("box-content-register").style.left = "0px";
-
-    //Begin moving to the right
-    document.getElementById("slider").style.width = "100%";
-
+    // Movement effect: login moving to the left while fading
+    $("#box-content-login").animate({
+        "left": "-=550px"
+    }, options, easeType);
+    
+    // Register box begins to appear
+    $("#box-content-register").fadeIn(options, easeType);
+    
+    // Movement effect: register appears from the right
+    $("#box-content-register").animate({
+        "left": "0px"
+    }, options, easeType);
+    
+    
+    // Move blue slider to the left
+    $("#slider").animate({
+        "left": "450px",
+    }, options, easeType);
+    
 
     // Make the registration scrollable
-    document.getElementsByClassName("box")[0].style.overflow = "scroll";
+    $(".box").css({
+        "overflow": "scroll"
+    });
 
-    // Change percentages to accomodate to more space
-    document.getElementById("box-content-register").style.width = "60%";
-    document.getElementById("box-content-login").style.width = "40%";
+    
+    // The register dialog appears in the slider 
+    $("#slider-register").fadeIn(options, easeType);
+     
+    // The login dialog disappears in the slider 
+    $("#slider-login").fadeOut(options, easeType);
+    
 
-
-    // Swap contents inside slider with visual effects
-    document.getElementById("slider-register").style.left = "0px";
-    document.getElementById("slider-register").style.opacity = "1";
-    document.getElementById("slider-login").style.right = "-100px";
-    document.getElementById("slider-login").style.opacity = "0";
-
-    setTimeout(function () {
-        // Follow right effect
-        document.getElementById("slider").style.left = "450px";
-
-        // Delayed opacity change for better visuals
-        document.getElementById("box-content-register").style.opacity = "1";
-
-        // Restore width
-        document.getElementById("slider").style.width = "40%";
-
-
-    }, 150); // Delay in ms
 
 
 }
 
 function slide_login() {
+    
+    var speed = 300;
+    var options = {
+        duration: speed,
+        queue: false
+    };
+    var easeType = "easeInOutQuint"
+    
+    // Hide the register box
+    $("#box-content-register").fadeOut(options, easeType);
 
-    console.log("slide to the login");
-
-    // Hide the left part
-    document.getElementById("box-content-register").style.opacity = "0";
-
-
-    // Movement effect
-    document.getElementById("box-content-login").style.left = "300px";
-    document.getElementById("box-content-register").style.left = "2000px";
-
-    //Begin moving to the left
-    document.getElementById("slider").style.width = "100%";
+    // Movement effect: register moving to the right while fading
+    $("#box-content-register").animate({
+        "left": "+=500px"
+    }, options, easeType);
+    
+    // Login box begins to appear
+    $("#box-content-login").fadeIn(options, easeType);
+    
+    // Movement effect: login appears from the left
+    $("#box-content-login").animate({
+        "left": "300px"
+    }, options, easeType);
+    
+    
+    // Move blue slider to the right
+    $("#slider").animate({
+        "left": "0px"
+    }, options, easeType);
+    
 
     // Make the login not scrollable
-    document.getElementsByClassName("box")[0].style.overflow = "hidden";
+    $(".box").css({
+        "overflow": "hidden"
+    });
 
-    // Change percentages to accomodate to the initial space
-    document.getElementById("box-content-register").style.width = "40%";
-    document.getElementById("box-content-login").style.width = "60%";
+    
+    // The register dialog disappears in the slider 
+    $("#slider-register").fadeOut(options, easeType);
+     
+    // The login dialog appears in the slider 
+    $("#slider-login").fadeIn(options, easeType);
 
-
-    // Swap contents inside slider with visual effects
-    document.getElementById("slider-register").style.left = "-200px";
-    document.getElementById("slider-register").style.opacity = "0";
-    document.getElementById("slider-login").style.right = "160px";
-    document.getElementById("slider-login").style.opacity = "1";
-
-    setTimeout(function () {
-        // Follow right effect
-        document.getElementById("slider").style.left = "0px";
-
-        // Delayed opacity change for better visuals
-        document.getElementById("box-content-login").style.opacity = "1";
-
-        //Restore width
-        document.getElementById("slider").style.width = "40%";
-
-    }, 150); // Delay in ms
 
 
 }
 
 
 function small_register() {
-    //    document.getElementById("box-content-login").style.display = "none";
-    //    document.getElementById("box-content-register").style.display = "inherit";
-    document.getElementById("box-content-register").style.opacity = "1";
-    document.getElementById("box-content-login").style.opacity = "0";
-    document.getElementById("box-content-register").style.zIndex = "1";
-    document.getElementById("box-content-login").style.zIndex = "-1";
+
+    //    $("#box-content-register").show();
+    //    $("#box-content-login").hide();
 
 }
 
 function small_login() {
-    //    document.getElementById("box-content-login").style.display = "inherit";
-    //    document.getElementById("box-content-register").style.display = "none";
-    document.getElementById("box-content-register").style.opacity = "0";
-    document.getElementById("box-content-login").style.opacity = "1";
-    document.getElementById("box-content-register").style.zIndex = "-1";
-    document.getElementById("box-content-login").style.zIndex = "1";
-}
 
-
-window.onload = function () {
-    document.getElementById("login").addEventListener("click", login);
-    document.getElementById("switch-register-desktop").addEventListener("click", slide_register);
-    document.getElementById("switch-login-desktop").addEventListener("click", slide_login);
-
-    document.getElementById("switch-register-small").addEventListener("click", small_register);
-    document.getElementById("switch-login-small").addEventListener("click", small_login);
-
-    small_login();
-
+    //    $("#box-content-register").hide();
+    //    $("#box-content-login").show();
 
 }
-

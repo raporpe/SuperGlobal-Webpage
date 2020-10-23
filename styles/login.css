@@ -38,62 +38,69 @@ html {
     width: 40%;
     height: 100%;
     z-index: 999;
-    position: absolute;
-
+    position: sticky;
+    top: 0px;
     /* Modified by js */
-    left: 0px;
-    transition: 0.8s;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+
+
 
 }
 
 #slider-register {
     position: absolute;
-    transition: 0.8s;
-    padding: 20px;
+    padding: 15px 30px;
+    width: 100%;
 
 
     /* Initially not shown */
-    opacity: 0;
+    display: none;
     z-index: -1;
 
 
     /* Initially hidden on the left */
-    left: -200px;
+}
+
+#slider-register p {
+    text-align: center;
+    margin: 20px 0;
 }
 
 #slider-login {
     position: absolute;
-    transition: 0.8s;
-    padding: 20px;
-
-    /* Initially shown */
-    opacity: 1;
-    z-index: 1;
-
-    /* Will be hidden on the right */
-    right: 160px;
+    padding: 15px 30px;
+    width: 100%;
 }
 
+#slider-login p {
+    text-align: center;
+    margin: 20px 0;
+
+}
+
+
 #box-content-register {
-    padding: 40px;
+    padding: 15px 40px 40px 40px;
     position: absolute;
-    width: 40%;
-    transition: 0.8s;
+    width: 60%;
     left: 200px;
-    z-index: 2;
+    z-index: 1;
     background-color: white;
-    opacity: 0;
+    display: none;
+    top: 0px;
 }
 
 #box-content-login {
     padding: 40px;
     position: absolute;
+    top: 0px;
+    right: 0px;
     width: 60%;
-    left: 300px;
-    transition: 0.8s;
-    z-index: 1;
+    z-index: 2;
     background-color: white;
-    
+
 }
 
 #box-header {
@@ -109,9 +116,26 @@ html {
 
 /* Button switch from login to register and vicerversa*/
 
-#switch-login {}
+#switch-login-desktop {
+    background-color: white;
+    color: darkblue;
+}
 
-#switch-register {}
+#switch-login-desktop:hover {
+    font-style: italic;
+}
+
+
+#switch-register-desktop {
+    background-color: white;
+    color: darkblue;
+    margin: 25px 0;
+
+}
+
+#switch-register-desktop:hover {
+    font-style: italic;
+}
 
 /* Background image */
 
@@ -142,9 +166,9 @@ html {
     border-radius: 17px;
 
     color: white;
-    display: inline;
     font-size: 1.1em;
     transition: 0.3s;
+    text-align: center;
 
 }
 
@@ -292,11 +316,11 @@ a {
 
 }
 
-.form-input > input:focus:required:invalid {
+.form-input > input:focus:invalid {
     border: 2px solid red !important;
 }
 
-.form-input > input:required:invalid {
+.form-input > input:invalid {
     border: 2px solid red !important;
 }
 
@@ -318,4 +342,81 @@ form:invalid button {
 
 .form-checkmark > h2 {
     margin: 2px;
+}
+
+#login-message {
+    display: none;
+    color: red;
+    font-size: 17px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    border: 3px solid red;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#login-button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#delete {
+    background: white;
+    border: solid 3px red;
+    color: red;
+    font-style: normal;
+    width: 50%;
+    display: inline;
+}
+
+#delete:hover {
+    background: red;
+    border: solid 3px red;
+    color: white;
+    font-style: italic;
+    width: 50%;
+}
+
+#submit {
+    width: 50%;
+    display: inline;
+    margin-right: 15px;
+}
+
+form:invalid #submit {
+    color: gray;
+    border: 2px solid darkgray;
+    background-color: lightgray;
+    pointer-events: none;
+}
+
+#title {
+
+    width: 100%;
+}
+
+#title p {
+    position: inline;
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#title img {
+    width: 43%;
+    padding: 0px;
+    position: inline;
+    display: block;
+    margin: 15px auto;
+}
+
+.white-background {
+    background-color: white;
 }
