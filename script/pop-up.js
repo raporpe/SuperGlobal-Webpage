@@ -1,7 +1,5 @@
-
- 
 window.onload = function() {
-    var button = document.getElementById('button');
+    var button = document.getElementById('popup-button');
     var popup = document.getElementsByClassName('popup-wrapper')[0];
     var close = document.getElementsByClassName('popup-close')[0];
     
@@ -17,4 +15,3 @@ window.onload = function() {
         popup.style.display = 'none';
     });
 }
-

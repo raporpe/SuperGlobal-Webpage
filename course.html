@@ -16,6 +16,8 @@
     <script src="script/pop-up.js"></script>
     <script src="script/jquery.table2excel.js"></script>
     <script src="script/excel_export.js"></script>
+    
+    
 </head>
 
 <body>
@@ -32,12 +34,12 @@
             <div class="dropdown">
                 <img id="burger" src="images/burguer.png" alt="burguer" class="hide-l show-s">
                 <div class="dropdown-content">
-                    <a href="index.html"><i class="fab fa-leanpub right-margin fa-fw"></i>Course</a>
-                    <a href="students.html"><i class="fas fa-graduation-cap right-margin fa-fw"></i>Students</a>
-                    <a href="forum.html"><i class="fas fa-comments right-margin fa-fw"></i>Forum</a>
-                    <a href="grades.html"><i class="fas fa-sticky-note right-margin fa-fw"></i>Grades</a>
-                    <a href="calendar.html"><i class="fas fa-newspaper right-margin fa-fw"></i>Next Events</a>
-                    <a href="grades.html"><i class="fas fa-calendar right-margin fa-fw"></i>Last News</a>
+                    <a onclick="changeWebContentTo('/main.html'); changeActive(this);"><i class="fab fa-leanpub right-margin fa-fw"></i>Course</a>
+                    <a onclick="changeWebContentTo('/students.html'); changeActive(this);"><i class="fas fa-graduation-cap right-margin fa-fw"></i>Students</a>
+                    <a onclick="changeWebContentTo('/forum.html'); changeActive(this);"><i class="fas fa-comments right-margin fa-fw"></i>Forum</a>
+                    <a onclick="changeWebContentTo('/grades.html'); changeActive(this);"><i class="fas fa-sticky-note right-margin fa-fw"></i>Grades</a>
+                    <a><i class="fas fa-newspaper right-margin fa-fw"></i>Last News</a>
+                    <a onclick="changeWebContentTo('/calendar.html'); changeActive(this);"><i class="fas fa-calendar right-margin fa-fw"></i>New Events</a>
                 </div> 
             </div>
 
@@ -47,13 +49,15 @@
             </div>
             <div id="links">
                 <ul>
-                    <li class="hide-m"><a href="https://www.uc3m.es/biblioteca/inicio">Books</a> </li>
-                    <li class="hide-m"><a href="https://www.youtube.com">Videos</a> </li>
+                    <li class="hide-m"><a href="https://www.uc3m.es/biblioteca/inicio">Books</a></li>
+                    <li class="hide-m"><a href="https://www.youtube.com">Videos</a></li>
                     <li class="hide-m"><a href="https://www.github.com">Library</a></li>
                     
-                    <li class="dropdown"><a>Anonymous <img class="show-s" src="images/icons/profile.png" alt="profile" width="30"></a>
+                    <li class="dropdown"><a>Anonymous
+                        <img class="show-s" src="images/icons/profile.png" alt="profile" width="30">
+                        </a>
                         <div class="dropdown-content-left">
-                        <a href="index.html"><i class="fas fa-sign-in-alt right-margin fa-fw"></i>Log Out</a>
+                            <a><i class="fas fa-sign-in-alt right-margin fa-fw"></i>Log Out</a>
                         </div>
                     </li>
                 </ul>     
@@ -78,14 +82,6 @@
 
     <div id="web-content" class="l-6 m-8 s-12"></div>
 
-
-
-
-
-
-
-
-
     <aside class="l-3 hide-m sticky">
         <div class="card">
             <h2><i class="fas fa-newspaper right-margin"></i>Last News</h2>
@@ -99,11 +95,6 @@
                 New Events
             </h2>
             
-            
-            
-            
-            
-    <button id="button">Haz clic para ver el popup</button>
     <div class="popup-wrapper">
         <div class="popup">
             <div class="popup-close">x</div>
@@ -112,19 +103,16 @@
             </div>
         </div>
     </div>
-            
-            
-            
-            
-
-            <p>
-                <span class="tag right-margin">20/09</span>Assignment due date<br>
-                <span class="tag right-margin">15/09</span>Group meeting
-            </p>
-        </div>
+    
+    <p>
+        <button id="popup-button">Click to see the calendar</button><br>
+        <span class="tag right-margin">20/09</span>Assignment due date<br>
+        <span class="tag right-margin">15/09</span>Group meeting
+    </p>
+    </div>
     </aside>
 
-    <footer class="card">
+    <footer class="card ">
         <h5>This is the footer, the end of the web page.</h5>
         <ul>
             <li><a href="https://www.uc3m.es/conocenos">About Us</a> <span class="vbar"></span></li>
