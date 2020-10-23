@@ -9,7 +9,7 @@ var events = [ {
     date: today.getMonth() + 1 + "/18/" + today.getFullYear(),
     type: "event"
 }, {
-    id: "9jU6g6f",
+    id: "9jUw6g6f",
     name: "Holiday #1",
     description: "Lorem ipsum dolor sit amet.",
     date: today.getMonth() + 1 + "/10/" + today.getFullYear(),
@@ -74,31 +74,40 @@ $(document).ready(function() {
         format: "MM dd, yyyy",
         titleFormat: "MM",
         calendarEvents: [{
-            id: "d8jai7s",
-            name: "Author's Birthday",
-            description: "Author's note: Thank you for using EvoCalendar! :)",
-            date: "February/15/1999",
-            type: "birthday",
-            everyYear: !0
-        }, {
             id: "sKn89hi",
-            name: "1-Week Coding Bootcamp",
-            description: "Lorem ipsum dolor sit amet.",
-            badge: "5-day event",
+            name: "Send Lab 2",
+            description: "Project delivery of the ILP exercise",
+            badge: "Project",
             date: [ today.getMonth() + 1 + "/" + week_date.start + "/" + today.getFullYear(), today.getMonth() + 1 + "/" + week_date.end + "/" + today.getFullYear() ],
             type: "event",
             everyYear: !0
         }, {
             id: "in8bha4",
-            name: "Holiday #2",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            name: "Groups for Lab 3",
+            description: "Find partners to work on Lab 3",
             date: today,
-            type: "holiday"
+            type: "birthday"
         }, {
-            id: "in8bha4",
-            name: "Event #2",
+            id: "ibha4",
+            name: "Homework",
+            description: "Finish the exercises proposed",
             date: today,
             type: "event"
+        }, {
+            name: "No class",
+            description: "You can rest these days",
+            date: [ today.getMonth() + 1 + "/2/" + today.getFullYear(), today.getMonth() + 1 + "/3/" + today.getFullYear() ],
+            type: "holiday",
+        }, {
+            name: "Mid-term Exam",
+            description: "Units 2,3 and 4",
+            date: [ today.getMonth() + 1 + "/27/" + today.getFullYear(), today.getMonth() + 1 + "/28/" + today.getFullYear() ],
+            type: "",
+        }, {
+            name: "Group for Lab 2",
+            description: "Find partners to work on Lab 2",
+            date: [ today.getMonth() + 1 + "/7/" + today.getFullYear(), today.getMonth() + 1 + "/7/" + today.getFullYear() ],
+            type: "birthday",
         }]
     });
     $("[data-set-theme]").click(function(b) {
