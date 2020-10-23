@@ -3,6 +3,8 @@ window.onload = function() {
     var popup = document.getElementsByClassName('popup-wrapper')[0];
     var close = document.getElementsByClassName('popup-close')[0];
     
+
+    
     button.addEventListener('click', function() {
         popup.style.display = 'block';
     });
@@ -15,3 +17,4 @@ window.onload = function() {
         popup.style.display = 'none';
     });
 }
+
