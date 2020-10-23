@@ -58,19 +58,19 @@
 
                 <form id="reg_form">
                     <div class="form-input">
-                        <label for="register_username" class="required">Username </label>
+                        <label for="register_username" class="required">Username</label>
                         <br>
-                        <input type="text" id="register_username" name="register_username">
+                        <input type="text" id="register_username" name="register_username" title="Username shall not contain spaces" pattern="[a-z]" required>
                     </div>
                     <div class="form-input">
 
                         <label for="NIA" class="required">NIA</label><br>
-                        <input type="number" id="nia" name="nia" maxlength="9" value="100" pattern="100[0-9]{6}"><br>
+                        <input type="number" id="nia" name="nia" maxlength="9" value="100" pattern="100[0-9]{6}" required><br>
                     </div>
                     <div class="form-input">
 
                         <label for="register_password" class="required">Password</label><br>
-                        <input type="password" id="register_password" name="register_password" maxlength="8" pattern="([0-9]|[a-z])*"><br>
+                        <input type="password" id="register_password" name="register_password" maxlength="8" pattern="([0-9]|[a-z])*" required><br>
                     </div>
 
                     <!--- using javascript, we hide some options depending of user answers-->
