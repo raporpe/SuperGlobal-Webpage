@@ -17,7 +17,7 @@ function getCookie(cookieName) {
     cookies = getAllCookies();
     for (i in cookies){
         if (cookies[i].name == cookieName){
-            return cookies[i];
+            return cookies[i].value;
         }
     }
 }

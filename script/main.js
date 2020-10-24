@@ -31,26 +31,47 @@ function changeWebContentTo(changeTo) {
     var webContent = document.getElementById("web-content");
     getContent(changeTo, function (html) {
         webContent.innerHTML = html;
+        updateContentRole();
     });
 }
 
-window.onload = function () {
-
-    changeWebContentTo("/main.html");
-
-    //checkLoggedIn();
-
-    //Check log in every 5 seconds
-    setInterval(function () {
-        //checkLoggedIn();
-    }, 5000);
-
-}
 
 function checkLoggedIn() {
-    if (getCookie("loginHash") == undefined) {
+    if (getCookie("authenticated") != "true") {
         // Redirect to login
         window.location.href = "/index.html";
     }
 
 }
+
+function updateContentRole() {
+    var role = getCookie("role");
+    console.log(role);
+    if (role == "teacher") {
+        $(".show-only-students").hide();
+        $(".show-only-teachers").show();
+    } else if (role == "student") {
+        $(".show-only-students").show();
+        $(".show-only-teachers").hide();
+    } else {
+        $(".show-only-students").hide();
+        $(".show-only-teachers").hide();
+    }
+
+}
+
+$(document).ready(function () {
+
+    changeWebContentTo("/main.html");
+
+    checkLoggedIn();
+    updateContentRole();
+
+    //Check log in every 5 seconds
+    setInterval(function () {
+        checkLoggedIn();
+    }, 5000);
+
+    $(document).on("change", "#web-content", updateContentRole);
+
+});
