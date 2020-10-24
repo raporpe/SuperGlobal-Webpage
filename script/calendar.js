@@ -74,7 +74,7 @@ $(document).ready(function() {
         format: "MM dd, yyyy",
         titleFormat: "MM",
         calendarEvents: [{
-            id: "sKn89hi",
+            id: "sKn89fhi",
             name: "Send Lab 2",
             description: "Project delivery of the ILP exercise",
             badge: "Project",
@@ -82,28 +82,31 @@ $(document).ready(function() {
             type: "event",
             everyYear: !0
         }, {
-            id: "in8bha4",
+            id: "in8fbha4",
             name: "Groups for Lab 3",
             description: "Find partners to work on Lab 3",
             date: today,
             type: "birthday"
         }, {
-            id: "ibha4",
+            id: "ibhaa4",
             name: "Homework",
             description: "Finish the exercises proposed",
             date: today,
             type: "event"
         }, {
+            id: "in8fb8ha4",
             name: "No class",
             description: "You can rest these days",
             date: [ today.getMonth() + 1 + "/2/" + today.getFullYear(), today.getMonth() + 1 + "/3/" + today.getFullYear() ],
             type: "holiday",
         }, {
+            id: "in8fbh71a4",
             name: "Mid-term Exam",
             description: "Units 2,3 and 4",
             date: [ today.getMonth() + 1 + "/27/" + today.getFullYear(), today.getMonth() + 1 + "/28/" + today.getFullYear() ],
             type: "",
         }, {
+            id: "in8fbha514",
             name: "Group for Lab 2",
             description: "Find partners to work on Lab 2",
             date: [ today.getMonth() + 1 + "/7/" + today.getFullYear(), today.getMonth() + 1 + "/7/" + today.getFullYear() ],
