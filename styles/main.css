@@ -77,7 +77,7 @@ header {
     background-color: white;
     min-width: 160px;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
-    z-index: 200;
+    z-index: 999;
     border-radius: 10px;
     
 
@@ -110,8 +110,8 @@ header {
     background-color: white;
     min-width: 120px;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
-    z-index: 200;
-        border-radius: 13px;
+    z-index: 999;
+    border-radius: 13px;
 
 }
 
@@ -625,7 +625,6 @@ footer ul li a:hover {
 }
  
 .popup {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     width: 100%;
     max-width: 300px;

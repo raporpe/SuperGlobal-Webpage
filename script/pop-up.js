@@ -1,20 +1,19 @@
-window.onload = function() {
-    var button = document.getElementById('popup-button');
-    var popup = document.getElementsByClassName('popup-wrapper')[0];
-    var close = document.getElementsByClassName('popup-close')[0];
+$(document).ready(function () {
+                  
+    $("#popup-button-calendar").click(function(){
+        $("#popup-wrapper-calendar").show();
+    });
     
+    $("#popup-close-calendar").click(function(){
+        $("#popup-wrapper-calendar").hide();
+    });
 
+    $("#popup-button-logout").click(function(){
+        $("#popup-wrapper-logout").show();
+    });
     
-    button.addEventListener('click', function() {
-        popup.style.display = 'block';
+    $("#popup-close-logout").click(function(){
+        $("#popup-wrapper-logout").hide();
     });
- 
-    close.addEventListener('click', function() {
-        popup.style.display = 'none';
-    });
- 
-    popup.addEventListener('click', function() {
-        popup.style.display = 'none';
-    });
-}
 
+});
