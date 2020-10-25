@@ -90,10 +90,14 @@ var postMessage = function () {
     //    
     var message = $("#message").val();
     var newPost = $("#write-forum").html();
-    var newPost = newPost.replace("write-forum", "");
+    var newPost = '<div class="card-forum" id="just-posted">' + newPost + '</div>';
     var newPost = newPost.replace("message-wrapper", "post-wrapper");
     $("#thread").append(newPost);
-    $("#post-wrapper").html("<p>" + message + "</p>")
+    
+    $("#just-posted").children(".l-8").html("<p>" + message + "</p>");
+    $("#just-posted").children(".forum-profile").append("<p>" + "Jut now" + "</p>")
+    $("#just-posted").removeAttr("id");
+    
 
 
     //    $("#write-forum")
