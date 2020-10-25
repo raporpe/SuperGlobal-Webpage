@@ -22,7 +22,23 @@ html {
     border-radius: 7px;
 }
 
-#nav-card {
+.card-forum {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    padding: 0px 1px;
+    overflow: auto;
+    background-color: white;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    margin: 10px 0px;
+}
+
+.forum-right{
+    text-align: right;
+}
+
+
+#nav-card{
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
     padding-left: 20px;
     padding-top: 25px;
@@ -304,9 +320,16 @@ nav ul li a:hover i {
     color: white;
 }
 
-.button:hover i {
+
+.button a {
+    text-decoration: none;
+    color: white;
+}
+.button:hover i{
     color: darkblue;
 }
+
+
 
 
 
@@ -739,24 +762,32 @@ footer ul li a:hover {
 }
 
 .popup-wrapper {
+    display: none;
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 999;
+    
 }
+
 
 .popup {
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    
     width: 100%;
     max-width: 300px;
     height: 100%;
-    max-height: 468px;
+    max-height: 465px;
+    
     background: white;
     margin: 5% auto;
     padding: 10px;
-    position: relative;
     border-radius: 10px
 }
 
@@ -771,8 +802,16 @@ footer ul li a:hover {
 }
 
 .popup a:hover {
-    background: palevioletred;
     transition: all 0.2s;
+    color: darkblue;
+}
+
+.popup-close {
+    right:18px;
+    top: -4px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
 }
 
 .popup-close {
@@ -781,6 +820,20 @@ footer ul li a:hover {
     right: 15px;
     cursor: pointer;
     font-size: 1.5rem;
+    height: 30px;
+    width: 30px;
+    background-color: #000;
+}
+
+.popup-content iframe{
+    height: 500px;
+    width: 300px;
+    border: 0;
+}
+
+.popup-content div ul{
+    padding-inline-start: 0px;
+    padding: 20px;
 }
 
 #account {
@@ -788,4 +841,13 @@ footer ul li a:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+.popup-content div p{
+    margin: 10px 30px;
+    text-align: center;
+}
+
+
+#running{
+    font-size: 35px;
 }
