@@ -41,10 +41,28 @@ html {
     font-size: clamp(0.8em, 1.5vw, 1em);
 }
 
-.profile-forum{
-    
+.forum-profile{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+.forum-profile img {
+    margin-bottom: 5px;
+    border-radius: 50%;
+
+}
+.forum-profile h3 {
+    color: darkblue;
+    margin: 0px 0px;
+}
+.forum-profile p{
+    text-align: center;
+    color: darkblue;
+    margin: 0px 0px;
+
+}
 
 
 #nav-card{
