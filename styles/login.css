@@ -93,7 +93,7 @@ html {
 }
 
 #box-content-login {
-    padding: 40px;
+    padding: 20px 40px;
     position: absolute;
     top: 0px;
     right: 0px;
@@ -103,16 +103,19 @@ html {
 
 }
 
-#box-header {
+#box-header-small {
     display: none;
     width: 100%;
-    height: 75px;
+    height: 110px;
     background-color: darkblue;
-    position: sticky;
+    position: absolute;
     top: 0;
     left: 0;
-
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
 
 /* Button switch from login to register and vicerversa*/
 
@@ -197,12 +200,19 @@ a {
 
 #switch-register-small {
     display: none;
+    background: white;
+    color: darkblue;
+    width: 30%;
+    float: right;
+
 }
 
 #switch-login-small {
     display: none;
-}
+    background: white;
+    color: darkblue;
 
+}
 /*Responsiveness for small screens (mobile phones included) */
 
 @media (max-width: 768px) {
@@ -224,19 +234,20 @@ a {
     }
 
 
-
-
     #box-content-register {
         position: absolute;
         left: 0;
-        padding: 40px;
+        padding: 50px;
+        padding-top: 100px;
+
         width: 100%;
     }
 
     #box-content-login {
         position: absolute;
         left: 0;
-        padding: 40px;
+        padding: 50px;
+        padding-top: 100px;
         width: 100%;
     }
 
@@ -244,8 +255,8 @@ a {
         text-align: center;
     }
 
-    #box-header {
-        display: inline;
+    #box-header-small {
+        display: flex;
     }
 
     #slider {
@@ -253,11 +264,11 @@ a {
     }
 
     #switch-register-small {
-        display: inline;
+        display: inherit;
     }
 
     #switch-login-small {
-        display: inline;
+        display: inherit;
     }
 
 }
@@ -350,7 +361,7 @@ form:invalid button {
     font-size: 17px;
     font-style: italic;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 10px;
     border: 3px solid red;
     -webkit-border-radius: 7px;
@@ -395,7 +406,6 @@ form:invalid #submit {
 }
 
 #title {
-
     width: 100%;
 }
 
@@ -417,6 +427,29 @@ form:invalid #submit {
     margin: 15px auto;
 }
 
+
+#box-header-small p {
+    float: left;
+    display: inline;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    text-align: center;
+}
+
+
+#box-header-small img {
+    width: 70px;
+    float: left;
+    align-self: flex-end;
+}
+
+
+
+
 .white-background {
     background-color: white;
 }
+
+

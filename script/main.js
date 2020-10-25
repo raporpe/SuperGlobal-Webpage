@@ -47,6 +47,14 @@ function checkLoggedIn() {
 function updateContentRole() {
     var role = getCookie("role");
     console.log(role);
+    
+    // Set the username
+    $("#display_username").html(getCookie("username"));
+    // Set the profile photo
+    // Check first if the 
+    $("#profile").attr("src","images/students/" + getCookie("username") + ".png");
+    
+    // Hide content from other roles
     if (role == "teacher") {
         $(".show-only-students").hide();
         $(".show-only-teachers").show();
