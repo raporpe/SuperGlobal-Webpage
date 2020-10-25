@@ -49,10 +49,10 @@ function updateContentRole() {
     console.log(role);
     
     // Set the username
-    $("#display_username").html(getCookie("username"));
+    $(".display-username").html(getCookie("username"));
     // Set the profile photo
     // Check first if the 
-    $("#profile").attr("src","images/students/" + getCookie("username") + ".png");
+    $(".profile-image").attr("src","images/students/" + getCookie("username") + ".png");
     
     // Hide content from other roles
     if (role == "teacher") {
@@ -80,6 +80,16 @@ $(document).ready(function () {
         checkLoggedIn();
     }, 5000);
 
-    $(document).on("change", "#web-content", updateContentRole);
+//    $(document).on("change", "#web-content", updateContentRole);
+    
+    $(document).on("click", "#post", postMessage);
 
 });
+
+var postMessage = function () {
+//    
+//    var message = $("#message").val();
+//    $("#write-forum")
+//    $("#message-wrapper").html("<p>" + message + "</p>")
+//    $("#thread").append(message);
+}

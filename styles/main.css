@@ -78,11 +78,10 @@ header {
 }
 
 /* Header mobile version */
-#profile {
+.profile-image {
     vertical-align: middle;
     margin: 0 10px;
     border-radius: 50%;
-
 }
 
 #burger {
