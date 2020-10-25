@@ -47,13 +47,13 @@ function checkLoggedIn() {
 function updateContentRole() {
     var role = getCookie("role");
     console.log(role);
-    
+
     // Set the username
     $(".display-username").html(getCookie("username"));
     // Set the profile photo
     // Check first if the 
-    $(".profile-image").attr("src","images/students/" + getCookie("username") + ".png");
-    
+    $(".profile-image").attr("src", "images/students/" + getCookie("username") + ".png");
+
     // Hide content from other roles
     if (role == "teacher") {
         $(".show-only-students").hide();
@@ -80,16 +80,22 @@ $(document).ready(function () {
         checkLoggedIn();
     }, 5000);
 
-//    $(document).on("change", "#web-content", updateContentRole);
-    
+    //    $(document).on("change", "#web-content", updateContentRole);
+
     $(document).on("click", "#post", postMessage);
 
 });
 
 var postMessage = function () {
-//    
-//    var message = $("#message").val();
-//    $("#write-forum")
-//    $("#message-wrapper").html("<p>" + message + "</p>")
-//    $("#thread").append(message);
+    //    
+    var message = $("#message").val();
+    var newPost = $("#write-forum").html();
+    var newPost = newPost.replace("write-forum", "");
+    var newPost = newPost.replace("message-wrapper", "post-wrapper");
+    $("#thread").append(newPost);
+    $("#post-wrapper").html("<p>" + message + "</p>")
+
+
+    //    $("#write-forum")
 }
+//    $("#thread").append(message);
