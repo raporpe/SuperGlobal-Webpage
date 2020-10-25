@@ -61,7 +61,11 @@ html {
     text-align: center;
     color: darkblue;
     margin: 0px 0px;
+}
 
+.forum-comment p {
+    padding-right: 20px;
+    padding-top: 20px;
 }
 
 
