@@ -1,5 +1,7 @@
 <section class="card">
-    
+<div id="thread">
+        
+    <div onclick="changeWebContentTo('forum.html')"><i class="fas fa-arrow-left fa-2x"></i></div>
     <button class="button"><i class="fas fa-arrow-left"></i></button>
     <h1>Course Information</h1>
     
@@ -14,4 +16,21 @@
             <p>This is a message generated for this section. I hope this message is seen well as I would like to finish the project soon!</p>
         </div>
     </div>
+        
+    
+    <div id="write-forum" class="card-forum">
+        <div class="l-4">
+            <img class="profile-image" src="images/students/default_student.png" alt="profile" width="32">
+            <p class="display-username">Anonymous</p>
+            <p>Name</p>
+            <p>Date and time</p>
+        </div>
+        <div class="l-8" id="message-wrapper">
+            <h3>Write your message</h3>
+            <input type="text" id="message" name="message">
+            <div class="button" id="post">Post</div>
+        </div>
+
+    </div>
+</div>
 </section>
