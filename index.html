@@ -28,7 +28,6 @@
             <div id="slider-login">
                 <div id="title">
                     <img id="logo" src="images/uc3m.png" alt="logo" class="hide-s">
-
                     <p>Super Global</p>
                 </div>
                 <p><b>Welcome back!</b><br> Log in to continue with your courses and enjoy learning. </p>
@@ -39,7 +38,6 @@
             <div id="slider-register">
                 <div id="title">
                     <img id="logo" src="images/uc3m.png" alt="logo" class="hide-s">
-
                     <p>Super Global</p>
                 </div>
                 <p><b>Join us!</b><br> Join us and learn with other students or teachers!</p>
@@ -49,145 +47,158 @@
 
         </div>
 
-        <div id="box-header"></div>
-        <div class="white-background">
-            <div id="box-content-register">
-                <button id="switch-login-small">Login</button>
 
-                <h1>Account Information</h1>
+        <div id="box-content-register">
+            <div id="box-header-small">
+                <div> <img id="logo" src="images/uc3m.png" alt="logo" class="hide-s">
+                    <p>Super Global</p>
+                </div>
 
-                <form id="reg_form">
-                    <div class="form-input">
-                        <label for="username" class="required">Username</label>
-                        <br>
-                        <input type="text" id="register_username" name="username" title="Username shall not contain spaces" pattern="[a-z]*" required>
-                    </div>
-                    <div class="form-input">
-
-                        <label for="NIA" class="required">NIA</label><br>
-                        <input type="text" id="nia" name="nia" maxlength="9" value="100" pattern="100[0-9]{6}" required><br>
-                    </div>
-                    <div class="form-input">
-
-                        <label for="password" class="required">Password</label><br>
-                        <input type="password" id="register_password" name="password" maxlength="8" pattern="([0-9]|[a-z])*" required><br>
-                    </div>
-
-                    <!--- using javascript, we hide some options depending of user answers-->
-                    <h2>Personal Information</h2>
-                    <div class="form-input">
-
-                        <label for="Name" class="required">Name</label><br>
-                        <input type="text" id="name" name="name" pattern="([A-Za-z])*" required><br>
-                    </div>
-                    <div class="form-input">
-
-                        <label for="Surname" class="required">Surname</label><br>
-                        <input type="text" id="surname" name="surname" pattern="([A-Za-z])*" required><br>
-                    </div>
-                    <div class="form-input">
-
-                        <label for="Email" class="required">Email</label><br>
-                        <input type="text" id="email" name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
-                    </div>
-                    <div class="form-input">
-
-                        <label for="Date of Birth" class="required">Date of Birth</label><br>
-                        <input type="date" id="date-birth" name="date-birth" required><br>
-                    </div>
-                    <div class="form-input">
-
-                        <label for="ID Document" class="required">ID Document</label><br>
-                        <input type="text" id="id-document" name="id-document" required pattern="[0-9]{8}[A-Za-z]" maxlength="9"><br>
-                    </div>
-                    <div class="form-checkmark">
-
-                        <h2 class="required">Role</h2>
-
-                        <input type="radio" id="admin" name="role" value="Administrator" required>
-                        <label for="admin">Administrator</label><br>
-
-                        <input type="radio" id="teacher" name="role" value="teacher">
-                        <label for="teacher">Teacher</label><br>
-
-                        <input type="radio" id="student" name="role" value="student">
-                        <label for="student">Student</label><br>
-                    </div>
-
-
-                    <!--- ONLY IF selectes student-->
-                    <div class="form-checkmark" id="bachelor-degree">
-                        <h2>Bachelor's Degree</h2>
-
-                        <input type="radio" id="comp-eng" name="degree" value="Computer Science Engineering">
-                        <label for="comp-eng">Computer Science Engineering</label><br>
-
-                        <input type="radio" id="bio-eng" name="degree" value="Biomedical Engineering">
-                        <label for="bio-eng">Biomedical Engineering</label><br>
-
-                        <input type="radio" id="telco-eng" name="degree" value="Telematics Engineering">
-                        <label for="telco-eng">Telematics Engineering</label><br>
-                    </div>
-                    <!--- END IF selectes student-->
-
-                    <div class="form-input">
-
-                        <label for="University">University</label><br>
-                        <input type="text" id="university" name="university" value="UC3M EPS" readonly required><br>
-
-                    </div>
-
-                    <div class="form-checkmark">
-
-                        <h2>Language</h2>
-
-                        <input type="checkbox" id="english" name="language" value="english">
-                        <label for="english">English</label><br>
-
-                        <input type="checkbox" id="italian" name="language" value="italian">
-                        <label for="italian">Italian</label><br>
-
-                        <input type="checkbox" id="spanish" name="language" value="spanish">
-                        <label for="spanish">Spanish</label><br><br>
-
-                    </div>
-                    <div class="form-checkmark">
-
-                        <input type="checkbox" id="spanish" name="terms" value="terms" required>
-                        <label for="terms">I have read and accept the Terms of Use.</label><br>
-
-                    </div>
-                    <div class="wrapper">
-                        <div class="button" id="submit">Submit</div>
-                        <div class="button" id="delete">Delete</div>
-                    </div>
-
-                </form>
-
-
+                <div class="button" id="switch-login-small">Log in</div>
             </div>
+
+            <h1>Registration</h1>
+            <h2>Account Information</h2>
+
+            <form id="reg_form">
+                <div class="form-input">
+                    <label for="username" class="required">Username</label>
+                    <br>
+                    <input type="text" id="register_username" name="username" title="Username shall not contain spaces" pattern="[a-z]*" required>
+                </div>
+                <div class="form-input">
+
+                    <label for="NIA" class="required">NIA</label><br>
+                    <input type="text" id="nia" name="nia" maxlength="9" value="100" pattern="100[0-9]{6}" required><br>
+                </div>
+                <div class="form-input">
+
+                    <label for="password" class="required">Password</label><br>
+                    <input type="password" id="register_password" name="password" maxlength="8" pattern="([0-9]|[a-z])*" required><br>
+                </div>
+
+                <!--- using javascript, we hide some options depending of user answers-->
+                <h2>Personal Information</h2>
+                <div class="form-input">
+
+                    <label for="Name" class="required">Name</label><br>
+                    <input type="text" id="name" name="name" pattern="([A-Za-z])*" required><br>
+                </div>
+                <div class="form-input">
+
+                    <label for="Surname" class="required">Surname</label><br>
+                    <input type="text" id="surname" name="surname" pattern="([A-Za-z])*" required><br>
+                </div>
+                <div class="form-input">
+
+                    <label for="Email" class="required">Email</label><br>
+                    <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+                </div>
+                <div class="form-input">
+
+                    <label for="Date of Birth" class="required">Date of Birth</label><br>
+                    <input type="date" id="date-birth" name="date-birth" required><br>
+                </div>
+                <div class="form-input">
+
+                    <label for="ID Document" class="required">ID Document</label><br>
+                    <input type="text" id="id-document" name="id-document" required pattern="[0-9]{8}[A-Za-z]" maxlength="9"><br>
+                </div>
+                <div class="form-checkmark">
+
+                    <h2 class="required">Role</h2>
+
+                    <input type="radio" id="admin" name="role" value="Administrator" required>
+                    <label for="admin">Administrator</label><br>
+
+                    <input type="radio" id="teacher" name="role" value="teacher">
+                    <label for="teacher">Teacher</label><br>
+
+                    <input type="radio" id="student" name="role" value="student">
+                    <label for="student">Student</label><br>
+                </div>
+
+
+                <!--- ONLY IF selectes student-->
+                <div class="form-checkmark" id="bachelor-degree">
+                    <h2>Bachelor's Degree</h2>
+
+                    <input type="radio" id="comp-eng" name="degree" value="Computer Science Engineering">
+                    <label for="comp-eng">Computer Science Engineering</label><br>
+
+                    <input type="radio" id="bio-eng" name="degree" value="Biomedical Engineering">
+                    <label for="bio-eng">Biomedical Engineering</label><br>
+
+                    <input type="radio" id="telco-eng" name="degree" value="Telematics Engineering">
+                    <label for="telco-eng">Telematics Engineering</label><br>
+                </div>
+                <!--- END IF selectes student-->
+
+                <div class="form-input">
+
+                    <label for="University">University</label><br>
+                    <input type="text" id="university" name="university" value="UC3M EPS" readonly required><br>
+
+                </div>
+
+                <div class="form-checkmark">
+
+                    <h2>Language</h2>
+
+                    <input type="checkbox" id="english" name="language" value="english">
+                    <label for="english">English</label><br>
+
+                    <input type="checkbox" id="italian" name="language" value="italian">
+                    <label for="italian">Italian</label><br>
+
+                    <input type="checkbox" id="spanish" name="language" value="spanish">
+                    <label for="spanish">Spanish</label><br><br>
+
+                </div>
+                <div class="form-checkmark">
+
+                    <input type="checkbox" id="spanish" name="terms" value="terms" required>
+                    <label for="terms">I have read and accept the Terms of Use.</label><br>
+
+                </div>
+                <div class="wrapper">
+                    <div class="button" id="submit">Submit</div>
+                    <div class="button" id="delete">Delete</div>
+                </div>
+
+            </form>
+
+
         </div>
-        <div class="white-background">
 
-            <div id="box-content-login">
+        <div id="box-content-login">
+            
+            <h1>Login</h1>
 
-                <button id="switch-register-small">Register</button>
-                <div class="form-input">
-                    <label for="login_username">Username</label><br>
-                    <input type="text" id="login_username" name="login_username" pattern="([0-9]|[a-z])+"><br>
+            <div id="box-header-small">
+
+                <div id="title-small"> 
+                    <img id="logo" src="images/uc3m.png" alt="logo" class="hide-s">
+                    <p>Super Global</p>
                 </div>
-
-                <div class="form-input">
-                    <label for="login_password">Password</label><br>
-                    <input type="password" id="login_password" name="login_password" pattern="([0-9]|[a-z])+" maxlength="8"><br>
-                </div>
-
-                <div class="button" id="login-button">Login</div>
-
-                <p id="login-message">Error</p>
-
-
+                <div class="button" id="switch-register-small">Sign up</div>
             </div>
+
+            <div class="form-input">
+                <label for="login_username">Username</label><br>
+                <input type="text" id="login_username" name="login_username" pattern="([0-9]|[a-z])+"><br>
+            </div>
+
+            <div class="form-input">
+                <label for="login_password">Password</label><br>
+                <input type="password" id="login_password" name="login_password" pattern="([0-9]|[a-z])+" maxlength="8"><br>
+            </div>
+
+            <div class="button" id="login-button">Login</div>
+
+            <p id="login-message">Error</p>
+
+
         </div>
 
 
@@ -204,4 +215,6 @@
 
 
 
-</body></html>
+</body>
+
+</html>

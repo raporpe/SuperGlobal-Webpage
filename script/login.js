@@ -28,6 +28,11 @@ $(document).ready(function () {
     });
 
 
+    // Trigger code to switch from 
+
+
+
+
 });
 
 
@@ -39,11 +44,6 @@ function reset_form() {
 function login() {
     var username = $("#login_username").val();
     var password = $("#login_password").val();
-    console.log("Username -> " + username);
-    console.log("Password -> " + password);
-
-    var hash = MD5(username + password);
-    var token = getCookie("password");
 
     $("#login-message").fadeOut(500);
 
@@ -54,7 +54,10 @@ function login() {
     }
 
 
-    if (token == hash) {
+    var hashedPassword = MD5(password);
+    var hashedCookie = getCookie("password");
+
+    if (hashedPassword == hashedCookie) {
         setCookie("authenticated", "true");
         console.log("Found cookie:" + cookie.value);
         window.location.href = "/course.html";
@@ -73,22 +76,38 @@ function register() {
     //Fields are prevalidated
     var register = $("#reg_form").serializeArray();
     console.log(register);
+
+    //Check if email already exists
+    var alreadyRegisteredEmail = getCookie("email");
     for (i in register) {
-        
-        if (register[i]["name"] == "password") {
-            var pass = register[i]["value"];
-        } else if (register[i]["name"] == "username") {
-            var user = register[i]["value"];
-        } else {
-            addCookie(register[i]);
+        //Get the form email and compare it to the one stored in the cookie
+        if (register[i]["name"] == "email" && register[i]["value"] == alreadyRegisteredEmail) {
+            alert("The email is already registered");
+            return;
         }
     }
-    
-    setCookie("password", MD5(user+pass));
-    
+
+    //Extract password value
+    for (i in register) {
+        if (register[i]["name"] == "password") {
+            var password = register[i]["value"];
+        }
+        addCookie(register[i]);
+    }
+
+    // Store the password hashed with md5
+    setCookie("password", MD5(password));
+
+
     alert("Your registration has been recorded");
     reset_form();
-    slide_login();
+
+    //Detect if in mobile or desktop version
+    if ($('#box-header-small').css('display') == 'none') {
+        slide_login();
+    } else {
+        small_login();
+    }
 
 
     //Save information in a cookie
@@ -99,31 +118,31 @@ function slide_register() {
     var speed = 300;
     var options = {
         duration: speed,
-        queue: false
+        queue: false,
+        easing: "easeInOutQuint",
     };
-    var easeType = "easeInOutQuint"
 
     // Hide the login box
-    $("#box-content-login").fadeOut(options, easeType);
+    $("#box-content-login").fadeOut(options);
 
     // Movement effect: login moving to the left while fading
     $("#box-content-login").animate({
-        "left": "-=550px"
-    }, options, easeType);
+        "right": "550px"
+    }, options);
 
     // Register box begins to appear
-    $("#box-content-register").fadeIn(options, easeType);
+    $("#box-content-register").fadeIn(options);
 
     // Movement effect: register appears from the right
     $("#box-content-register").animate({
         "left": "0px"
-    }, options, easeType);
+    }, options);
 
 
     // Move blue slider to the left
     $("#slider").animate({
         "left": "450px",
-    }, options, easeType);
+    }, options);
 
 
     // Make the registration scrollable
@@ -133,13 +152,10 @@ function slide_register() {
 
 
     // The register dialog appears in the slider 
-    $("#slider-register").fadeIn(options, easeType);
+    $("#slider-register").fadeIn(options);
 
     // The login dialog disappears in the slider 
-    $("#slider-login").fadeOut(options, easeType);
-
-
-
+    $("#slider-login").fadeOut(options);
 
 }
 
@@ -148,31 +164,32 @@ function slide_login() {
     var speed = 300;
     var options = {
         duration: speed,
-        queue: false
+        queue: false,
+        easing: "easeInOutQuint",
     };
-    var easeType = "easeInOutQuint"
+
 
     // Hide the register box
-    $("#box-content-register").fadeOut(options, easeType);
+    $("#box-content-register").fadeOut(options);
 
     // Movement effect: register moving to the right while fading
     $("#box-content-register").animate({
         "left": "+=500px"
-    }, options, easeType);
+    }, options);
 
     // Login box begins to appear
-    $("#box-content-login").fadeIn(options, easeType);
+    $("#box-content-login").fadeIn(options);
 
     // Movement effect: login appears from the left
     $("#box-content-login").animate({
-        "left": "300px"
-    }, options, easeType);
+        "right": "0px"
+    }, options);
 
 
     // Move blue slider to the right
     $("#slider").animate({
         "left": "0px"
-    }, options, easeType);
+    }, options);
 
 
     // Make the login not scrollable
@@ -182,11 +199,10 @@ function slide_login() {
 
 
     // The register dialog disappears in the slider 
-    $("#slider-register").fadeOut(options, easeType);
+    $("#slider-register").fadeOut(options);
 
     // The login dialog appears in the slider 
-    $("#slider-login").fadeIn(options, easeType);
-
+    $("#slider-login").fadeIn(options);
 
 
 }
@@ -194,14 +210,14 @@ function slide_login() {
 
 function small_register() {
 
-    //    $("#box-content-register").show();
-    //    $("#box-content-login").hide();
+    $("#box-content-register").fadeIn(500);
+    $("#box-content-login").fadeOut(500);
 
 }
 
 function small_login() {
 
-    //    $("#box-content-register").hide();
-    //    $("#box-content-login").show();
+    $("#box-content-register").fadeOut(500);
+    $("#box-content-login").fadeIn(500);
 
 }
