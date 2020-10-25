@@ -68,6 +68,16 @@ html {
     padding-top: 20px;
 }
 
+/* if forum tab is available */
+.available:hover{
+    color: white;
+    background-color: darkblue;
+}
+
+.available:hover i{
+    color: white;
+}
+
 
 #nav-card{
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
@@ -345,6 +355,10 @@ nav ul li a:hover i {
     margin: 0px;
 }
 
+.button:hover a{
+    color: darkblue;
+}
+
 .button i {
     color: white;
 }
@@ -586,8 +600,12 @@ footer ul li a:hover {
     top: 0;
 }
 
+.flex{
+    display: flex;
+}
 .exportToExcel {
-    padding: 2px;
+    padding: 0px 8px;
+    margin: 10p
     border: 3px solid darkblue;
     background-color: darkblue;
 
@@ -601,10 +619,14 @@ footer ul li a:hover {
     transition: 0.3s;
 }
 
+.exportToExcel i{
+    color: white;
+}
+
 .exportToExcel:hover {
     background: white;
     color: darkblue;
-    margin: 0px;
+    margin: 10px;
 }
 
 #white-alt {}
@@ -813,16 +835,6 @@ footer ul li a:hover {
     margin: 5% auto;
     padding: 10px;
     border-radius: 10px
-}
-
-.popup a {
-    background: salmon;
-    color: white;
-    text-decoration: none;
-    padding: 6px 10px;
-    margin: 30px auto;
-    display: block;
-    width: 50%;
 }
 
 .popup a:hover {
