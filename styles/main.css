@@ -22,6 +22,22 @@ html {
     border-radius: 7px;
 }
 
+.card-forum {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    padding: 0px 1px;
+    overflow: auto;
+    background-color: white;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    margin: 10px 0px;
+}
+
+.forum-right{
+    text-align: right;
+}
+
+
 #nav-card{
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
     padding-left: 20px;
@@ -306,6 +322,8 @@ nav ul li a:hover i {
 .button:hover i{
     color: darkblue;
 }
+
+
 
 
 
