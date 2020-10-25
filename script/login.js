@@ -26,9 +26,19 @@ $(document).ready(function () {
             scrollTop: 0
         }, "slow");
     });
+    
+    
 
 
-    // Trigger code to switch from 
+    // Trigger code to avoid bugs when switching views
+    var accomodate = function() {
+        if($(window).width() > 768){
+            slide_login();
+        } else {
+            small_login();
+        }
+    }
+    $(window).resize(accomodate);
 
 
 
