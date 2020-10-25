@@ -37,6 +37,15 @@ html {
     text-align: right;
 }
 
+.top-forum {
+    font-size: clamp(0.8em, 1.5vw, 1em);
+}
+
+.profile-forum{
+    
+}
+
+
 
 #nav-card{
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
@@ -59,7 +68,6 @@ html {
 
 
 /* Header */
-
 
 header {
     height: 90px;
@@ -556,11 +564,6 @@ footer ul li a:hover {
     margin-right: 2px;
     top: 0;
 }
-
-.top-forum {
-    font-size: clamp(0.8em, 1.5vw, 1em);
-}
-
 
 .exportToExcel {
     padding: 2px;
