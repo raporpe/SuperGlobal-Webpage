@@ -21,11 +21,11 @@ $(document).ready(function () {
     });
 
     //Delete all form data and scroll to op
-    $("#delete").click(function () {
-        $("html, body").animate({
-            scrollTop: 0
-        }, "slow");
-    });
+//    $("#delete").click(function () {
+//        $("html, body").animate({
+//            scrollTop: 0
+//        }, "slow");
+//    });
     
 
 
@@ -85,17 +85,18 @@ function register() {
         }
     }
 
-    //Extract password value
+    //Save registration form info in cookies
     for (i in register) {
+        
+        //The password is stored hashed
         if (register[i]["name"] == "password") {
             var password = register[i]["value"];
+            setCookie("password", MD5(password));
         }
+        
         addCookie(register[i]);
+        
     }
-
-    // Store the password hashed with md5
-    setCookie("password", MD5(password));
-
 
     alert("Your registration has been recorded");
     reset_form();
@@ -103,119 +104,100 @@ function register() {
     //Detect if in mobile or desktop version
     if ($('#box-header-small').css('display') == 'none') {
         slide_login();
+        console.log("Desktop");
     } else {
         small_login();
+        console.log("Mobile");
     }
 
 
-    //Save information in a cookie
 }
 
 function slide_register() {
 
-    var speed = 300;
-    var options = {
-        duration: speed,
-        queue: false,
-        easing: "easeInOutQuint",
-    };
-
     // Hide the login box
-    $("#box-content-login").fadeOut(options);
+    $("#box-content-login").css("opacity", "0");
+    $("#box-content-login").css("z-index", "-1");
 
     // Movement effect: login moving to the left while fading
-    $("#box-content-login").animate({
-        "right": "550px"
-    }, options);
+    $("#box-content-login").css("right", "550px");
 
     // Register box begins to appear
-    $("#box-content-register").fadeIn(options);
+    $("#box-content-register").css("opacity", "1");
+    $("#box-content-register").css("z-index", "999");
 
     // Movement effect: register appears from the right
-    $("#box-content-register").animate({
-        "left": "0px"
-    }, options);
-
+    $("#box-content-register").css("left", "0px");
 
     // Move blue slider to the left
-    $("#slider").animate({
-        "left": "450px",
-    }, options);
-
+    $("#slider").css("left", "450px");
 
     // Make the registration scrollable
-    $(".box").css({
-        "overflow": "scroll"
-    });
-
+    $(".box").css("overflow", "scroll");
 
     // The register dialog appears in the slider 
-    $("#slider-register").fadeIn(options);
+    $("#slider-register").css("opacity", "1");
+    $("#slider-register").css("z-index", "999");
 
     // The login dialog disappears in the slider 
-    $("#slider-login").fadeOut(options);
+    $("#slider-login").css("opacity", "0");
+    $("#slider-login").css("z-index", "-1");
 
 }
 
 function slide_login() {
-
-    var speed = 300;
-    var options = {
-        duration: speed,
-        queue: false,
-        easing: "easeInOutQuint",
-    };
-
+    
+    console.log("Switching to login");
 
     // Hide the register box
-    $("#box-content-register").fadeOut(options);
+    $("#box-content-register").css("opacity", "0");
+    $("#box-content-register").css("z-index", "-1");
 
     // Movement effect: register moving to the right while fading
-    $("#box-content-register").animate({
-        "left": "+=500px"
-    }, options);
+    $("#box-content-register").css("left", "+=500px");
 
     // Login box begins to appear
-    $("#box-content-login").fadeIn(options);
+    $("#box-content-login").css("opacity", "1");
+    $("#box-content-login").css("z-index", "999");
 
     // Movement effect: login appears from the left
-    $("#box-content-login").animate({
-        "right": "0px"
-    }, options);
-
+    $("#box-content-login").css("right", "0px");
 
     // Move blue slider to the right
-    $("#slider").animate({
-        "left": "0px"
-    }, options);
-
+    $("#slider").css("left", "0px");
 
     // Make the login not scrollable
-    $(".box").css({
-        "overflow": "hidden"
-    });
-
+    $(".box").css("overflow", "hidden");
 
     // The register dialog disappears in the slider 
-    $("#slider-register").fadeOut(options);
+    $("#slider-register").css("opacity", "0");
+    $("#slider-register").css("z-index", "-1");
 
     // The login dialog appears in the slider 
-    $("#slider-login").fadeIn(options);
+    $("#slider-login").css("opacity", "1");
+    $("#slider-login").css("z-index", "999");
 
 
 }
 
 
+
 function small_register() {
 
-    $("#box-content-register").fadeIn(500);
-    $("#box-content-login").fadeOut(500);
+    $("#box-content-register").css("opacity", 1);
+    $("#box-content-register").css("z-index", "999");
+    
+    $("#box-content-login").css("opacity", 0);
+    $("#box-content-login").css("z-index", "-1");
 
 }
 
 function small_login() {
 
-    $("#box-content-register").fadeOut(500);
-    $("#box-content-login").fadeIn(500);
+    $("#box-content-register").css("opacity", 0);
+    $("#box-content-register").css("z-index", "-1");
+    
+    $("#box-content-login").css("opacity", 1);
+    $("#box-content-login").css("z-index", "999");
 
 }

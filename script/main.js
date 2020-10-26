@@ -1,3 +1,23 @@
+$(document).ready(function () {
+
+    changeWebContentTo("/main.html");
+
+    checkLoggedIn();
+    updateContentRole();
+
+    //Check log in every 5 seconds
+    setInterval(function () {
+        checkLoggedIn();
+    }, 5000);
+
+    //    $(document).on("change", "#web-content", updateContentRole);
+
+    $(document).on("click", "#post", postMessage);
+
+});
+
+// Gets the contents in the specified url and returns them
+// in the first argument of the callback function
 function getContent(url, callback) {
 
     // Feature detection
@@ -17,7 +37,6 @@ function getContent(url, callback) {
     xhttp.open("GET", url, true);
     xhttp.send();
 
-
 };
 
 function changeActive(obj) {
@@ -27,35 +46,45 @@ function changeActive(obj) {
     obj.className = "active";
 }
 
+// Modifies the content of the div with id "web-content"
 function changeWebContentTo(changeTo) {
-    var webContent = document.getElementById("web-content");
-    getContent(changeTo, function (html) {
-        webContent.innerHTML = html;
+    
+    //Callback function used to insert new content when it has been downloaded
+    var callback = function (html) {
+        $("web-content").html(html);
         updateContentRole();
-    });
+    }
+    
+    getContent(changeTo, callback);
+    
 }
 
-
+// Checks if the user has authenticated
 function checkLoggedIn() {
     if (getCookie("authenticated") != "true") {
         // Redirect to login
         window.location.href = "/index.html";
     }
-
 }
 
-function updateContentRole() {
-    var role = getCookie("role");
-    console.log(role);
+// Changes the authentication flag to false and calls function to return to login
+function logOut() {
+    setCookie("authenticated", "false");    
+    checkLoggedIn();
+}
 
-    // Set the username
+// Updates the page with custom content according to the selected role in the registration
+function updateContentRole() {
+    
+    var role = getCookie("role");
+    
+    // Set the username 
     $(".display-username").html(getCookie("username"));
     // Set the profile photo
-    // Check first if the 
     $(".profile-image").attr("src", "images/students/" + getCookie("username") + ".png");
 
     // Hide content from other roles
-    if (role == "teacher") {
+    if (role == "teacher" || role == "administrator") {
         $(".show-only-students").hide();
         $(".show-only-teachers").show();
     } else if (role == "student") {
@@ -68,25 +97,9 @@ function updateContentRole() {
 
 }
 
-$(document).ready(function () {
 
-    changeWebContentTo("/main.html");
 
-    checkLoggedIn();
-    updateContentRole();
-
-    //Check log in every 5 seconds
-    setInterval(function () {
-        checkLoggedIn();
-    }, 5000);
-
-    //    $(document).on("change", "#web-content", updateContentRole);
-
-    $(document).on("click", "#post", postMessage);
-
-});
-
-var postMessage = function () {
+function postMessage() {
     //    
     var message = $("#message").val();
     var newPost = $("#write-forum").html();
@@ -98,8 +111,4 @@ var postMessage = function () {
     $("#just-posted").children(".forum-profile").append("<p>" + "Jut now" + "</p>")
     $("#just-posted").removeAttr("id");
     
-
-
-    //    $("#write-forum")
 }
-//    $("#thread").append(message);
