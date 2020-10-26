@@ -126,7 +126,7 @@ html {
 #box-header-small p {
     float: left;
     display: inline;
-    font-size: 30px;
+    font-size: clamp(1vw,4vw,5vw);
     font-weight: bold;
     font-style: italic;
     color: white;
@@ -220,6 +220,8 @@ a {
     color: darkblue;
     margin-right: 20px;
     margin-left: auto;
+    padding: 10px 20px;
+
 }
 
 #switch-login-small {
@@ -228,6 +230,7 @@ a {
     color: darkblue;
     margin-right: 20px;
     margin-left: auto;
+    padding: 10px 20px;
 }
 
 /*Responsiveness for small screens (mobile phones included) */
@@ -457,4 +460,11 @@ form:invalid #submit {
 
 .white-background {
     background-color: white;
+}
+
+
+@media (max-width: 600px) {
+    
+    
+    
 }
