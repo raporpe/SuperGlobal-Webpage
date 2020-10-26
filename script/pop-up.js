@@ -8,6 +8,14 @@ $(document).ready(function () {
         $("#popup-wrapper-calendar").hide();
     });
 
+    $("#popup-button-calendar1").click(function(){
+        $("#popup-wrapper-calendar1").show();
+    });
+    
+    $("#popup-close-calendar1").click(function(){
+        $("#popup-wrapper-calendar1").hide();
+    });
+    
     $("#popup-button-logout").click(function(){
         $("#popup-wrapper-logout").show();
     });
