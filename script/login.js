@@ -7,7 +7,7 @@ $(document).ready(function () {
     $("#delete").click(reset_form);
     $("#submit").click(register);
 
-    small_login();
+//    small_login();
 
     $("#bachelor-degree").fadeOut(500);
     $("#reg_form").on("change", function () {
@@ -86,11 +86,13 @@ function register() {
     // Store the password hashed
     setCookie("password", MD5(password));
 
+    $(".box").scrollTop(0);
     alert("Your registration has been recorded");
     reset_form();
 
     //Detect if in mobile or desktop version
     if ($('#box-header-small').css('display') == 'none') {
+        console.log("Sliding in desktop");
         slide_login();
     } else {
         small_login();

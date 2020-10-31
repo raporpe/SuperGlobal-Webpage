@@ -44,7 +44,7 @@ html {
     -webkit-border-radius: 17px;
     -moz-border-radius: 17px;
     border-radius: 17px;
-    
+
     left: 0px;
     transition: 0.4s cubic-bezier(0.74, 0.25, 0.32, 0.93);
 
@@ -133,7 +133,7 @@ html {
 #box-header-small p {
     float: left;
     display: inline;
-    font-size: clamp(1vw,4vw,5vw);
+    font-size: clamp(1vw, 4vw, 5vw);
     font-weight: bold;
     font-style: italic;
     color: white;
@@ -402,10 +402,12 @@ form:invalid button {
 #delete {
     background: white;
     border: solid 3px red;
+    padding: 10px 50px;
     color: red;
     font-style: normal;
     width: 50%;
     display: inline;
+
 }
 
 #delete:hover {
@@ -413,13 +415,14 @@ form:invalid button {
     border: solid 3px red;
     color: white;
     font-style: italic;
-    width: 50%;
 }
 
 #submit {
     width: 50%;
     display: inline;
     margin-right: 15px;
+    padding: 10px 50px;
+
 }
 
 form:invalid #submit {
@@ -467,8 +470,4 @@ form:invalid #submit {
 }
 
 
-@media (max-width: 600px) {
-    
-    
-    
-}
+@media (max-width: 600px) {}
