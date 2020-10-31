@@ -45,7 +45,7 @@ html {
     -moz-border-radius: 17px;
     border-radius: 17px;
     
-
+    left: 0px;
     transition: 0.4s cubic-bezier(0.74, 0.25, 0.32, 0.93);
 
 
