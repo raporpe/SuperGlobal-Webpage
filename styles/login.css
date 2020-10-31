@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    transition: 0.4s cubic-bezier(0.74, 0.25, 0.32, 0.93);
 }
 
 body,
@@ -47,6 +46,7 @@ html {
     border-radius: 17px;
     
 
+    transition: 0.4s cubic-bezier(0.74, 0.25, 0.32, 0.93);
 
 
 }
@@ -60,6 +60,7 @@ html {
     /* Initially not shown */
     opacity: 0;
     z-index: -1;
+    transition: 0.4s cubic-bezier(0.74, 0.25, 0.32, 0.93);
 
 
     /* Initially hidden on the left */
@@ -74,6 +75,9 @@ html {
     position: absolute;
     padding: 15px 30px;
     width: 100%;
+    transition: 0.4s cubic-bezier(0.74, 0.25, 0.32, 0.93);
+
+
 }
 
 #slider-login p {
@@ -92,6 +96,8 @@ html {
     background-color: white;
     opacity: 0;
     top: 0px;
+    transition: 0.4s cubic-bezier(0.74, 0.25, 0.32, 0.93);
+
 }
 
 #box-content-login {
@@ -102,6 +108,7 @@ html {
     width: 60%;
     z-index: 2;
     background-color: white;
+    transition: 0.4s cubic-bezier(0.74, 0.25, 0.32, 0.93);
 
 
 }

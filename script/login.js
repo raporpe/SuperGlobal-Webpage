@@ -20,20 +20,11 @@ $(document).ready(function () {
         }
     });
 
-    //Delete all form data and scroll to op
-//    $("#delete").click(function () {
-//        $("html, body").animate({
-//            scrollTop: 0
-//        }, "slow");
-//    });
     
-
-
-
-
 });
 
 
+// Resets the registration form to defaults
 function reset_form() {
     $('#reg_form').trigger("reset");
 }
