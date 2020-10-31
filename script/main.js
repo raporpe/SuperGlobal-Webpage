@@ -109,6 +109,7 @@ function postMessage() {
     
     $("#just-posted").children(".l-8").html("<p>" + message + "</p>");
     $("#just-posted").children(".forum-profile").append("<p>" + "Jut now" + "</p>")
+    $("#just-posted").children(".forum-profile").append("<p>" + "Just now" + "</p>")
     $("#just-posted").removeAttr("id");
     
 }
