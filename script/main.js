@@ -52,7 +52,6 @@ function changeWebContentTo(changeTo) {
     //Callback function used to insert new content when it has been downloaded
     var callback = function (html) {
         $("#web-content").html(html);
-        console.log(html);
         updateContentRole();
     }
     
