@@ -48,15 +48,12 @@ function login() {
 
     if (hashedPassword == hashedCookie) {
         setCookie("authenticated", "true");
-        console.log("Found cookie:" + cookie.value);
         window.location.href = "/course.html";
 
     } else {
         //Do nothing
-        console.log("Cookie not found!");
         $("#login-message").text("The user or password are incorrect");
         $("#login-message").fadeIn(500);
-
 
     }
 }
@@ -71,7 +68,7 @@ function register() {
     for (i in register) {
         //Get the form email and compare it to the one stored in the cookie
         if (register[i]["name"] == "email" && register[i]["value"] == alreadyRegisteredEmail) {
-            alert("The email is already registered");
+            alert("The email is already registered!");
             return;
         }
     }
@@ -95,10 +92,8 @@ function register() {
     //Detect if in mobile or desktop version
     if ($('#box-header-small').css('display') == 'none') {
         slide_login();
-        console.log("Desktop");
     } else {
         small_login();
-        console.log("Mobile");
     }
 
 
@@ -138,14 +133,12 @@ function slide_register() {
 
 function slide_login() {
     
-    console.log("Switching to login");
-
     // Hide the register box
     $("#box-content-register").css("opacity", "0");
     $("#box-content-register").css("z-index", "-1");
 
     // Movement effect: register moving to the right while fading
-    $("#box-content-register").css("left", "+=500px");
+    $("#box-content-register").css("left", "500px");
 
     // Login box begins to appear
     $("#box-content-login").css("opacity", "1");

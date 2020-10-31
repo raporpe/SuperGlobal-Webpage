@@ -51,7 +51,8 @@ function changeWebContentTo(changeTo) {
     
     //Callback function used to insert new content when it has been downloaded
     var callback = function (html) {
-        $("web-content").html(html);
+        $("#web-content").html(html);
+        console.log(html);
         updateContentRole();
     }
     
@@ -63,7 +64,7 @@ function changeWebContentTo(changeTo) {
 function checkLoggedIn() {
     if (getCookie("authenticated") != "true") {
         // Redirect to login
-        window.location.href = "/index.html";
+        //window.location.href = "/index.html";
     }
 }
 
