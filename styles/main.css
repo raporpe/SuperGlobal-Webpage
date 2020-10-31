@@ -369,6 +369,10 @@ nav ul li a:hover i {
     color: darkblue;
 }
 
+.popup-button-calendar{
+    text-decoration: underline;
+}
+
 .button {
     padding: 10px;
     border: 2px solid darkblue;
