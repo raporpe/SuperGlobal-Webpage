@@ -62,7 +62,6 @@ function register() {
     //Fields are prevalidated
     var register = $("#reg_form").serializeArray();
     console.log(register);
-
     //Check if email already exists
     var alreadyRegisteredEmail = getCookie("email");
     for (i in register) {
@@ -76,15 +75,16 @@ function register() {
     //Save registration form info in cookies
     for (i in register) {
         
-        //The password is stored hashed
         if (register[i]["name"] == "password") {
             var password = register[i]["value"];
-            setCookie("password", MD5(password));
         }
         
         addCookie(register[i]);
         
     }
+    
+    // Store the password hashed
+    setCookie("password", MD5(password));
 
     alert("Your registration has been recorded");
     reset_form();
