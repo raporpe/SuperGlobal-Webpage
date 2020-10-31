@@ -80,6 +80,8 @@ function updateContentRole() {
     
     // Set the username 
     $(".display-username").html(getCookie("username"));
+    $(".display-name").html(getCookie("name"));
+
     // Set the profile photo
     $(".profile-image").attr("src", "images/students/" + getCookie("username") + ".png");
 

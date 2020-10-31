@@ -1,8 +1,7 @@
 $(function () {
     $("#web-content").on('click', '.exportToExcel', function (e) {
-        console.log("hola");
 
-        var table = $(this).prev('.table2excel');
+        var table = $(".table2excel:visible");
         if (table && table.length) {
             var preserveColors = (table.hasClass('table2excel_with_colors') ? true : false);
             $(table).table2excel({
