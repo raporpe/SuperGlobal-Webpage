@@ -10,7 +10,6 @@ $(document).ready(function () {
         checkLoggedIn();
     }, 5000);
 
-    //    $(document).on("change", "#web-content", updateContentRole);
 
     $(document).on("click", "#post", postMessage);
 
@@ -63,7 +62,7 @@ function changeWebContentTo(changeTo) {
 function checkLoggedIn() {
     if (getCookie("authenticated") != "true") {
         // Redirect to login
-        //window.location.href = "/index.html";
+        window.location.href = "/index.html";
     }
 }
 
@@ -102,7 +101,6 @@ function updateContentRole() {
 
 
 function postMessage() {
-    //    
     var message = $("#message").val();
     var newPost = $("#write-forum").html();
     var newPost = '<div class="card-forum" id="just-posted">' + newPost + '</div>';
