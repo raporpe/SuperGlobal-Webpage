@@ -2,11 +2,14 @@ $(document).ready(function () {
     
     // Show and hide calendar
     
-    $("#web-content").on("click", "#popup-button-calendar", function() {
+    $("body").on("click", "#popup-button-calendar", function() {
+        console.log("pop");
         $("#popup-wrapper-calendar").show();
     })
                   
-    $("#web-content").on("click", "#popup-close-calendar", function(){
+    $("body").on("click", "#popup-close-calendar", function(){
+        console.log("close");
+
         $("#popup-wrapper-calendar").hide();
     });
     
