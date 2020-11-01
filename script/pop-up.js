@@ -1,20 +1,17 @@
 $(document).ready(function () {
-                  
-    $("#popup-button-calendar").click(function(){
-        $("#popup-wrapper-calendar").show();
-    });
     
-    $("#popup-close-calendar").click(function(){
+    // Show and hide calendar
+    
+    $("#web-content").on("click", "#popup-button-calendar", function() {
+        $("#popup-wrapper-calendar").show();
+    })
+                  
+    $("#web-content").on("click", "#popup-close-calendar", function(){
         $("#popup-wrapper-calendar").hide();
     });
-
-    $("#popup-button-calendar1").click(function(){
-        $("#popup-wrapper-calendar1").show();
-    });
     
-    $("#popup-close-calendar1").click(function(){
-        $("#popup-wrapper-calendar1").hide();
-    });
+    
+    // Logout window
     
     $("#popup-button-logout").click(function(){
         $("#popup-wrapper-logout").show();

@@ -73,10 +73,15 @@ function register() {
     }
 
     //Save registration form info in cookies
+    var language = "";
     for (i in register) {
         
         if (register[i]["name"] == "password") {
             var password = register[i]["value"];
+        }
+        
+        if (register[i]["name"] == "language") {
+            language += register[i]["value"] + ",";
         }
         
         addCookie(register[i]);
@@ -85,6 +90,10 @@ function register() {
     
     // Store the password hashed
     setCookie("password", MD5(password));
+    
+    // Remove trailing comma and set language
+    language = language.replace(/,*$/, "");
+    setCookie("language", language);
 
     $(".box").scrollTop(0);
     alert("Your registration has been recorded");
