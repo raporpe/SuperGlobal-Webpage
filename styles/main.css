@@ -67,6 +67,11 @@ html {
     padding-top: 20px;
 }
 
+#message {
+    height: 100px;
+    width: inherit;
+    margin: 0px 5px 20px 0px;
+}
 .write-box{
     
 }
