@@ -59,20 +59,20 @@
 
             <form id="reg_form">
                 <div class="form-input">
-                    <label for="username" class="required">Username</label>
+                    <label for="register_username" class="required">Username</label>
                     <br>
                     <input type="text" id="register_username" name="username" pattern="[a-z]*" required>
                 </div>
                 <div class="form-input">
 
-                    <label for="NIA" class="required">NIA</label>
+                    <label for="nia" class="required">NIA</label>
                     <span style="opacity: 0.5">(e.g. 100123456)</span>
 
                     <input type="text" id="nia" name="nia" maxlength="9" value="100" pattern="100[0-9]{6}" required><br>
                 </div>
                 <div class="form-input">
 
-                    <label for="password" class="required">Password</label><br>
+                    <label for="register_password" class="required">Password</label><br>
                     <input type="password" id="register_password" name="password" maxlength="8" pattern="([0-9]|[a-z])*" required><br>
                 </div>
 
@@ -80,29 +80,29 @@
                 <h2>Personal Information</h2>
                 <div class="form-input">
 
-                    <label for="Name" class="required">Name</label><br>
+                    <label for="name" class="required">Name</label><br>
                     <input type="text" id="name" name="name" pattern="([A-Za-z])*" required><br>
                 </div>
                 <div class="form-input">
 
-                    <label for="Surname" class="required">Surname</label><br>
+                    <label for="surname" class="required">Surname</label><br>
                     <input type="text" id="surname" name="surname" pattern="([A-Za-z])*" required><br>
                 </div>
                 <div class="form-input">
 
-                    <label for="Email" class="required">Email</label>
+                    <label for="email" class="required">Email</label>
                     <span style="opacity: 0.5">(e.g. example@gmail.com)</span>
 
                     <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
                 </div>
                 <div class="form-input">
 
-                    <label for="Date of Birth" class="required">Date of Birth</label><br>
+                    <label for="date-birth" class="required">Date of Birth</label><br>
                     <input type="date" id="date-birth" name="date-birth" required><br>
                 </div>
                 <div class="form-input">
 
-                    <label for="ID Document" class="required">ID Document</label>
+                    <label for="id-document" class="required">ID Document</label>
                     <span style="opacity: 0.5">(e.g. 12345678A)</span>
                     <input type="text" id="id-document" name="id-document" required pattern="[0-9]{8}[A-Za-z]" maxlength="9">
 
@@ -139,7 +139,7 @@
 
                 <div class="form-input">
 
-                    <label for="University">University</label><br>
+                    <label for="university">University</label><br>
                     <input type="text" id="university" name="university" value="UC3M EPS" readonly required><br>
 
                 </div>
@@ -160,7 +160,7 @@
                 </div>
                 <div class="form-checkmark">
 
-                    <input type="checkbox" name="terms" value="terms" required>
+                    <input type="checkbox" id="terms" name="terms" value="terms" required>
                     <label for="terms">I have read and accept the Terms of Use.</label><br>
 
                 </div>
