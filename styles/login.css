@@ -9,12 +9,6 @@ html {
     height: 100%;
 }
 
-.center {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 /* Central box with content */
 
@@ -30,6 +24,16 @@ html {
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
 
 }
+
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Slider separating login and register  */
 
 
 #slider {
@@ -51,6 +55,8 @@ html {
 
 }
 
+/* Register message inside the blue slider */
+
 #slider-register {
     position: absolute;
     padding: 15px 30px;
@@ -71,21 +77,22 @@ html {
     margin: 20px 0;
 }
 
+
+/* Login message inside the blue slider */
+
 #slider-login {
     position: absolute;
     padding: 15px 30px;
     width: 100%;
     transition: 0.4s cubic-bezier(0.74, 0.25, 0.32, 0.93);
-
-
 }
 
 #slider-login p {
     text-align: center;
     margin: 20px 0;
-
 }
 
+/* Register form inside box */
 
 #box-content-register {
     padding: 15px 40px 40px 40px;
@@ -97,8 +104,9 @@ html {
     opacity: 0;
     top: 0px;
     transition: 0.4s cubic-bezier(0.74, 0.25, 0.32, 0.93);
-
 }
+
+/* Login form inside box */
 
 #box-content-login {
     padding: 20px 40px;
@@ -113,6 +121,8 @@ html {
 
 }
 
+/* Header of box for mobile version */
+
 #box-header-small {
     display: none;
     width: 100%;
@@ -126,8 +136,10 @@ html {
     justify-content: flex-start;
 }
 
+
 #box-header-small img {
     margin: 0 20px;
+    width: 70px;
 }
 
 #box-header-small p {
@@ -140,7 +152,7 @@ html {
     text-align: center;
 }
 
-/* Button switch from login to register and vicerversa*/
+/* Button switch from login to register and vicerversa */
 
 #switch-login-desktop {
     background-color: white;
@@ -163,7 +175,7 @@ html {
     font-style: italic;
 }
 
-/* Background image */
+/* Background image for login page */
 
 .bg-img {
     background-image: url("/images/uc3m_campus.jpg");
@@ -178,7 +190,6 @@ html {
     opacity: 0.4;
     z-index: -1;
 }
-
 
 /* Login and register button */
 
@@ -211,11 +222,7 @@ html {
     color: darkblue;
 }
 
-label {
-    font-size: 20px;
-}
 
-input {}
 
 a {
     text-decoration: none;
@@ -237,7 +244,7 @@ a {
     margin-left: auto;
 }
 
-/*Responsiveness for small screens (mobile phones included) */
+/* Responsiveness for small screens (mobile phones included) */
 
 @media (max-width: 768px) {
 
@@ -257,13 +264,11 @@ a {
 
     }
 
-
     #box-content-register {
         position: absolute;
         left: 0;
         padding: 50px;
         padding-top: 100px;
-
         width: 100%;
     }
 
@@ -275,17 +280,20 @@ a {
         width: 100%;
     }
 
-    .box-small > p {
-        text-align: center;
-    }
+    
+    /* Display the header only in mobile version */
 
     #box-header-small {
         display: flex;
     }
 
+    /* Slider is only for desktop version */
+
     #slider {
         display: none;
     }
+
+    /* Display switch buttons for mobile version */
 
     #switch-register-small {
         display: inherit;
@@ -298,7 +306,7 @@ a {
 }
 
 
-/* Forms */
+/* Register form */
 
 .form-input {
     margin-bottom: 20px;
@@ -332,22 +340,10 @@ a {
 
 }
 
-
-.required::after {
-    content: '*';
-    margin-left: 2px;
-    color: red;
-}
-
 .form-input > input:focus {
     border: 1px solid darkblue;
     outline: none !important;
     transition: 0.5s;
-
-}
-
-.wrong > label {
-    color: red;
 
 }
 
@@ -379,6 +375,19 @@ form:invalid button {
     margin: 2px;
 }
 
+/* Red asterisk */
+.required::after {
+    content: '*';
+    margin-left: 2px;
+    color: red;
+}
+
+/* Red color when wrong input */
+.wrong > label {
+    color: red;
+}
+
+/* Login message when authentication fails */
 #login-message {
     display: none;
     color: red;
@@ -398,6 +407,8 @@ form:invalid button {
     margin-right: auto;
     width: 50%;
 }
+
+/* Delete button to clear form */
 
 #delete {
     background: white;
@@ -432,6 +443,9 @@ form:invalid #submit {
     pointer-events: none;
 }
 
+
+/* Title */
+
 #title {
     width: 100%;
 }
@@ -453,20 +467,3 @@ form:invalid #submit {
     display: block;
     margin: 15px auto;
 }
-
-
-
-
-
-#box-header-small img {
-    width: 70px;
-}
-
-
-
-
-.white-background {
-    background-color: white;
-}
-
-
