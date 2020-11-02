@@ -953,6 +953,7 @@ footer ul li a:hover {
 }
 
 #post {
-    width: 20px;
-    height: 30px;
+    float: right;
+    width: 60px;
+    height: 45px;
 }
