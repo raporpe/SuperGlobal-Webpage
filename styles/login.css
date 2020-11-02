@@ -443,6 +443,10 @@ form:invalid #submit {
     pointer-events: none;
 }
 
+form span {
+    opacity: 0.5;
+}
+
 
 /* Title */
 
