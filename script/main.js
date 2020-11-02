@@ -1,16 +1,20 @@
 $(document).ready(function () {
 
+    // Sets the initial content
     changeWebContentTo("/main.html");
 
+    // Do not allow unuthenticated users
     checkLoggedIn();
+    
+    // Fill the page with custom content
     updateContentRole();
 
-    //Check log in every 5 seconds
+    //Check log in authentication every 5 seconds
     setInterval(function () {
         checkLoggedIn();
     }, 5000);
 
-
+    // Listener for forum post button
     $(document).on("click", "#post", postMessage);
 
 });
@@ -38,6 +42,23 @@ function getContent(url, callback) {
 
 };
 
+
+// Modifies the content of the div with id "web-content"
+function changeWebContentTo(changeTo) {
+
+    //Callback function used to insert new content when it has been downloaded
+    var callback = function (html) {
+        $("#web-content").html(html);
+        
+        // Check if dynamic content must be updated
+        updateContentRole();
+    }
+
+    getContent(changeTo, callback);
+
+}
+
+// Adds the active class to the passed object to the function
 function changeActive(obj) {
     //Delete active from the other object
     var otherActive = document.getElementsByClassName("active");
@@ -45,18 +66,6 @@ function changeActive(obj) {
     obj.className = "active";
 }
 
-// Modifies the content of the div with id "web-content"
-function changeWebContentTo(changeTo) {
-    
-    //Callback function used to insert new content when it has been downloaded
-    var callback = function (html) {
-        $("#web-content").html(html);
-        updateContentRole();
-    }
-    
-    getContent(changeTo, callback);
-    
-}
 
 // Checks if the user has authenticated
 function checkLoggedIn() {
@@ -68,24 +77,26 @@ function checkLoggedIn() {
 
 // Changes the authentication flag to false and calls function to return to login
 function logOut() {
-    setCookie("authenticated", "false");    
+    setCookie("authenticated", "false");
     checkLoggedIn();
 }
 
 // Updates the page with custom content according to the selected role in the registration
 function updateContentRole() {
-    
-    var role = getCookie("role");
-    
-    // Set the username 
+
+    // Set the username
     $(".display-username").html(getCookie("username"));
+
+    // Set the user name
     $(".display-name").html(getCookie("name"));
 
     // Set the profile photo
     $(".profile-image").attr("src", "images/students/" + getCookie("username") + ".png");
 
-    // Hide content from other roles
-    if (role == "teacher" || role == "administrator") {
+    // Hide content from other roles.
+    // Administrators and teachers have the same privileges.
+    var role = getCookie("role");
+    if (role == "teacher" || role == "administrator") {
         $(".show-only-students").hide();
         $(".show-only-teachers").show();
     } else if (role == "student") {
@@ -100,15 +111,23 @@ function updateContentRole() {
 
 
 
+// Retrieves the text from the forum post input and appends a new entry to the already existing ones.
 function postMessage() {
+
+    // Get the message
     var message = $("#message").val();
+
+    // Copy the post template
     var newPost = $("#write-forum").html();
     var newPost = '<div class="card-forum" id="just-posted">' + newPost + '</div>';
     var newPost = newPost.replace("message-wrapper", "post-wrapper");
+
+    // Append new post template
     $("#thread").append(newPost);
-    
+
+    // Edit the appended content: include message, time and remove id to comply with DOM.
     $("#just-posted").children(".l-8").html("<p>" + message + "</p>");
     $("#just-posted").children(".forum-profile").append("<p>" + "Just now" + "</p>")
     $("#just-posted").removeAttr("id");
-    
+
 }
