@@ -35,15 +35,15 @@ function reset_form() {
 
 
 function login() {
-    var username = $("#login_username").val();
+    var email = $("#login_email").val();
     var password = $("#login_password").val();
 
     // Hide login message in case a previous one was triggered
     $("#login-message").fadeOut(500);
 
     // Check for empty fields
-    if (username == "" || password == "") {
-        $("#login-message").text("The password or username are empty");
+    if (email == "" || password == "") {
+        $("#login-message").text("The password or email are empty");
         $("#login-message").fadeIn(500);
         return;
     }
