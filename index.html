@@ -61,11 +61,13 @@
                 <div class="form-input">
                     <label for="username" class="required">Username</label>
                     <br>
-                    <input type="text" id="register_username" name="username" title="Username shall not contain spaces" pattern="[a-z]*" required>
+                    <input type="text" id="register_username" name="username" pattern="[a-z]*" required>
                 </div>
                 <div class="form-input">
 
-                    <label for="NIA" class="required">NIA</label><br>
+                    <label for="NIA" class="required">NIA</label>
+                    <span style="opacity: 0.5">(e.g. 100123456)</span>
+
                     <input type="text" id="nia" name="nia" maxlength="9" value="100" pattern="100[0-9]{6}" required><br>
                 </div>
                 <div class="form-input">
@@ -88,7 +90,9 @@
                 </div>
                 <div class="form-input">
 
-                    <label for="Email" class="required">Email</label><br>
+                    <label for="Email" class="required">Email</label>
+                    <span style="opacity: 0.5">(e.g. example@gmail.com)</span>
+
                     <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
                 </div>
                 <div class="form-input">
@@ -98,8 +102,10 @@
                 </div>
                 <div class="form-input">
 
-                    <label for="ID Document" class="required">ID Document</label><br>
-                    <input type="text" id="id-document" name="id-document" required pattern="[0-9]{8}[A-Za-z]" maxlength="9"><br>
+                    <label for="ID Document" class="required">ID Document</label>
+                    <span style="opacity: 0.5">(e.g. 12345678A)</span>
+                    <input type="text" id="id-document" name="id-document" required pattern="[0-9]{8}[A-Za-z]" maxlength="9">
+
                 </div>
                 <div class="form-checkmark">
 
