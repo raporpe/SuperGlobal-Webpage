@@ -101,13 +101,12 @@ function register() {
     language = language.replace(/,*$/, "");
     setCookie("language", language);
 
-    // Successful registration, go to top and move to login.
-    $(".box").scrollTop(0);
+    // Successful registration, move to login.
     alert("Your registration has been recorded");
     reset_form();
 
     //Move to login. Detect if in mobile or desktop version to execute correct function.
-    if ($('#box-header-small').css('display') == 'none') {
+    if ($('.box-header-small').css('display') == 'none') {
         slide_login();
     } else {
         small_login();
@@ -152,6 +151,9 @@ function slide_register() {
 
 // Called to make animation sliding to login form in desktop mode 
 function slide_login() {
+    
+    // Go to top
+    $(".box").scrollTop(0);
 
     // Hide the register box
     $("#box-content-register").css("opacity", "0");
@@ -200,6 +202,9 @@ function small_register() {
 
 // Called to make animation sliding to login form in mobile mode 
 function small_login() {
+    
+    // Go to top
+    $(".box").scrollTop(0);
 
     // Hide #box-content-register
     $("#box-content-register").css("opacity", 0);

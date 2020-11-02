@@ -283,7 +283,7 @@ a {
     
     /* Display the header only in mobile version */
 
-    #box-header-small {
+    .box-header-small {
         display: flex;
     }
 
