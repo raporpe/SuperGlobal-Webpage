@@ -445,6 +445,7 @@ form:invalid #submit {
 
 form span {
     opacity: 0.5;
+    text-transform: none;
 }
 
 

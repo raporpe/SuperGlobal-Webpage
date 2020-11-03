@@ -60,8 +60,9 @@
             <form id="reg_form">
                 <div class="form-input">
                     <label for="register_username" class="required">Username</label>
-                    <br>
-                    <input type="text" id="register_username" name="username" pattern="[a-z]*" required>
+                    <span>(e.g. User_Paul-98)</span>
+
+                    <input type="text" id="register_username" name="username" pattern="[a-zA-Z0-9_-.]*" required>
                 </div>
                 <div class="form-input">
 
@@ -72,7 +73,7 @@
                 <div class="form-input">
 
                     <label for="register_password" class="required">Password</label><br>
-                    <input type="password" id="register_password" name="password" maxlength="8" pattern="([0-9]|[a-z])*" required><br>
+                    <input type="password" id="register_password" name="password" maxlength="8" pattern="([0-9a-zA-Z_-. ])*" required><br>
                 </div>
 
                 <!--- using javascript, we hide some options depending of user answers-->
