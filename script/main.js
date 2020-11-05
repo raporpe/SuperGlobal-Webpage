@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // Sets the initial content
-    changeWebContentTo("/main.html");
+    changeWebContentTo("/course.html");
 
     // Do not allow unuthenticated users
     checkLoggedIn();

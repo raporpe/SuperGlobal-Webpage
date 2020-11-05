@@ -55,7 +55,7 @@ function login() {
     // Authentication success
     if (hashedPassword == hashedCookie) {
         setCookie("authenticated", "true");
-        window.location.href = "/course.html";
+        window.location.href = "/home.html";
 
     } else {
         // Authentication fail. Show message.
