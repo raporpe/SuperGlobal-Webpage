@@ -71,7 +71,7 @@ function changeActive(obj) {
 function checkLoggedIn() {
     if (getCookie("authenticated") != "true") {
         // Redirect to login
-        window.location.href = "/index.html";
+        //window.location.href = "/index.html";
     }
 }
 
