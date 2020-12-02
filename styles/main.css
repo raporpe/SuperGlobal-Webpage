@@ -35,6 +35,16 @@ html {
     justify-content: space-between;
 }
 
+.card-forum:hover {
+    background-color: darkblue;
+    color: white;
+    transition: 0.3s;
+}
+.card-forum:hover i {
+    color: white;
+}
+
+
 .card-forum h3 {
     margin: auto 0;
     min-width: 50%;
