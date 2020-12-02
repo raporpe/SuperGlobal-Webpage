@@ -23,7 +23,7 @@ html {
 
 .card-forum {
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
-    padding: 0px 20px;
+    padding: 10px 20px;
     overflow: auto;
     background-color: white;
     -webkit-border-radius: 7px;
@@ -46,10 +46,17 @@ html {
 
 
 .card-forum h3 {
-    margin: auto 0;
     min-width: 50%;
+    margin: 0;
 }
 
+.card-forum h4 {
+    text-align: right;
+    margin: auto 0;
+}
+.card-forum p {
+    margin: 0;
+}
 
 .forum-right{
     text-align: right;
