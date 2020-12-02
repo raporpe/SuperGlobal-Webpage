@@ -126,7 +126,7 @@ html {
 .box-header-small {
     display: none;
     width: 100%;
-    height: 110px;
+    height: 100px;
     background-color: darkblue;
     position: absolute;
     top: 0;
@@ -157,10 +157,13 @@ html {
 #switch-login-desktop {
     background-color: white;
     color: darkblue;
+    border: 2px solid white;
+
 }
 
 #switch-login-desktop:hover {
-    font-style: italic;
+    color: white;
+    background-color: darkblue;
 }
 
 
@@ -168,11 +171,12 @@ html {
     background-color: white;
     color: darkblue;
     margin: 25px 0;
-
+    border: 2px solid white;
 }
 
 #switch-register-desktop:hover {
-    font-style: italic;
+    color: white;
+    background-color: darkblue;
 }
 
 /* Background image for login page */
@@ -194,13 +198,13 @@ html {
 /* Login and register button */
 
 .button {
-    padding: 10px 10px;
+    padding: 7px 5px;
     border: 2px solid darkblue;
     background-color: darkblue;
 
-    -webkit-border-radius: 17px;
-    -moz-border-radius: 17px;
-    border-radius: 17px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
 
     color: white;
     font-size: 1.1em;
@@ -233,16 +237,33 @@ a {
     background: white;
     color: darkblue;
     margin-right: 20px;
-    margin-left: auto;
+    padding-left: 10px;    
+    padding-right: 10px;    
+    border: 2px solid white;
+
 }
+
+#switch-register-small:hover {
+    color: white;
+    background-color: darkblue;
+}
+
 
 #switch-login-small {
     display: none;
     background: white;
     color: darkblue;
     margin-right: 20px;
-    margin-left: auto;
+    padding-left: 10px;    
+    padding-right: 10px; 
+    border: 2px solid white;
+
 }
+#switch-login-small:hover {
+    color: white;
+    background-color: darkblue;
+}
+
 
 /* Responsiveness for small screens (mobile phones included) */
 
@@ -271,6 +292,11 @@ a {
         padding-top: 100px;
         width: 100%;
     }
+    
+    .home-button {
+        display: none;
+    }
+    
 
     #box-content-login {
         position: absolute;
@@ -471,4 +497,40 @@ form span {
     position: inline;
     display: block;
     margin: 15px auto;
+}
+
+/* Margin for fontawesome icons */
+.right-margin {
+    margin-right: 10px;
+}
+
+
+/* Homepage button */
+.home-button {
+    width: 160px;
+    font-size: 15px;
+    padding: 4px 0;
+    margin-left: auto;
+}
+
+.header-home-button {
+    width: 50px;
+    align-self: auto;
+    margin-left: auto;
+    margin-right: 10px;
+    color: darkblue;
+    background-color: white;
+    border: 2px solid white;
+
+
+}
+
+.header-home-button:hover {
+    background-color: darkblue;
+}
+.header-home-button i {
+    color: darkblue;
+}
+.header-home-button:hover i {
+    color: white;
 }
