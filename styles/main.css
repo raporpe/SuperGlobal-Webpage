@@ -23,13 +23,26 @@ html {
 
 .card-forum {
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
-    padding: 0px 1px;
+    padding: 0px 30px;
     overflow: auto;
     background-color: white;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 7px;
-    margin: 10px 0px;
+    margin: 10px 10px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.card-forum h3 {
+    margin: auto 0;
+    min-width: 50%;
+}
+.card-forum h4 {
+    margin-left: auto;
+    margin-right: 40px;
+
 }
 
 .forum-right{
