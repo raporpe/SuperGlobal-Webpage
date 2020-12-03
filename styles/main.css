@@ -40,6 +40,7 @@ html {
     color: white;
     transition: 0.3s;
 }
+
 .card-forum:hover i {
     color: white;
 }
@@ -54,13 +55,14 @@ html {
     text-align: right;
     margin: auto 0;
 }
+
 .card-forum p {
     margin: 0;
 }
 
 
 
-.forum-right{
+.forum-right {
     text-align: right;
 }
 
@@ -72,7 +74,7 @@ html {
     text-align: right;
 }
 
-.forum-profile{
+.forum-profile {
     text-align: center;
     font-size: 12px;
     margin-top: 20px;
@@ -84,11 +86,13 @@ html {
     border-radius: 50%;
 
 }
+
 .forum-profile h3 {
     color: darkblue;
     margin: 0px 0px;
 }
-.forum-profile p{
+
+.forum-profile p {
     text-align: center;
     color: darkblue;
     margin: 0px 0px;
@@ -104,22 +108,21 @@ html {
     width: inherit;
     margin: 0px 5px 20px 0px;
 }
-.write-box{
-    
-}
+
+.write-box {}
 
 /* if forum tab is available */
-.available:hover{
+.available:hover {
     color: white;
     background-color: darkblue;
 }
 
-.available:hover i{
+.available:hover i {
     color: white;
 }
 
 
-#nav-card{
+#nav-card {
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
     padding-left: 20px;
     padding-top: 25px;
@@ -370,7 +373,7 @@ nav ul li a:hover i {
 
 /* Button */
 
-.export-button{
+.export-button {
     margin: 10px;
     padding: 5px;
     border: 2px solid darkblue;
@@ -386,7 +389,7 @@ nav ul li a:hover i {
     transition: 0.3s;
 }
 
-.export-button:hover{
+.export-button:hover {
     background: white;
     color: darkblue;
     margin: 10px;
@@ -397,7 +400,7 @@ nav ul li a:hover i {
     color: white;
 }
 
-.export-button:hover i{
+.export-button:hover i {
     color: darkblue;
 }
 
@@ -409,6 +412,7 @@ nav ul li a:hover i {
     text-decoration: underline;
     color: blue;
 }
+
 .button {
     padding: 10px;
     border: 2px solid darkblue;
@@ -431,7 +435,7 @@ nav ul li a:hover i {
 }
 
 
-.button:hover a{
+.button:hover a {
     color: darkblue;
 }
 
@@ -444,7 +448,8 @@ nav ul li a:hover i {
     text-decoration: none;
     color: white;
 }
-.button:hover i{
+
+.button:hover i {
     color: darkblue;
 }
 
@@ -714,7 +719,7 @@ footer ul li a:hover {
     top: 0;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
@@ -906,7 +911,7 @@ footer ul li a:hover {
     width: 100%;
     height: 100%;
     z-index: 999;
-    
+
 }
 
 
@@ -915,12 +920,12 @@ footer ul li a:hover {
     position: relative;
     overflow: hidden;
     padding: 0;
-    
+
     width: 100%;
     max-width: 400px;
     height: 100%;
     max-height: 465px;
-    
+
     background: white;
     margin: 5% auto;
     padding: 10px;
@@ -933,7 +938,7 @@ footer ul li a:hover {
 }
 
 .popup-close {
-    right:18px;
+    right: 18px;
     top: -4px;
     cursor: pointer;
     font-size: 1.5rem;
@@ -951,13 +956,13 @@ footer ul li a:hover {
     background-color: #000;
 }
 
-.popup-content iframe{
+.popup-content iframe {
     height: 500px;
     width: 400px;
     border: 0;
 }
 
-.popup-content div ul{
+.popup-content div ul {
     padding-inline-start: 0px;
     padding: 20px;
 }
@@ -968,13 +973,14 @@ footer ul li a:hover {
     justify-content: center;
     align-items: center;
 }
-.popup-content div p{
+
+.popup-content div p {
     margin: 10px 30px;
     text-align: center;
 }
 
 
-#running{
+#running {
     font-size: 35px;
 }
 
@@ -991,4 +997,30 @@ footer ul li a:hover {
 }
 
 
-/* */
+/* Activities related css */
+.upload-box {
+    background-color: white;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 7px dashed darkblue;
+    width: 100%;
+    height: 75px;
+    
+}
+
+.activity-teacher{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.activity-text {
+    text-align: justify;
+    
+}
