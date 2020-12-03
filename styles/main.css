@@ -126,7 +126,6 @@ html {
     margin: 0px 5px 20px 0px;
 }
 
-.write-box {}
 
 /* if forum tab is available */
 .available:hover {
@@ -1017,16 +1016,16 @@ footer ul li a:hover {
 /* Activities related css */
 .upload-box {
     background-color: white;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 4px dashed darkblue;
-    width: 80%;
-    height: 75px;
+    border: 3px dashed darkblue;
+    width: 90%;
+    height: 95px;
     margin: 20px auto;
 }
 
@@ -1061,6 +1060,60 @@ footer ul li a:hover {
     margin-left: 10px;
 }
 
+.submit-button {
+    margin-left: !important auto;
+    margin-right: 10px;
+    float: right;
+}
+
+.submit-button:hover {
+    margin-left: !important auto;
+    margin-right: 10px;
+}
+
 .content-wrapper {
-    padding: 20px;
+    padding: 0 40px;
+}
+
+.any-doubt p {
+    color: darkblue;
+    font-weight: bold;
+    display: block;
+    margin: auto 0;
+    text-align: center;
+    width: 100%
+}
+
+
+.form-input {
+    margin-bottom: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 100%;
+
+}
+
+.form-input > input {
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    border: 1px solid gray;
+    padding: 12px 19px;
+    font-size: 17px;
+    padding-top: 10px;
+
+}
+
+.form-input > input:focus {
+    border: 1px solid darkblue;
+    outline: none !important;
+    transition: 0.5s;
+
+}
+
+.send-message {
+    margin-left: 10px;
+}
+.send-message:hover {
+    margin-left: 10px;
 }

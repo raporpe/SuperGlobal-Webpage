@@ -3,34 +3,29 @@
     <h3>MAG 2.55 Computer Architecture</h3>
 
     <div class="navigator">
-            <button onclick="changeWebContentTo('activities.html')" class="button"><i class="fas fa-arrow-left"></i></button>
-            <h1><i class="fas fa-laptop-code fa-fw right-margin"></i>W</h1>
+            <button onclick="changeWebContentTo('activity.html')" class="button"><i class="fas fa-arrow-left"></i></button>
+            <h1><i class="fas fa-mailbox fa-fw right-margin"></i>Writing message</h1>
     </div>
 
-    <div class="activity-teacher">
-        <div>        
-            <img src="images/teacher.png">
-            <h3>Professor Anna Simon</h3>
+    <div class="content-wrapper">
+        <div class="activity-teacher">
+            <div>        
+                <img src="images/teacher.png">
+                <h3>Professor Anna Simon</h3>
+            </div>
+
         </div>
 
-    </div>
-        
-    <form id="reg_form">
+        <form class="form-input">
 
-        <div>
-            <h3 class="write-box">Subject</h3>
-            <textarea id="subject" name="subject"></textarea>
-        </div>
-        
-        <div>
-            <h3 class="write-box">Message</h3>
-            <textarea id="message" name="message" style="margin: 11px ;"></textarea>
-        </div>
-    </form>
-    
-    <div class="activity-teacher">
-        <div class="button" onclick="changeWebContentTo('/activity.html')"><i class="fas fa-paper-plane"></i> Send email</div>
-    </div>
+            <h3>Subject</h3>
+            <input id="subject" name="subject">
+
+            <h3>Message</h3>
+            <input id="message" name="message">
+        </form>
+
+        <div class="button send-message" onclick="changeWebContentTo('/activity.html')"><i class="fas fa-paper-plane right-margin"></i>Send email</div>
 
     </div>
 </section>
