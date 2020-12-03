@@ -1024,20 +1024,36 @@ footer ul li a:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 7px dashed darkblue;
-    width: 100%;
+    border: 4px dashed darkblue;
+    width: 80%;
     height: 75px;
-    
+    margin: 20px 10px;
 }
 
 .activity-teacher{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin: 20px 10px;
+}
+
+.activity-teacher * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.activity-teacher img {
+    border-radius: 50%;
+    width: 50px;
 }
 
 .activity-text {
     text-align: justify;
     
+}
+
+.navigator * {
+    display: inline-block;
+    vertical-align: middle;
 }
