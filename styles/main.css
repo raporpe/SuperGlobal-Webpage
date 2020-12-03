@@ -35,6 +35,23 @@ html {
     justify-content: space-between;
 }
 
+.img-grades{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.card-message{
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    padding: 5px 0px;
+    overflow: auto;
+    background-color: white;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    margin: 20px 17px;
+
+}
+
 .card-forum:hover {
     background-color: darkblue;
     color: white;
