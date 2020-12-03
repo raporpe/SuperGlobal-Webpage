@@ -1027,7 +1027,7 @@ footer ul li a:hover {
     border: 4px dashed darkblue;
     width: 80%;
     height: 75px;
-    margin: 20px 10px;
+    margin: 20px auto;
 }
 
 .activity-teacher{
@@ -1056,4 +1056,11 @@ footer ul li a:hover {
 .navigator * {
     display: inline-block;
     vertical-align: middle;
+}
+.navigator {
+    margin-left: 10px;
+}
+
+.content-wrapper {
+    padding: 20px;
 }
