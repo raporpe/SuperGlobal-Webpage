@@ -2,11 +2,24 @@
     <h1>MY ACTIVITIES</h1>
     <h3>MAG 2.55 Computer Architecture</h3>
 
-    <div class="title"></div>
+    <div class="title">
+    
+    <form id="reg_form">
+
+        <div>
+            <h3 class="write-box">Subject</h3>
+            <textarea id="subject" name="subject"></textarea>
+        </div>
+        
+        <div>
+            <h3 class="write-box">Message</h3>
+            <textarea id="message" name="message" style="margin: 11px ;"></textarea>
+        </div>
+    </form>
     
     <div class="activity-teacher">
-        <div class="button" onclick="changeWebContent('activity.html')"><i class="fas fa-paper-plane"></i>Send email</div>
+        <div class="button" onclick="changeWebContentTo('/activity.html')"><i class="fas fa-paper-plane"></i> Send email</div>
     </div>
 
-    
+    </div>
 </section>
