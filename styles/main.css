@@ -293,13 +293,17 @@ header {
 /* Header links */
 
 #links {
-    font-size: clamp(0.6em, 1.6vw, 1.1em);
+    font-size: clamp(0.6em, 1.4vw, 1.1em);
     margin-left: auto;
 }
 
 #links ul {
     display: flex;
     padding-inline-start: 0px;
+}
+
+#links ul * {
+    display: inline-block;
 }
 
 #links ul li {
@@ -441,6 +445,8 @@ nav ul li a:hover i {
 #popup-button-logout:hover i {
     color: white;
 }
+
+
 
 .button {
     padding: 10px;
@@ -765,7 +771,7 @@ footer ul li a:hover {
     }
 
     .hide-m {
-        display: none;
+        display: none !important;
     }
 
     .m-1 {
@@ -815,6 +821,8 @@ footer ul li a:hover {
     .m-12 {
         width: 100%;
     }
+    
+
 
 }
 
@@ -823,11 +831,11 @@ footer ul li a:hover {
 @media (max-width: 600px) {
 
     .show-s {
-        display: inline;
+        display: inline !important;
     }
 
     .hide-s {
-        display: none;
+        display: none !important;
     }
 
     .s-1 {
@@ -1132,8 +1140,4 @@ footer ul li a:hover {
 }
 .send-message:hover {
     margin-left: 10px;
-}
-
-.inline {
-    display: inline-block;
 }

@@ -17,7 +17,7 @@ $(document).ready(function () {
     // Listener for forum post button
     $(document).on("click", "#post", postMessage);
     
-    setCookie("role", "student")        
+    setCookie("role", "teacher")        
 
 });
 
