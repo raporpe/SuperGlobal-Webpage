@@ -73,7 +73,7 @@ function changeActive(obj) {
 function checkLoggedIn() {
     if (getCookie("authenticated") != "true") {
         // Redirect to login
-        //window.location.href = "/index.html";
+        //window.location.href = "/login.html";
     }
 }
 
@@ -99,14 +99,9 @@ function updateContentRole() {
     // Administrators and teachers have the same privileges.
     var role = getCookie("role");
     if (role == "teacher" || role == "administrator") {
-        $(".show-only-students").hide();
-        $(".show-only-teachers").show();
+        $(".show-teachers").attr("style", "display:inherit !important");
     } else if (role == "student") {
-        $(".show-only-students").show();
-        $(".show-only-teachers").hide();
-    } else {
-        $(".show-only-students").hide();
-        $(".show-only-teachers").hide();
+        $(".show-students").attr("style", "display:inherit !important");
     }
 
 }

@@ -1170,3 +1170,12 @@ footer ul li a:hover {
 .send-message:hover {
     margin-left: 10px;
 }
+
+/* Show only manager */
+.show-teachers {
+    display: none !important;
+}
+
+.show-students {
+    display: none !important;
+}
