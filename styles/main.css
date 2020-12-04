@@ -1162,3 +1162,14 @@ footer ul li a:hover {
 .show-students {
     display: none !important;
 }
+
+.create-activity {
+    margin-left: 20px;
+    width: 175px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.create-activity:hover {
+    margin-left: 20px;
+}
