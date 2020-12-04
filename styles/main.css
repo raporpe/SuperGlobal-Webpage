@@ -355,7 +355,11 @@ header {
     background-color: darkblue;
     border-radius: 10px;
     cursor: pointer;
-    padding-top: 2%;
+    padding-top: 3%;
+}
+
+#login:hover{
+    background: rgb(105, 105, 236);
 }
 
 #login *{
