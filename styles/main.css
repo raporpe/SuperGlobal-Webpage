@@ -41,11 +41,11 @@ html {
     display: flex;
 }
 
-.card-homepage img{
-    width: 50%;
+.homepage-img{
+    height: 50vh;
+    width:50%;
     border-radius: 10px;
     margin-right: 5%;
-    max-height: 40vh;
 }
 
 .img-grades{
@@ -374,17 +374,18 @@ color: white;
     display: flex;
     direction: row;
     margin-left: 2%;
+    margin-right: 2%;
 }
 
 #search-bar{
     margin-top: 20px;
-    margin-left: 5%;
+    margin-left: auto;
 }
 
 #search-bar input{
     width:30vw;
     border-radius: 10px;
-    margin-left: 15px;
+    margin-left: 20px;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
