@@ -126,8 +126,6 @@ html {
     margin: 0px 5px 20px 0px;
 }
 
-.write-box {}
-
 /* if forum tab is available */
 .available:hover {
     color: white;
@@ -428,6 +426,10 @@ nav ul li a:hover i {
 #popup-button-calendar:hover {
     text-decoration: underline;
     color: blue;
+}
+
+#popup-button-logout:hover i {
+    color: white;
 }
 
 .button {
@@ -919,6 +921,7 @@ footer ul li a:hover {
     margin: 0px;
 }
 
+
 .popup-wrapper {
     display: none;
     background: rgba(0, 0, 0, 0.5);
@@ -1056,4 +1059,8 @@ footer ul li a:hover {
 .navigator * {
     display: inline-block;
     vertical-align: middle;
+}
+
+.inline {
+    display: inline-block;
 }
