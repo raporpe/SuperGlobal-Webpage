@@ -1235,3 +1235,18 @@ footer ul li a:hover {
 .create-activity:hover {
     margin-left: 20px;
 }
+
+#graphic1{
+    max-width: 320px;
+    padding: 20px 0px 0px 0px;
+}
+
+#graphic2{
+    max-width: 320px;
+    padding: 20px 0px 0px 0px;
+}
+
+.graphic-teacher{
+    max-width: 520px;
+    padding: 25px 0px 0px 0px;
+}
