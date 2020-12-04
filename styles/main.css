@@ -21,7 +21,7 @@ html {
     border-radius: 7px;
 }
 
-.card-forum {
+.card-activity{
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
     padding: 10px 20px;
     overflow: auto;
@@ -29,10 +29,24 @@ html {
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 7px;
-    margin: 20px 17px;
+    margin: 10px 17px;
     display: flex;
     align-content: center;
     justify-content: space-between;
+}
+.card-activity h3 {
+    min-width: 50%;
+    min-width: 50%;
+    margin: 0;
+}
+
+.card-activity h4 {
+    text-align: right;
+    margin: auto 0;
+}
+
+.card-activity p {
+    margin: 0;
 }
 
 .card-homepage{
@@ -64,6 +78,20 @@ html {
     margin: 20px 17px;
 }
 
+.card-forum {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    overflow: auto;
+    background-color: white;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    margin: 20px 17px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
 .card-forum:hover {
     background-color: darkblue;
     color: white;
@@ -76,6 +104,7 @@ html {
 
 
 .card-forum h3 {
+    min-width: 50%;
     min-width: 50%;
     margin: 0;
 }
