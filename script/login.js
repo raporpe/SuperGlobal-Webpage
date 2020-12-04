@@ -9,22 +9,25 @@ $(document).ready(function () {
     $("#delete").click(reset_form);
     $("#submit").click(register);
 
-    // The bachelor degree selector is hidden by default in the registration form
-    $("#bachelor-degree").fadeOut(500);
+    // The student only div is hidden by default in the registration form
+    $("#student-only").fadeOut(500);
 
     // Call function to update the form when student is selected as role
     $("#reg_form").on("change", updateForm);
 
 });
 
-// Updates the form to include bachelor degree selection when student is selected in role
+// Updates the form to include student only div selection when student is selected in role
 function updateForm() {
     if ($(this).find("input[name=role]:checked").val() == "student") {
-        $("#bachelor-degree").fadeIn(500);
+        $("#student-only").fadeIn(500);
         $("#comp-eng").attr('required', true);
+        $("#working-group").attr('required', true);
+        
     } else {
-        $("#bachelor-degree").fadeOut(500);
+        $("#student-only").fadeOut(500);
         $("#comp-eng").attr('required', false);
+        $("#working-group").attr('required', false);
     }
 }
 

@@ -126,17 +126,31 @@
 
 
                 <!--- ONLY IF selectes student-->
-                <div class="form-checkmark" id="bachelor-degree">
-                    <h2>Bachelor's Degree</h2>
+                <div id="student-only">
+                    <div class="form-checkmark" id="bachelor-degree">
+                        <h2>Bachelor's Degree</h2>
 
-                    <input type="radio" id="comp-eng" name="degree" value="Computer Science Engineering">
-                    <label for="comp-eng">Computer Science Engineering</label><br>
+                        <input type="radio" id="comp-eng" name="degree" value="Computer Science Engineering">
+                        <label for="comp-eng">Computer Science Engineering</label><br>
 
-                    <input type="radio" id="bio-eng" name="degree" value="Biomedical Engineering">
-                    <label for="bio-eng">Biomedical Engineering</label><br>
+                        <input type="radio" id="bio-eng" name="degree" value="Biomedical Engineering">
+                        <label for="bio-eng">Biomedical Engineering</label><br>
 
-                    <input type="radio" id="telco-eng" name="degree" value="Telematics Engineering">
-                    <label for="telco-eng">Telematics Engineering</label><br>
+                        <input type="radio" id="telco-eng" name="degree" value="Telematics Engineering">
+                        <label for="telco-eng">Telematics Engineering</label><br>
+
+                    </div>
+                    
+                    <div class="form-input">
+                        <label for="working-group">Working group</label><br>
+                        <select name="working-group" id="working-group">
+                            <option value="1">Group 1</option>
+                            <option value="2">Group 2</option>
+                            <option value="3">Group 3</option>
+                            <option value="4">Group 4</option>
+                        </select>          
+                    </div>
+                
                 </div>
                 <!--- END IF selectes student-->
 
@@ -144,6 +158,7 @@
 
                     <label for="university">University</label><br>
                     <input type="text" id="university" name="university" value="UC3M EPS" readonly required><br>
+
 
                 </div>
 
