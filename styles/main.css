@@ -45,6 +45,7 @@ html {
     width: 50%;
     border-radius: 10px;
     margin-right: 5%;
+    max-height: 40vh;
 }
 
 .img-grades{
@@ -143,10 +144,6 @@ html {
     width: inherit;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b08357c75315f6eaabdcededa79827dfa505c143
 /* if forum tab is available */
 .available:hover {
     color: white;
@@ -339,6 +336,22 @@ header {
     color: white;
     background-color: darkblue;
 }
+
+.homepage-links a:hover i{
+    color: white;
+}
+
+#login{
+    background-color: darkblue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#login *{
+color: white;
+}
+
+
 
 
 
@@ -1202,4 +1215,23 @@ footer ul li a:hover {
 
 #mini{
     margin: 0px 0px;
+}
+/* Show only manager */
+.show-teachers {
+    display: none !important;
+}
+
+.show-students {
+    display: none !important;
+}
+
+.create-activity {
+    margin-left: 20px;
+    width: 175px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.create-activity:hover {
+    margin-left: 20px;
 }
