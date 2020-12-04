@@ -61,7 +61,6 @@ html {
     -moz-border-radius: 7px;
     border-radius: 7px;
     margin: 20px 17px;
-
 }
 
 .card-forum:hover {
@@ -500,8 +499,35 @@ nav ul li a:hover i {
     color: darkblue;
 }
 
+.upload {
+    float: right;
+    padding: 0px;
+    border: 2px solid darkblue;
+    background-color: darkblue;
 
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
 
+    color: white;
+    display: inline;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+.upload:hover {
+    float: right;
+    background: white;
+    color: darkblue;
+}
+
+.upload i {
+    color: white;
+}
+
+.upload:hover i {
+    color: darkblue;
+}
 
 
 /* Page column dividers */
@@ -586,6 +612,7 @@ iframe {
     padding: 0;
     margin: 0;
 }
+
 
 /* General text */
 
@@ -1077,6 +1104,12 @@ footer ul li a:hover {
     vertical-align: middle;
 }
 
+.activity-admin *{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
 .activity-teacher img {
     border-radius: 50%;
     width: 50px;
@@ -1152,4 +1185,21 @@ footer ul li a:hover {
 }
 .send-message:hover {
     margin-left: 10px;
+}
+
+.highlighter{
+    background-color: #efefff;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.highlighter {
+    margin: 10px 10px;
+    padding: 10px 15px;
+    
+}
+
+#mini{
+    margin: 0px 0px;
 }
