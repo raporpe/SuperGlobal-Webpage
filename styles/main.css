@@ -45,6 +45,7 @@ html {
     width: 50%;
     border-radius: 10px;
     margin-right: 5%;
+    max-height: 40vh;
 }
 
 .img-grades{
@@ -340,6 +341,22 @@ header {
     color: white;
     background-color: darkblue;
 }
+
+.homepage-links a:hover i{
+    color: white;
+}
+
+#login{
+    background-color: darkblue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#login *{
+color: white;
+}
+
+
 
 
 
