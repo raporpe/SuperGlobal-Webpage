@@ -26,7 +26,7 @@ $(document).ready(function () {
 function getContent(url, callback) {
 
     // Feature detection
-    if (!window.XMLHttpRequest) console.log("The browser does not this functionality");
+    if (!window.XMLHttpRequest) console.log("The browser does not support this functionality");
 
     // Create new request
     var xhttp = new XMLHttpRequest();

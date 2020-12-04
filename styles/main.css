@@ -132,13 +132,22 @@ html {
     padding-top: 20px;
 }
 
+.post-button{
+    align-content: flex-start; 
+}
+
+.write-box {
+    margin: 0px 0px 10px;
+}
 #message {
     height: 100px;
     width: inherit;
-    margin: 0px 5px 20px 0px;
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> b08357c75315f6eaabdcededa79827dfa505c143
 /* if forum tab is available */
 .available:hover {
     color: white;
@@ -296,13 +305,17 @@ header {
 /* Header links */
 
 #links {
-    font-size: clamp(0.6em, 1.6vw, 1.1em);
+    font-size: clamp(0.6em, 1.4vw, 1.1em);
     margin-left: auto;
 }
 
 #links ul {
     display: flex;
     padding-inline-start: 0px;
+}
+
+#links ul * {
+    display: inline-block;
 }
 
 #links ul li {
@@ -440,6 +453,12 @@ nav ul li a:hover i {
     text-decoration: underline;
     color: blue;
 }
+
+#popup-button-logout:hover i {
+    color: white;
+}
+
+
 
 .button {
     padding: 10px;
@@ -764,7 +783,7 @@ footer ul li a:hover {
     }
 
     .hide-m {
-        display: none;
+        display: none !important;
     }
 
     .m-1 {
@@ -814,6 +833,8 @@ footer ul li a:hover {
     .m-12 {
         width: 100%;
     }
+    
+
 
 }
 
@@ -822,11 +843,11 @@ footer ul li a:hover {
 @media (max-width: 600px) {
 
     .show-s {
-        display: inline;
+        display: inline !important;
     }
 
     .hide-s {
-        display: none;
+        display: none !important;
     }
 
     .s-1 {
@@ -930,6 +951,7 @@ footer ul li a:hover {
     margin: 0px;
 }
 
+
 .popup-wrapper {
     display: none;
     background: rgba(0, 0, 0, 0.5);
@@ -1019,10 +1041,11 @@ footer ul li a:hover {
 }
 
 #post {
-    float: right;
+    float: left;
     width: 60px;
     height: 45px;
 }
+
 
 
 /* Activities related css */
@@ -1068,6 +1091,7 @@ footer ul li a:hover {
     display: inline-block;
     vertical-align: middle;
 }
+
 .navigator {
     margin-left: 10px;
 }
