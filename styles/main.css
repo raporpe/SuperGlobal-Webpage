@@ -338,19 +338,30 @@ header {
     background-color: darkblue;
 }
 
-.homepage-links a:hover i{
+.homepage-links li{
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.homepage-links li:hover i{
     color: white;
+}
+.homepage-links li:hover{
+    background-color: darkblue;
 }
 
 #login{
     background-color: darkblue;
     border-radius: 10px;
     cursor: pointer;
+    padding-top: 2%;
 }
 
 #login *{
 color: white;
 }
+
 
 
 /* Search section */
