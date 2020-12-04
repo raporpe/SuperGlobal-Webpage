@@ -2,11 +2,30 @@
     <h1>MY ACTIVITIES</h1>
     <h3>MAG 2.55 Computer Architecture</h3>
 
-    <div class="title"></div>
-    
-    <div class="activity-teacher">
-        <div class="button" onclick="changeWebContent('activity.html')"><i class="fas fa-paper-plane"></i>Send email</div>
+    <div class="navigator">
+            <button onclick="changeWebContentTo('activity.html')" class="button"><i class="fas fa-arrow-left"></i></button>
+            <h1><i class="fas fa-mailbox fa-fw right-margin"></i>Writing message</h1>
     </div>
 
-    
+    <div class="content-wrapper">
+        <div class="activity-teacher">
+            <div>        
+                <img src="images/teacher.png">
+                <h3>Professor Anna Simon</h3>
+            </div>
+
+        </div>
+
+        <form class="form-input">
+
+            <h3>Subject</h3>
+            <input id="subject" name="subject">
+
+            <h3>Message</h3>
+            <input id="message" name="message">
+        </form>
+
+        <div class="button send-message" onclick="changeWebContentTo('/activity.html')"><i class="fas fa-paper-plane right-margin"></i>Send email</div>
+
+    </div>
 </section>
