@@ -120,10 +120,16 @@ html {
     padding-top: 20px;
 }
 
+.post-button{
+    align-content: flex-start; 
+}
+
+.write-box {
+    margin: 0px 0px 10px;
+}
 #message {
     height: 100px;
     width: inherit;
-    margin: 0px 5px 20px 0px;
 }
 
 
@@ -1007,10 +1013,11 @@ footer ul li a:hover {
 }
 
 #post {
-    float: right;
+    float: left;
     width: 60px;
     height: 45px;
 }
+
 
 
 /* Activities related css */
