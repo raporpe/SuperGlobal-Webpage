@@ -347,6 +347,10 @@ header {
     list-style: none;
     margin-left: 5px;
 }
+#links ul li {
+    margin: auto 5px;
+}
+
 
 #links ul li a {
     height: 50px;
@@ -362,6 +366,10 @@ header {
     border-radius: 12px;
 }
 
+#links ul li:hover i {
+    color: white;
+}
+
 #links ul li a:hover {
     color: white;
     background-color: darkblue;
@@ -374,20 +382,7 @@ header {
 }
 
 
-#login{
-    background-color: darkblue;
-    border-radius: 10px;
-    cursor: pointer;
-    padding-top: 3%;
-}
 
-#login:hover{
-    background: rgb(105, 105, 236);
-}
-
-#login *{
-color: white;
-}
 
 
 
