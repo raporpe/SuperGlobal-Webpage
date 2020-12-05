@@ -56,7 +56,6 @@ html {
 }
 
 .homepage-img{
-    height: 40vh;
     width:95%;
     border-radius: 10px;
 }
@@ -899,6 +898,13 @@ footer ul li a:hover {
 
 /*Responsiveness for tablets*/
 
+@media (max-width: 1200px) {
+.card-homepage{
+    grid-template-columns: 1fr;
+}
+}
+
+
 @media (max-width: 768px) {
 
     .show-m {
@@ -956,12 +962,6 @@ footer ul li a:hover {
     .m-12 {
         width: 100%;
     }
-    
-    .card-homepage{
-        grid-template-columns: 1fr;
-    }
-    
-
 
 }
 
