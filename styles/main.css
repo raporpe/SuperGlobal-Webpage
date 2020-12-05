@@ -395,16 +395,46 @@ header {
     margin-right: 2%;
 }
 
+.test-5 {
+	width: 835px;
+	height: 73px;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+	background: #ffffff;
+	border-color: #000000;
+	border-style: solid;
+	border-radius: 27px 27px 27px 27px;
+}
+
 #search-bar{
     margin-top: 20px;
     margin-left: auto;
 }
-
-#search-bar input{
+#search-bar div{
     width:30vw;
+    height: 3vw;
+	border-color: darkblue;
+	border-style: 1px solid;
     border-radius: 10px;
     margin-left: 20px;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    padding-left: 10px;
+}
+
+#search-bar div i{
+    vertical-align: middle;
+}
+
+#search-bar input textarea:focus, input:focus{
+    outline: none;
+}
+
+#search-bar input{
+    width: 90%;
+    margin-left: 5px;
+    height: 100%;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* Navigation bar */
@@ -593,6 +623,7 @@ nav ul li a:hover i {
 .upload:hover i {
     color: darkblue;
 }
+
 
 
 /* Page column dividers */
