@@ -373,12 +373,6 @@ header {
     border-radius: 10px;
 }
 
-.homepage-links li:hover i{
-    color: white;
-}
-.homepage-links li:hover{
-    background-color: darkblue;
-}
 
 #login{
     background-color: darkblue;
