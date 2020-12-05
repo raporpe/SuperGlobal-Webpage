@@ -561,7 +561,7 @@ nav ul li a:hover i {
 }
 
 .button:hover i {
-    color: darkblue;
+    color: darkblue !important;
 }
 
 .upload {
