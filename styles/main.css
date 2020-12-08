@@ -47,8 +47,16 @@ html {
 }
 
 .card-activity p {
-    margin: 0;
+    margin: 0 0 7px 0x;
 }
+
+.card-activity .option-buttons {
+    text-align: right;
+}
+.card-activity .option-buttons * {
+    margin: 3px 0;
+}
+
 
 .card-activity .button {
     display: inline-block;
@@ -1385,7 +1393,7 @@ footer ul li a:hover {
 }
 
 .activity-not-submited {
-    color: darkred;
+    color: orangered;
     font-style: italic;
     font-weight: bold;
 }

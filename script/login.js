@@ -14,6 +14,10 @@ $(document).ready(function () {
 
     // Call function to update the form when student is selected as role
     $("#reg_form").on("change", updateForm);
+    
+    $(".home-button").click(function(){
+        window.location.href = "/index.html";
+    })
 
 });
 
