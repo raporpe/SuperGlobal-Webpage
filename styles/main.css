@@ -71,6 +71,7 @@ html {
 .homepage-img{
     width:95%;
     border-radius: 10px;
+    max-height: 400px;
 }
 
 .img-grades{
