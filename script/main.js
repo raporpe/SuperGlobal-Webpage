@@ -17,6 +17,10 @@ $(document).ready(function () {
     // Listener for forum post button
     $(document).on("click", "#post", postMessage);
     
+    $("#go-to-login").click(function(){
+            window.location.href = "/login.html";
+    })
+    
 
 });
 
