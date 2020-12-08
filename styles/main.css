@@ -1342,12 +1342,17 @@ footer ul li a:hover {
 
 #graphic2{
     max-width: 320px;
+    padding: 0px 40px 0px 30px;
+}
+
+#graphic3{
+    max-width: 320px;
     padding: 20px 0px 0px 0px;
 }
 
-.graphic-teacher{
+#graphic4{
     max-width: 320px;
-    padding: 25px 0px 0px 0px;
+    padding: 0px 40px 0px 30px;
 }
 
 
