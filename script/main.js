@@ -4,15 +4,15 @@ $(document).ready(function () {
     changeWebContentTo("/course.html");
 
     // Do not allow unuthenticated users
-    checkLoggedIn();
+//    checkLoggedIn();
     
     // Fill the page with custom content
     updateContentRole();
 
     //Check log in authentication every 5 seconds
-    setInterval(function () {
-        checkLoggedIn();
-    }, 5000);
+//    setInterval(function () {
+//        checkLoggedIn();
+//    }, 5000);
 
     // Listener for forum post button
     $(document).on("click", "#post", postMessage);
@@ -73,7 +73,7 @@ function changeActive(obj) {
 function checkLoggedIn() {
     if (getCookie("authenticated") != "true") {
         // Redirect to login
-        //window.location.href = "/login.html";
+        window.location.href = "/login.html";
     }
 }
 
