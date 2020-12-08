@@ -33,6 +33,7 @@ html {
     display: flex;
     align-content: center;
     justify-content: space-between;
+    vertical-align: middle;
 }
 .card-activity h3 {
     min-width: 50%;
@@ -47,6 +48,10 @@ html {
 
 .card-activity p {
     margin: 0;
+}
+
+.card-activity .button {
+    display: inline-block;
 }
 
 .card-homepage{
@@ -1270,8 +1275,15 @@ footer ul li a:hover {
     padding: 12px 19px;
     font-size: 17px;
     padding-top: 10px;
+    width: 100%;
 
 }
+
+.form-input > textarea {
+    width: 100%;
+    height: 150px;
+}
+
 
 .form-input > input:focus {
     border: 1px solid darkblue;
@@ -1338,3 +1350,25 @@ footer ul li a:hover {
     padding: 25px 0px 0px 0px;
 }
 
+
+/* Student selector */
+
+.student-select {
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    border: 2px darkblue solid;
+    overflow: scroll;
+    width: 100%;
+    height: 150px;
+    padding: 0 15px;
+}
+
+.student-select div {
+    margin: 10px 0;
+    
+}
+
+.student-select div input {
+    margin-right: 7px;
+}
