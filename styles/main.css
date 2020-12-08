@@ -1372,3 +1372,26 @@ footer ul li a:hover {
 .student-select div input {
     margin-right: 7px;
 }
+
+
+/* Teacher grading styles */
+.activity-submited {
+    color: darkgreen;
+}
+
+.activity-not-submited {
+    color: darkred;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.mark-input {
+    border: 2px darkblue solid;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    width: 75px;
+    padding: 5px;
+    font-size: 20px;
+    
+}
