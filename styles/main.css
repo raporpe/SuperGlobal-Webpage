@@ -900,8 +900,6 @@ footer ul li a:hover {
 }
 
 
-#white-alt {}
-
 
 /*Responsiveness for tablets*/
 
@@ -1240,13 +1238,13 @@ footer ul li a:hover {
 }
 
 .submit-button {
-    margin-left: !important auto;
+    margin-left: auto !important;
     margin-right: 10px;
     float: right;
 }
 
 .submit-button:hover {
-    margin-left: !important auto;
+    margin-left: auto !important;
     margin-right: 10px;
 }
 
