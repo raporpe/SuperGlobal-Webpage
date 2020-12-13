@@ -119,7 +119,7 @@ function postMessage() {
 
     // Copy the post template
     var newPost = $("#write-forum").html();
-    var newPost = '<div class="card-forum" id="just-posted">' + newPost + '</div>';
+    var newPost = '<div class="card-message" id="just-posted">' + newPost + '</div>';
     var newPost = newPost.replace("message-wrapper", "post-wrapper");
 
     // Append new post template
