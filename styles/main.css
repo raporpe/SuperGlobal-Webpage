@@ -422,7 +422,7 @@ header {
 }
 #search-bar div{
     width:30vw;
-    height: 3vw;
+    height: 40px;
 	border-color: darkblue;
 	border-style: solid;
     border-width: 2px;
