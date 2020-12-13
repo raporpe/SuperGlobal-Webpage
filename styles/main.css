@@ -909,6 +909,9 @@ footer ul li a:hover {
 .card-homepage{
     grid-template-columns: 1fr;
 }
+}
+
+@media (max-width: 900px) {
 .homelink{
     font-size: 2.5vw;
 }
@@ -1034,8 +1037,6 @@ footer ul li a:hover {
     .s-12 {
         width: 100%;
     }
-
-
 
 }
 
