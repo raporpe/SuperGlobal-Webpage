@@ -899,7 +899,9 @@ footer ul li a:hover {
     display: flex;
 }
 
-
+.float-right {
+    float: right;
+}
 
 /*Responsiveness for tablets*/
 
