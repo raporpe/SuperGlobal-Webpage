@@ -397,7 +397,6 @@ header {
 
 
 
-
 /* Search section */
 
 .search-section{
@@ -909,6 +908,9 @@ footer ul li a:hover {
 @media (max-width: 1200px) {
 .card-homepage{
     grid-template-columns: 1fr;
+}
+.homelink{
+    font-size: 2.5vw;
 }
 }
 
