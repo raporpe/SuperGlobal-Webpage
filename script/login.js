@@ -15,7 +15,11 @@ $(document).ready(function () {
     // Call function to update the form when student is selected as role
     $("#reg_form").on("change", updateForm);
     
+    // Redirect to home page on click
     $(".home-button").click(function(){
+        window.location.href = "/index.html";
+    })
+    $(".header-home-button").click(function(){
         window.location.href = "/index.html";
     })
 
