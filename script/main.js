@@ -128,6 +128,7 @@ function postMessage() {
     // Edit the appended content: include message, time and remove id to comply with DOM.
     $("#just-posted").children(".l-8").html("<p>" + message + "</p>");
     $("#just-posted").children(".forum-profile").append("<p>" + "Just now" + "</p>")
+    $("#just-posted").children(".post-button").remove()
     $("#just-posted").removeAttr("id");
 
 }
